@@ -6,12 +6,12 @@
 
 <tiles-definitions>
 
-	<definition name="baselayout" template="/baselayout.jsp">
-		<put-attribute name="title" value="Template" />
-		<put-attribute name="header" value="/header.jsp" />
-		<put-attribute name="menu" value="/menu.jsp" />
-		<put-attribute name="body" value="/body.jsp" />
-		<put-attribute name="footer" value="/footer.jsp" />
+	<definition name="baselayout" template="/temp/baselayout.jsp">
+		<put-attribute name="title" value="Title Demo" />
+		<put-attribute name="header" value="/temp/header.jsp" />
+		<put-attribute name="menu" value="/temp/menu.jsp" />
+		<put-attribute name="body" value="/temp/body.jsp" />
+		<put-attribute name="footer" value="/temp/footer.jsp" />
 	</definition>
 
 	<definition name="welcome.tiles" extends="baselayout">
