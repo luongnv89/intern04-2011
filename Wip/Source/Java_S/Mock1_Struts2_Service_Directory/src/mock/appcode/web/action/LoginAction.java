@@ -15,7 +15,8 @@ public class LoginAction extends ActionSupport {
 		boolean result = new Operations().checkLogin(account, password);
 
 		if (result) {
-			Map<Object,Object> session = ActionContext.getContext().getSession();
+			Map<Object, Object> session = ActionContext.getContext()
+					.getSession();
 			session.put("USER", account);
 			return "success";
 		} else {
@@ -31,10 +32,6 @@ public class LoginAction extends ActionSupport {
 
 	public String showService() {
 		return "service";
-	}
-
-	public String error() {
-		return "error";
 	}
 
 	public LoginAction() {

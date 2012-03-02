@@ -12,19 +12,19 @@
 
 		<action name="login" method="authenticate"
 			class="mock.appcode.web.action.LoginAction">
-			<result name="success" type="tiles">/welcome.tiles</result>
-			<result name="error" type="tiles">/error.tiles</result>
+			<result name="success" type="tiles">welcome.tiles</result>
+			<result name="error" type="tiles">error.tiles</result>
 		</action>
 
 		<action name="showOrganistation" method="showOrganistation"
 			class="mock.appcode.web.action.LoginAction">
-			<result name="org" type="tiles">/org.tiles
+			<result name="org" type="tiles">org.tiles
 			</result>
 		</action>
 
 		<action name="showService" method="showService"
 			class="mock.appcode.web.action.LoginAction">
-			<result name="service" type="tiles">/service.tiles
+			<result name="service" type="tiles">service.tiles
 			</result>
 		</action>
 	</package>
