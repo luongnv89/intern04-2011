@@ -8,4 +8,6 @@
 
 
 <a href="<s:url action="showService" />"> Service</a>
+<br>
+<a href="<s:url action="logout" />"> Logout</a>
 

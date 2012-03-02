@@ -5,25 +5,35 @@ import java.util.Map;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import mock.appcode.common.utility.Users;
 import mock.appcode.dao.daointerface.Operations;
 
 public class LoginAction extends ActionSupport {
 	private String account;
 	private String password;
 
-	public String authenticate() throws Exception {
+	public String execute() throws Exception {
 		boolean result = new Operations().checkLogin(account, password);
 
 		if (result) {
-			Map<Object, Object> session = ActionContext.getContext()
+			Map<String, String> session = ActionContext.getContext()
 					.getSession();
 			session.put("USER", account);
 			return "success";
 		} else {
-			addActionError(getText("error.login"));
-			return "error";
+
+			return "errorlogin";
 		}
 
+	}
+
+	public void validate() {
+		if (getAccount().length() == 0) {
+			addFieldError("account", "Account is required");
+		}
+		if (getPassword().length() == 0) {
+			addFieldError("password", getText("password.required"));
+		}
 	}
 
 	public String showOrganistation() {

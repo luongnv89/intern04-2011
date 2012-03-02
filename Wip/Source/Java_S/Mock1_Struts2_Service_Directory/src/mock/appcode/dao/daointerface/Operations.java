@@ -12,11 +12,11 @@ import mock.appcode.common.utility.Users;
 public class Operations {
 	public boolean checkLogin(String acc, String pass) throws Exception {
 		PreparedStatement ps = null;
-		ResultSet rs = null;
-		Connection con = null;
+		 ResultSet rs = null;
+		 Connection con = null;
 		try {
 			MyConnection mycon = new MyConnection();
-			con = mycon.getMyConnection();
+			 con = mycon.getMyConnection();
 
 			String sql = "Select * From User Where Account = ? and Password = ?";
 			ps = con.prepareStatement(sql);
@@ -24,7 +24,7 @@ public class Operations {
 			ps.setString(1, acc);
 			ps.setString(2, pass);
 
-			rs = ps.executeQuery();
+			 rs = ps.executeQuery();
 
 			if (rs.next()) {
 				return true;

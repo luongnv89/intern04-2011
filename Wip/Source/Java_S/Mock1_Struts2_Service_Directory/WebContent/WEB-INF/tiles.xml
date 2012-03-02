@@ -31,7 +31,7 @@
 
 	<definition name="error.tiles" extends="baselayout">
 		<put-attribute name="title" value="error page" />
-		<put-attribute name="body" value="/error.jsp" />
+		<put-attribute name="body" value="/index.jsp" />
 	</definition>
 
 </tiles-definitions>

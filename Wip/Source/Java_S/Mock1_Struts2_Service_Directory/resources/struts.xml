@@ -10,10 +10,11 @@
 				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
 
-		<action name="login" method="authenticate"
+		<action name="login" method="execute"
 			class="mock.appcode.web.action.LoginAction">
+			<result name="input">/index.jsp</result>
 			<result name="success" type="tiles">welcome.tiles</result>
-			<result name="error" type="tiles">error.tiles</result>
+			<result name="errorlogin">index.jsp</result>
 		</action>
 
 		<action name="showOrganistation" method="showOrganistation"
