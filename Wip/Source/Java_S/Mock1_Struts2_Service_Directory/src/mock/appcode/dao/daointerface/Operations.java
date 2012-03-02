@@ -18,7 +18,7 @@ public class Operations {
 			MyConnection mycon = new MyConnection();
 			 con = mycon.getMyConnection();
 
-			String sql = "Select * From User Where Account = ? and Password = ?";
+			String sql = "Select * From User2 Where Account = ? and Password = ?";
 			ps = con.prepareStatement(sql);
 
 			ps.setString(1, acc);
