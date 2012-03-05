@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baselayout" template="/temp/baselayout.jsp">
+		<put-attribute name="title" value="Title Demo" />
+		<put-attribute name="header" value="/temp/header.jsp" />
+		<put-attribute name="menu" value="/temp/menu.jsp" />
+		<put-attribute name="body" value="/temp/body.jsp" />
+		<put-attribute name="footer" value="/temp/footer.jsp" />
+	</definition>
+
+	<definition name="welcome.tiles" extends="baselayout">
+		<put-attribute name="title" value="Welcome page" />
+		<put-attribute name="body" value="/welcome.jsp" />
+	</definition>
+
+	<definition name="org.tiles" extends="baselayout">
+		<put-attribute name="title" value="Organistation page" />
+		<put-attribute name="body" value="/org_list.jsp" />
+	</definition>
+
+	<definition name="service.tiles" extends="baselayout">
+		<put-attribute name="title" value="Service page" />
+		<put-attribute name="body" value="/service.jsp" />
+	</definition>
+
+	<definition name="error.tiles" extends="baselayout">
+		<put-attribute name="title" value="error page" />
+		<put-attribute name="body" value="/index.jsp" />
+	</definition>
+
+</tiles-definitions>
