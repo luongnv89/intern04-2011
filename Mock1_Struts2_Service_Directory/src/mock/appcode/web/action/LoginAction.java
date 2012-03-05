@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import mock.appcode.dao.daointerface.Operations;
 
-public class LoginAction extends ActionSupport{
+public class LoginAction extends ActionSupport {
 	private String account;
 	private String password;
 
