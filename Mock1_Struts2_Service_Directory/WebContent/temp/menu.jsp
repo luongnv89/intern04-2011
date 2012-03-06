@@ -3,7 +3,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 
 
-<a href="<s:url action="showOrganistation" />"> Organistation</a>
+<a href="<s:url action="viewAllOrganistation" />"> Organistation</a>
 <br>
 
 
