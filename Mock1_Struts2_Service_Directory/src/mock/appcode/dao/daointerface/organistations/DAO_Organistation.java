@@ -42,7 +42,6 @@ public class DAO_Organistation {
 				byte statusactive = rs.getByte("StatusActive");
 				byte statuspreferred = rs.getByte("StatusPreferred");
 				byte statusexpression = rs.getByte("StatusExpression");
-
 				Organistations org = new Organistations(orgid, orgname,
 						contactid, serviceid, shortdescription, addressid, sic,
 						refid, fulldescription, phone, fax, mail, webaddress,
