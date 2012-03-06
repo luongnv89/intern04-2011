@@ -9,4 +9,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ViewAllOrganistationAction extends ActionSupport {
 	private List<Organistations> allOrganistation;
+
+	public String execute() throws Exception {
+		return "success";
+	}
 }
