@@ -1,19 +1,12 @@
-<%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<sj:head />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-	<sj:tabbedpanel id="mytabs" animate="true" collapsible="true"
-		useSelectedTabCookie="true">
-		<sj:tab id="tab1" target="tone" label="Tab One" />
-		<sj:tab id="tab2" target="ttwo" label="Tab Two" />
-		<sj:tab id="tab3" target="tthree" label="Tab Three" />
-		<div id="tone">Test 1</div>
-		<div id="ttwo">Test 2</div>
-		<div id="tthree">Test 3</div>
-	</sj:tabbedpanel>
 
 </body>
 </html>

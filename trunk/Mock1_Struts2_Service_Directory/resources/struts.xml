@@ -17,9 +17,9 @@
 			<result name="errorlogin">index.jsp</result>
 		</action>
 
-		<action name="showOrganistation" method="execute"
-			class="mock.appcode.web.action.organistation.ViewAllOrganistationAction">
-			<result name="success" type="tiles">org.tiles
+		<action name="showOrganistation" method="showOrganistation"
+			class="mock.appcode.web.action.LoginAction">
+			<result name="org" type="tiles">org.tiles
 			</result>
 		</action>
 
