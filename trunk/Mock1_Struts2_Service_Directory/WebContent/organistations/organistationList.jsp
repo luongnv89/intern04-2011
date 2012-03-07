@@ -10,6 +10,31 @@
 	type="text/css" />
 </head>
 <body>
-Content of List Organistation
+	<h1>Organistation</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Organistation Name</th>
+				<th>Head Office Address Line 1</th>
+				<th>Post Code</th>
+				<th>Contact</th>
+				<th>Is Active?</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<s:iterator value="list" status="listStatus"></s:iterator>
+			<tr>
+				<td><s:property value="orgname" /></td>
+				<td><s:property value="" /></td>
+				<td><s:property value="" /></td>
+				<td><s:property value="statusactive" /></td>
+			</tr>
+		</tbody>
+	</table>
+	Page
+	<s:text name="index" />
+	of
+	<s:label name="xxx" value="2" />
 </body>
 </html>

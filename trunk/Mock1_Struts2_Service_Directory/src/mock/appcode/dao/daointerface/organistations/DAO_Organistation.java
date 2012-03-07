@@ -12,7 +12,7 @@ import mock.appcode.dao.daointerface.MyConnection;
 
 public class DAO_Organistation {
 
-	public static List<Organistations> showOrgnistation() {
+	public static List<Organistations> getAllOrgnistation() {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection con = null;
