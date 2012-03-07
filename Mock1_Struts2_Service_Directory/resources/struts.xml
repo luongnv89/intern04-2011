@@ -12,12 +12,12 @@
 
 		<action name="login" method="execute"
 			class="mock.appcode.web.action.LoginAction">
-			<result name="input">/index.jsp</result>
+			<result name="input">index.jsp</result>
 			<result name="success" type="tiles">welcome.tiles</result>
 			<result name="errorlogin">index.jsp</result>
 		</action>
 
-		<action name="viewAllOrganistation"  method="execute"
+		<action name="viewAllOrganistation" method="execute"
 			class="mock.appcode.web.action.organistation.ViewAllOrganistationAction">
 			<result name="success" type="tiles">org.tiles
 			</result>
