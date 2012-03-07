@@ -23,7 +23,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<s:iterator value="list" status="listStatus"></s:iterator>
+			<s:iterator value="listOrganistation" status="listStatus"></s:iterator>
 			<tr>
 				<td><s:property value="orgname" /></td>
 				<td><s:property value="" /></td>
