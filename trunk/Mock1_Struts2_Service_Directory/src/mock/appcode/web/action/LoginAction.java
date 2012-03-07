@@ -35,6 +35,12 @@ public class LoginAction extends ActionSupport {
 		}
 	}
 
+	public String logout() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		session.remove("USER");
+		return "logout_success";
+	}
+
 	public String showOrganistation() {
 		return "org";
 	}
