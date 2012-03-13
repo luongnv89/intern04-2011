@@ -1,0 +1,347 @@
+<Screen
+	CID = "1934362485"
+	AppID = "2"
+	AppVer = "4.3.129.0"
+	DocID = ""
+	HasCanvas = "0"
+	Width = "640"
+	Height = "480"
+	NextCID = "6"
+	RepresentativeRefID = "0"
+	UseDefRepresentative = "1">
+	<Elements
+		CID = "1">
+		<Element
+			CID = "963454482"
+			Type = "WebPage"
+			X = "-167"
+			Y = "-53"
+			Width = "1000"
+			Height = "800"
+			Flags = "0"
+			BackgroundColour = "255,255,255,0,0"
+			BorderColour = "160,160,160,0,0"
+			MarginLeft = "0"
+			MarginRight = "0"
+			MarginTop = "0"
+			MarginBottom = "0"
+			BorderWidth = "0"
+			PageHeight = "400"/>
+		<Element
+			CID = "963470926"
+			Type = "Component"
+			X = "-155"
+			Y = "-51"
+			Width = "981"
+			Height = "203"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,6"
+			FileID = "978C70DA-9BC9-43CC-A916AD9AEA2C52F1"
+			RootPath = "$Container"
+			Filename = "..\..\master\header.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0"/>
+		<Element
+			CID = "963463292"
+			Type = "Component"
+			X = "-154"
+			Y = "158"
+			Width = "196"
+			Height = "399"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,6"
+			FileID = "01F32436-06B4-4522-9E5E1AB7936895D6"
+			RootPath = "$Container"
+			Filename = "..\..\master\left_top.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0"/>
+		<Element
+			CID = "963464126"
+			Type = "HorizontalSeparatorLine"
+			X = "43"
+			Y = "177"
+			Width = "787"
+			Height = "12"
+			Flags = "2"/>
+		<Element
+			CID = "963464519"
+			Type = "StaticText"
+			X = "713"
+			Y = "157"
+			Width = "100"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "33,161,33,0,2"
+			Typeface = ""
+			FontAttributes = "1"
+			TextSize = "100"
+			Text = "12/03/2012"
+			IsDisabled = "0"
+			IsHyperlink = "0"
+			Fill = "None"
+			HorzAlign = "Right"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "963464363"
+			Type = "StaticText"
+			X = "48"
+			Y = "157"
+			Width = "156"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "33,161,33,0,2"
+			Typeface = ""
+			FontAttributes = "1"
+			TextSize = "100"
+			Text = "Service&gt;Programe"
+			IsDisabled = "0"
+			IsHyperlink = "0"
+			Fill = "None"
+			HorzAlign = "Centre"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "963449012"
+			Type = "Icon"
+			X = "52"
+			Y = "160"
+			Width = "16"
+			Height = "16"
+			Flags = "3"
+			RootPath = "$Application"
+			Filename = "Icons\Miscellaneous\ArrowLargeRight.ico"
+			IconIndex = "0"
+			IsDisabled = "0"/>
+		<Element
+			CID = "1015897188"
+			Type = "Icon"
+			X = "-140"
+			Y = "416"
+			Width = "16"
+			Height = "16"
+			Flags = "3"
+			RootPath = "$Application"
+			Filename = "Icons\Miscellaneous\ArrowLargeDown.ico"
+			IconIndex = "0"
+			IsDisabled = "0"/>
+		<Element
+			CID = "328675737"
+			Type = "StaticText"
+			X = "-111"
+			Y = "439"
+			Width = "140"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "0,0,255,0,0"
+			Typeface = "Arial"
+			FontAttributes = "1"
+			TextSize = "110"
+			Text = "List Programes"
+			IsDisabled = "0"
+			IsHyperlink = "1"
+			Fill = "None"
+			HorzAlign = "Left"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "1200359592"
+			Type = "Component"
+			X = "-1337"
+			Y = "-21"
+			Width = "1000"
+			Height = "800"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,6"
+			FileID = "D3FB7165-49A5-4F62-85DA9DA08989733D"
+			RootPath = "$Container"
+			Filename = "list_programes.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0">
+			<Overrides>
+				<Override
+					Type = "Table"
+					SubItemID = "1839203925;">
+					<PropertyStore>
+						<Columns>
+							<ColumnItem
+								OddBackgroundColour = "255,255,255,0,6"
+								EvenBackgroundColour = "255,255,255,0,6"
+								TextColour = "0,0,0,0,9"
+								ColumnID = "3"
+								Heading = "Programe Name"
+								Width = "202"
+								HeaderMargin = "0"
+								CellMargin = "0"
+								HasCustomOddBgColour = "0"
+								HasCustomEvenBgColour = "0"
+								HasCustomTextColour = "0"
+								HeadingAlignment = "Centre"
+								CellAlignment = "Centre"/>
+							<ColumnItem
+								OddBackgroundColour = "255,255,255,0,6"
+								EvenBackgroundColour = "255,255,255,0,6"
+								TextColour = "0,0,0,0,9"
+								ColumnID = "1"
+								Heading = "Description"
+								Width = "231"
+								HeaderMargin = "0"
+								CellMargin = "0"
+								HasCustomOddBgColour = "0"
+								HasCustomEvenBgColour = "0"
+								HasCustomTextColour = "0"
+								HeadingAlignment = "Centre"
+								CellAlignment = "Centre"/>
+							<ColumnItem
+								OddBackgroundColour = "255,255,255,0,6"
+								EvenBackgroundColour = "255,255,255,0,6"
+								TextColour = "0,0,0,0,9"
+								ColumnID = "2"
+								Heading = "Contact"
+								Width = "243"
+								HeaderMargin = "0"
+								CellMargin = "0"
+								HasCustomOddBgColour = "0"
+								HasCustomEvenBgColour = "0"
+								HasCustomTextColour = "0"
+								HeadingAlignment = "Centre"
+								CellAlignment = "Centre"/>
+							<ColumnItem
+								OddBackgroundColour = "255,255,255,0,6"
+								EvenBackgroundColour = "255,255,255,0,6"
+								TextColour = "0,0,0,0,9"
+								ColumnID = "3"
+								Heading = "Is Active"
+								Width = "75"
+								HeaderMargin = "0"
+								CellMargin = "0"
+								HasCustomOddBgColour = "0"
+								HasCustomEvenBgColour = "0"
+								HasCustomTextColour = "0"
+								HeadingAlignment = "Centre"
+								CellAlignment = "Centre"/>
+						</Columns>
+						<Data>
+							<Row
+								IsSelected = "0">
+								<Cell>
+									Web service
+								</Cell>
+								<Cell>
+									service directory
+								</Cell>
+								<Cell>
+									aaabbbccc
+								</Cell>
+								<Cell>
+									yes
+								</Cell>
+							</Row>
+							<Row
+								IsSelected = "0">
+								<Cell>
+									
+								</Cell>
+								<Cell>
+									
+								</Cell>
+								<Cell>
+									
+								</Cell>
+								<Cell>
+									
+								</Cell>
+							</Row>
+						</Data>
+					</PropertyStore>
+				</Override>
+			</Overrides>
+		</Element>
+		<Element
+			CID = "1385437886"
+			Type = "Icon"
+			X = "-132"
+			Y = "442"
+			Width = "16"
+			Height = "16"
+			Flags = "3"
+			RootPath = "$Application"
+			Filename = "Icons\Miscellaneous\ArrowLargeRight.ico"
+			IconIndex = "0"
+			IsDisabled = "0"/>
+		<Element
+			CID = "1771250304"
+			Type = "Component"
+			X = "-2385"
+			Y = "-51"
+			Width = "1000"
+			Height = "800"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,6"
+			FileID = "7AA1E1B4-F833-4C1D-AA58E6E9036FC5C9"
+			RootPath = "$Container"
+			Filename = "amend_programe.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0"/>
+	</Elements>
+	<Connections
+		CID = "2">
+		<Connection
+			CID = "2084782226"
+			Layer = "DesignElements"
+			Trigger = "LeftClick"
+			Type = "Navigation"
+			SubType = "ModelessSwitchTop"
+			SourceSubItemID = ""
+			SourceRefID = "328675737"
+			TargetRefID = "1200359592"
+			ConLineWidth = "2"
+			ConLineColour = "0,0,0,0,0"/>
+		<Connection
+			CID = "765216650"
+			Layer = "DesignElements"
+			Trigger = "LeftClick"
+			Type = "Navigation"
+			SubType = "ModelessSwitchTop"
+			SourceSubItemID = "1839203925;3"
+			SourceRefID = "1200359592"
+			TargetRefID = "1771250304"
+			ConLineWidth = "2"
+			ConLineColour = "0,0,0,0,0"/>
+		<Connection
+			CID = "765229032"
+			Layer = "DesignElements"
+			Trigger = "LeftClick"
+			Type = "Navigation"
+			SubType = "ModelessSwitchTop"
+			SourceSubItemID = "1210793734;"
+			SourceRefID = "1771250304"
+			TargetRefID = "1200359592"
+			ConLineWidth = "2"
+			ConLineColour = "0,0,0,0,0"/>
+	</Connections>
+	<Groups
+		CID = "3"/>
+	<SelectionGroups
+		CID = "4"/>
+	<Notes
+		CID = "5">
+		<Note
+			CID = "1934388903"
+			Name = "Description"
+			NextCID = "2">
+			<Text
+				CID = "1">
+				
+			</Text>
+		</Note>
+	</Notes>
+</Screen>

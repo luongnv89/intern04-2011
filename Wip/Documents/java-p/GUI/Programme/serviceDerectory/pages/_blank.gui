@@ -1,0 +1,190 @@
+<Screen
+	CID = "564005087"
+	AppID = "2"
+	AppVer = "4.3.129.0"
+	DocID = ""
+	HasCanvas = "0"
+	Width = "160"
+	Height = "160"
+	NextCID = "6"
+	RepresentativeRefID = "0"
+	UseDefRepresentative = "1">
+	<Elements
+		CID = "1">
+		<Element
+			CID = "28392927"
+			Type = "WebPage"
+			X = "260"
+			Y = "-182"
+			Width = "1000"
+			Height = "800"
+			Flags = "0"
+			BackgroundColour = "255,255,255,0,0"
+			BorderColour = "160,160,160,0,0"
+			MarginLeft = "0"
+			MarginRight = "0"
+			MarginTop = "0"
+			MarginBottom = "0"
+			BorderWidth = "0"
+			PageHeight = "400"/>
+		<Element
+			CID = "55010810"
+			Type = "Component"
+			X = "272"
+			Y = "-180"
+			Width = "981"
+			Height = "203"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,6"
+			FileID = "978C70DA-9BC9-43CC-A916AD9AEA2C52F1"
+			RootPath = "$Container"
+			Filename = "..\master\header.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0"/>
+		<Element
+			CID = "55002145"
+			Type = "Component"
+			X = "273"
+			Y = "29"
+			Width = "196"
+			Height = "399"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,0"
+			FileID = "01F32436-06B4-4522-9E5E1AB7936895D6"
+			RootPath = "$Container"
+			Filename = "..\master\left_top.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0"/>
+		<Element
+			CID = "1102136798"
+			Type = "HorizontalSeparatorLine"
+			X = "470"
+			Y = "48"
+			Width = "787"
+			Height = "12"
+			Flags = "2"/>
+		<Element
+			CID = "1102147624"
+			Type = "StaticText"
+			X = "1140"
+			Y = "28"
+			Width = "100"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "33,161,33,0,2"
+			Typeface = ""
+			FontAttributes = "1"
+			TextSize = "100"
+			Text = "12/03/2012"
+			IsDisabled = "0"
+			IsHyperlink = "0"
+			Fill = "None"
+			HorzAlign = "Right"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "2112095783"
+			Type = "StaticText"
+			X = "475"
+			Y = "28"
+			Width = "100"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "33,161,33,0,2"
+			Typeface = ""
+			FontAttributes = "1"
+			TextSize = "100"
+			Text = "Service&gt;"
+			IsDisabled = "0"
+			IsHyperlink = "0"
+			Fill = "None"
+			HorzAlign = "Centre"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "1290362974"
+			Type = "Icon"
+			X = "479"
+			Y = "31"
+			Width = "16"
+			Height = "16"
+			Flags = "3"
+			RootPath = "$Application"
+			Filename = "Icons\Miscellaneous\ArrowLargeRight.ico"
+			IconIndex = "0"
+			IsDisabled = "0"/>
+		<Element
+			CID = "1431053156"
+			Type = "Component"
+			X = "-838"
+			Y = "-186"
+			Width = "1000"
+			Height = "800"
+			Flags = "3"
+			BackgroundColour = "255,255,255,0,6"
+			FileID = "26304962-2564-40A4-BA34BF625C67A37B"
+			RootPath = "$Container"
+			Filename = "programe\programes.gui"
+			Background = "Transparent"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			MaintainSize = "0"/>
+		<Element
+			CID = "97195568"
+			Type = "Icon"
+			X = "287"
+			Y = "286"
+			Width = "16"
+			Height = "16"
+			Flags = "3"
+			RootPath = "$Application"
+			Filename = "Icons\Miscellaneous\ArrowLargeRight.ico"
+			IconIndex = "0"
+			IsDisabled = "0"/>
+	</Elements>
+	<Connections
+		CID = "2">
+		<Connection
+			CID = "1431046219"
+			Layer = "DesignElements"
+			Trigger = "LeftClick"
+			Type = "Navigation"
+			SubType = "ModelessSwitchTop"
+			SourceSubItemID = "483393623;"
+			SourceRefID = "55002145"
+			TargetRefID = "1431053156"
+			ConLineWidth = "2"
+			ConLineColour = "0,0,0,0,0"/>
+		<Connection
+			CID = "1498764032"
+			Layer = "DesignElements"
+			Trigger = "LeftClick"
+			Type = "Navigation"
+			SubType = "ModelessSwitchTop"
+			SourceSubItemID = "963463292;483393623;"
+			SourceRefID = "1431053156"
+			TargetRefID = "28392927"
+			ConLineWidth = "2"
+			ConLineColour = "0,0,0,0,0"/>
+	</Connections>
+	<Groups
+		CID = "3"/>
+	<SelectionGroups
+		CID = "4"/>
+	<Notes
+		CID = "5">
+		<Note
+			CID = "564021054"
+			Name = "Description"
+			NextCID = "2">
+			<Text
+				CID = "1">
+				
+			</Text>
+		</Note>
+	</Notes>
+</Screen>

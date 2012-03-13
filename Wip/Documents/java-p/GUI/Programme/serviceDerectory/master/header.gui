@@ -1,0 +1,150 @@
+<Screen
+	CID = "364603418"
+	AppID = "2"
+	AppVer = "4.3.129.0"
+	DocID = ""
+	HasCanvas = "0"
+	Width = "640"
+	Height = "480"
+	NextCID = "6"
+	RepresentativeRefID = "0"
+	UseDefRepresentative = "1">
+	<Elements
+		CID = "1">
+		<Element
+			CID = "1815375744"
+			Type = "Bitmap"
+			X = "-2022"
+			Y = "-957"
+			Width = "981"
+			Height = "203"
+			Flags = "0"
+			RootPath = "$Container"
+			Filename = "..\images\banner.png"
+			Placement = "Stretch"
+			HorzAlign = "Left"
+			VertAlign = "Top"
+			ClipLeft = "0"
+			ClipRight = "0"
+			ClipTop = "0"
+			ClipBottom = "0"
+			SliceLeft = "0"
+			SliceRight = "0"
+			SliceTop = "0"
+			SliceBottom = "0"/>
+		<Element
+			CID = "1815366334"
+			Type = "StaticText"
+			X = "-1207"
+			Y = "-925"
+			Width = "53"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "255,104,32,0,0"
+			Typeface = ""
+			FontAttributes = "5"
+			TextSize = "90"
+			Text = ".Register"
+			IsDisabled = "0"
+			IsHyperlink = "1"
+			Fill = "None"
+			HorzAlign = "Left"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "460149228"
+			Type = "StaticText"
+			X = "-1148"
+			Y = "-893"
+			Width = "42"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "255,104,32,0,0"
+			Typeface = ""
+			FontAttributes = "5"
+			TextSize = "90"
+			Text = ".Login"
+			IsDisabled = "0"
+			IsHyperlink = "1"
+			Fill = "None"
+			HorzAlign = "Left"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "1134777715"
+			Type = "StaticText"
+			X = "-1101"
+			Y = "-873"
+			Width = "46"
+			Height = "21"
+			Flags = "0"
+			FillColour = "236,233,216,0,16"
+			TextColour = "255,104,32,0,0"
+			Typeface = ""
+			FontAttributes = "5"
+			TextSize = "90"
+			Text = ".Logout"
+			IsDisabled = "0"
+			IsHyperlink = "1"
+			Fill = "None"
+			HorzAlign = "Left"
+			VertAlign = "Centre"/>
+		<Element
+			CID = "1123971091"
+			Type = "TextLinkList"
+			X = "-1495"
+			Y = "-780"
+			Width = "454"
+			Height = "26"
+			Flags = "0"
+			TextColour = "0,0,255,0,0"
+			SeparatorColour = "0,0,0,0,9"
+			Typeface = ""
+			FontAttributes = "5"
+			TextSize = "100"
+			NextItemID = "7"
+			SeparatorText = "| "
+			SeparatorLeftMargin = "8"
+			SeparatorRightMargin = "7"
+			Mirror = "0"
+			HorzAlign = "Left"
+			VertAlign = "Centre">
+			<TextLinkListItem
+				Item = " Home"
+				ItemID = "6"/>
+			<TextLinkListItem
+				Item = "Organisations"
+				ItemID = "1"/>
+			<TextLinkListItem
+				Item = "Services"
+				ItemID = "2"/>
+			<TextLinkListItem
+				Item = "Geography"
+				ItemID = "3"/>
+			<TextLinkListItem
+				Item = "Premises"
+				ItemID = "4"/>
+			<TextLinkListItem
+				Item = "Contacts"
+				ItemID = "5"/>
+		</Element>
+	</Elements>
+	<Connections
+		CID = "2"/>
+	<Groups
+		CID = "3"/>
+	<SelectionGroups
+		CID = "4"/>
+	<Notes
+		CID = "5">
+		<Note
+			CID = "364593100"
+			Name = "Description"
+			NextCID = "2">
+			<Text
+				CID = "1">
+				
+			</Text>
+		</Note>
+	</Notes>
+</Screen>
