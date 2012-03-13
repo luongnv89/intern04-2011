@@ -1,0 +1,57 @@
+<Catalogue
+	CID = "1"
+	NextCID = "2">
+	<Files
+		CID = "1">
+		<FileInfo
+			ID = "01F32436-06B4-4522-9E5E1AB7936895D6"
+			RelativePath = "master\left_top.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "master\left_top.gui"/>
+		<FileInfo
+			ID = "0D31764B-ADAC-4284-8D74FCB04618391E"
+			RelativePath = "pages\programe\lookup_contact.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\programe\lookup_contact.gui"/>
+		<FileInfo
+			ID = "26304962-2564-40A4-BA34BF625C67A37B"
+			RelativePath = "pages\programe\programes.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\programes.gui"/>
+		<FileInfo
+			ID = "382B94DE-EA22-4BF9-B0435331713FF1E8"
+			RelativePath = "pages\programe\mark_inactive_programes.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\programe\mark_inactive_programes.gui"/>
+		<FileInfo
+			ID = "64190BCF-5717-41CE-935FC2CE064F79D4"
+			RelativePath = "pages\programe\create_programe.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\programe\create_programe.gui"/>
+		<FileInfo
+			ID = "7AA1E1B4-F833-4C1D-AA58E6E9036FC5C9"
+			RelativePath = "pages\programe\amend_programe.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\programe\amend_programe.gui"/>
+		<FileInfo
+			ID = "978C70DA-9BC9-43CC-A916AD9AEA2C52F1"
+			RelativePath = "master\header.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "master\header.gui"/>
+		<FileInfo
+			ID = "AFF81101-C50E-42CF-A7781032259B1F80"
+			RelativePath = "pages\_blank.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\_blank.gui"/>
+		<FileInfo
+			ID = "D3FB7165-49A5-4F62-85DA9DA08989733D"
+			RelativePath = "pages\programe\list_programes.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\list_programes.gui"/>
+		<FileInfo
+			ID = "EBBBBDB4-06E2-4443-AA492931A042009C"
+			RelativePath = "pages\service\mark_inactive.gui"
+			OriginalRoot = "$Project"
+			OriginalPath = "pages\mark_inactive.gui"/>
+	</Files>
+</Catalogue>

@@ -1,0 +1,34 @@
+<Project
+	CID = "1"
+	NextCID = "4">
+	<Links
+		CID = "1">
+		<Link
+			RootPath = "$Project"
+			Filename = "Web Widgets Library.gdp"
+			RelativePath = ""/>
+	</Links>
+	<Options
+		CID = "2"/>
+	<PlugIns
+		CID = "3"
+		NextCID = "2">
+		<DocGenerators
+			CID = "1"
+			NextCID = "2">
+			<CS:DocGenHTML
+				CID = "1"
+				OptionsString = ""
+				AddDateStamp = "0"
+				AddTimeStamp = "0"
+				RemoveSpaces = "0"
+				IncludeRefComponents = "0"
+				IncludeLinkedProjects = "0"
+				DeepDocDescriptions = "0"
+				IncludeOption = "0"
+				ContentOption = "0"
+				SortDesignsOption = "0"
+				LastFullDateTime = "2012-03-12 03:08:00"/>
+		</DocGenerators>
+	</PlugIns>
+</Project>
