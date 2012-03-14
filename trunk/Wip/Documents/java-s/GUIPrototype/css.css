@@ -1,0 +1,26 @@
+html{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+#bar a{
+padding:4px 6px;
+background:#EFEFEF;
+text-decoration:none;
+font-weight:bold;
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-top:1px solid #CCCCCC;
+}
+#bar a:hover{
+color:#003366;
+}
+#container{
+background:#EFEFEF;
+padding:10px;
+}
+div.maintab div {
+display: none
+}
+div.maintab div:target {
+display: block
+}
