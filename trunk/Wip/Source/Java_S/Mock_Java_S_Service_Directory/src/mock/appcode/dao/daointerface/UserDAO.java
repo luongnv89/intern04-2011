@@ -21,7 +21,7 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 
 	}
 
-	public Users authenticate(String account, String password) {
+	public boolean authenticate(String account, String password) {
 		try {
 			session.getTransaction().begin();
 			String sql = "from User2 where account = ? and password = ?";
@@ -31,14 +31,16 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 			Users result = (Users) query.uniqueResult();
 			session.flush();
 			session.getTransaction().commit();
-			return result;
+			if(result!=null)
+				return true;
+			
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
 				session.getTransaction().rollback();
 			}
 			e.printStackTrace();
 		}
-		return null;
+		return false;
 	}
 
 	public Users[] findByAccount(String account) {
