@@ -1,6 +1,5 @@
 package mock.appcode.web.action;
 
-import mock.appcode.common.utility.Users;
 import com.opensymphony.xwork2.ActionSupport;
 import mock.appcode.dao.daointerface.UserDAO;
 
