@@ -15,7 +15,7 @@ public class UserAction extends ActionSupport {
 			return SUCCESS;
 		}
 
-		return LOGIN;
+		return "errorlogin";
 
 	}
 
