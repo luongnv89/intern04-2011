@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Service</title>
+        <link href="style_panel.css" rel="stylesheet" type="text/css" />
+        <script language="javascript" src="popup_window.js" ></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <input type="button" value="check" onclick="showtab();" />
+            </div>
+            <div id="content">
+                <div id="sidebar">
+                    <ul id="menubar">
+                        <li><a id="tab1" class="link_active" href="#detail1">Detail
+                                1</a></li>
+                        <li><a id="tab2" class="link_active" href="#detail2">Detail
+                                2</a></li>
+                        <li><a id="tab3" class="link_active" href="#detail3">Detail
+                                3</a></li>
+                        <li><a id="tab4" class="link_invisible" href="#organisation">Organisation</a></li>
+                        <li><a id="tab5" class="link_invisible" href="#premises">Premises</a></li>
+                        <li><a id="tab6" class="link_invisible" href="#funding">Funding</a></li>
+                    </ul>
+                </div>
+                <div id="primary">
+                    <div id="detail1" class="tab">detail 1</div>
+                    <div id="detail2" class="tab">detail 2</div>
+                    <div id="detail3" class="tab">detail 3</div>
+                    <div id="organisation" class="tab">
+                        <div class="tier_one">
+                            <form name="organisation_action" action="#">
+                                <ul class="action">
+                                    <li><input type="button" value="In-active" onclick="open_mark_inactive_service();" /></li>
+                                    <li><input type="button" value="Save" /></li>
+                                    <li><input type="button" value="Back" /></li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="tier_two">
+                            <table border="0" align="left" cellpadding="1" cellspacing="1">
+                                <tr class="title">
+                                    <td width="145">Organisation Name</td>
+                                    <td width="387">Description</td>
+                                    <td width="158">Roles</td>
+                                    <td width="77">&nbsp;</td>
+                                    <td width="280">&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>fg1</td>
+                                    <td>fafasfasfge5rg </td>
+                                    <td>Lead</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>fashfjk</td>
+                                    <td>fahfsahjt4t8439tfgs</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>fakfjt43thkb</td>
+                                    <td>fjkldj94tug`</td>
+                                    <td>Auditor</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>nghiafaw</td>
+                                    <td>ejg4A</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>fagreh</td>
+                                    <td>y45uhj</td>
+                                    <td>Delivery,Auditor</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>hsdgh</td>
+                                    <td>hdfht6ru</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>hrtj6ujj</td>
+                                    <td>hdhfh</td>
+                                    <td>Funder,Auditor</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>jdjdfj</td>
+                                    <td>j7kjvkvjk</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>sdhshsh</td>
+                                    <td>jdfjhs</td>
+                                    <td>Lead</td>
+                                    <td><a href="#organisation" onclick="open_popup_organisation();;">edit roles</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tier_three"><table width="200" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td><a href="#"><img src="images/fpg.gif" /></a><a href="#"><img src="images/ppg.gif" /></a></td>
+                                    <td>Page <input name="index" type="text" value="1" size="3"/> of 2</td>
+                                    <td><a href="#"><img src="images/np.gif" /></a><a href="#"><img src="images/lp.gif" /></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="popup_organisation" class="inactive">
+                            <div class="popup_content">
+                                <span ><img src="images/close.png" title="Close" onclick="close_popup_organisation();" /></span>
+                                <form action="#" name="roles_of_organisation">
+                                    <table width="200" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td class="title">Change Roles of Organisation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div id="list_extend">
+                                                    <ul>
+                                                        <li style="background-color:#00D7D7"><input type="checkbox" name="roles_organisation" value="1"/> Funder</li>
+                                                        <li style="background-color:#80FFFF"><input type="checkbox" name="roles_organisation" value="2"/> Lead</li>
+                                                        <li style="background-color:#DFF"><input type="checkbox" name="roles_organisation" value="3"/> Delivery</li>
+                                                        <li style="background-color:#FFF"><input type="checkbox" name="roles_organisation" value="4"/> Auditor</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action"><input type="button" value="Ok" onclick="close_popup_organisation();" /><input type="button" value="Cancel" onclick="close_popup('popup_window');"/></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="premises" class="tab">
+                        <div class="tier_one">
+                            <form name="organisation_action" action="#">
+                                <ul class="action">
+                                    <li class="action"><input type="button" value="In-active" onclick="open_mark_inactive_service();"/></li>
+                                    <li><input type="button" value="Save" /></li>
+                                    <li><input type="button" value="Back" /></li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="tier_two">
+                            <table border="0" align="left" cellpadding="1" cellspacing="1">
+                                <tr class="title">
+                                    <td width="104">Premises Name</td>
+                                    <td width="221">Address</td>
+                                    <td width="155">Phone Number</td>
+                                    <td width="115">Project Code</td>
+                                    <td width="103">&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Cau Giay</td>
+                                    <td>16 Maurer Court Greenwich Line 1</td>
+                                    <td>2342342</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#premises" style="font-style:italic;color:#03F;">Remove</a></td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>Xuan Thuy</td>
+                                    <td>Pham Hung Line 1</td>
+                                    <td>0906132567</td>
+                                    <td>SE0202</td>
+                                    <td><a href="#premises" style="font-style:italic;color:#03F;">Remove</a></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tier_three">
+                            <form action="#premises" name="associate_new_premises">
+                                <input type="button" value="Associate New Premises"
+                                       onclick="open_popup_premises();" />
+                            </form>
+                        </div>
+                        <div id="popup_premises" class="inactive">
+                            <div class="popup_content">
+                                <span><img src="images/close.png" title="Close"
+                                           onclick="close_popup_premises();" /></span>
+                                <form action="#" name="associate_premises">
+                                    <table border="0" align="left" cellpadding="1" cellspacing="1">
+                                        <tr class="title">
+                                            <td width="104">Premises Name</td>
+                                            <td width="221">Address</td>
+                                            <td width="155">Phone Number</td>
+                                            <td width="115">Project Code</td>
+                                            <td width="103">&nbsp;</td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>Cau Giay</td>
+                                            <td>16 Maurer Court Greenwich Line 1</td>
+                                            <td>2342342</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="inactive">
+                                            <td>My Dinh</td>
+                                            <td>Toyota My Dinh</td>
+                                            <td>0906132567</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="inactive">
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="inactive">
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr class="inactive">
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                    <input type="button" value="Select" onclick="close_popup_premises();"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="funding" class="tab">funding</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
