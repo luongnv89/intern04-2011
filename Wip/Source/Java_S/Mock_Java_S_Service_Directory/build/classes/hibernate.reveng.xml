@@ -3,5 +3,5 @@
 <hibernate-reverse-engineering>
 	<schema-selection match-catalog="Service_Directory"
 		match-schema="dbo" />
-	<table-filter match-name="User2" />
+	<table-filter match-name="User" />
 </hibernate-reverse-engineering>
