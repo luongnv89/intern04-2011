@@ -1,7 +1,9 @@
 package mock.appcode.web.action;
 
-import com.opensymphony.xwork2.ActionSupport;
+import mock.appcode.common.utility.Users;
 import mock.appcode.dao.daointerface.UserDAO;
+
+import com.opensymphony.xwork2.ActionSupport;
 
 public class UserAction extends ActionSupport {
 
@@ -10,8 +12,8 @@ public class UserAction extends ActionSupport {
 
 	public String doLogin() throws Exception {
 		UserDAO userDAO = new UserDAO();
-		boolean result = userDAO.authenticate(account, password);
-		if (result) {
+		Users user = userDAO.authenticate(account, password);
+		if (user!=null) {
 			return SUCCESS;
 		}
 

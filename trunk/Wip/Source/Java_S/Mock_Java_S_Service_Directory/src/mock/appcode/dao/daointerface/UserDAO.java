@@ -23,10 +23,10 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 		this.session = factory.getCurrentSession();
 	}
 
-	public boolean authenticate(String account, String password) {
+	public Users authenticate(String account, String password) {
 		try {
 			session.getTransaction().begin();
-			String sql = "from User2 where account = ? and password = ?";
+			String sql = "from User where account = ? and password = ?";
 			Query query = (Query) session.createQuery(sql);
 			query.setString(0, account);
 			query.setString(1, password);
@@ -34,8 +34,7 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 			session.flush();
 			session.getTransaction().commit();
 			System.out.print(result.toString());
-			if (result != null)
-				return true;
+			return result;
 
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
@@ -43,7 +42,7 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 			}
 			e.printStackTrace();
 		}
-		return false;
+		return null;
 	}
 
 	public Users[] findByAccount(String account) {
