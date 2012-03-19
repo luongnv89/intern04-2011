@@ -11,14 +11,16 @@ import mock.appcode.common.utility.Users;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import mock.appcode.common.utility.HibernateUtil;
 
 public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 
 	private Session session;
-	Users user=new Users();
+	Users user = null;
 
 	public UserDAO() {
-
+		SessionFactory factory = HibernateUtil.getSessionFactory();
+		this.session = factory.getCurrentSession();
 	}
 
 	public boolean authenticate(String account, String password) {
@@ -31,9 +33,10 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 			Users result = (Users) query.uniqueResult();
 			session.flush();
 			session.getTransaction().commit();
-			if(result!=null)
+			System.out.print(result.toString());
+			if (result != null)
 				return true;
-			
+
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
 				session.getTransaction().rollback();
@@ -94,19 +97,18 @@ public class UserDAO extends HibernateDaoSupport implements IDAO<Users> {
 
 	@Override
 	public void addNew(Users entity) throws Exception {
-		SessionFactory sessionFactory = 
-		         (SessionFactory) ServletActionContext.getServletContext()
-	                     .getAttribute(HibernateListener.KEY_NAME);
-	 
-			Session session = sessionFactory.openSession();
-	 
-			//save it
-	 
-			session.beginTransaction();
-			session.save(user);
-			session.getTransaction().commit();
-	 
-			//reload the customer list
+		SessionFactory sessionFactory = (SessionFactory) ServletActionContext
+				.getServletContext().getAttribute(HibernateListener.KEY_NAME);
+
+		Session session = sessionFactory.openSession();
+
+		// save it
+
+		session.beginTransaction();
+		session.save(user);
+		session.getTransaction().commit();
+
+		// reload the customer list
 	}
 
 }

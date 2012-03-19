@@ -17,8 +17,8 @@
 			<column name="Email" length="50" not-null="true" />
 		</property>
 
-		<property name="roles" type="string">
-			<column name="Roles" length="15" not-null="true" />
+		<property name="role" type="string">
+			<column name="Role" length="15" not-null="true" />
 		</property>
 
 		<property name="password" type="string">
