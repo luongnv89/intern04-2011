@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baselayout" template="/pages/tiles/baselayout.jsp">
+		<put-attribute name="title" value="Title Demo" />
+		<put-attribute name="header" value="/pages/tiles/header.jsp" />
+		<put-attribute name="menu" value="/pages/tiles/menu.jsp" />
+		<put-attribute name="body" value="/pages/tiles/body.jsp" />
+		<put-attribute name="footer" value="/pages/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="welcome.tiles" extends="baselayout">
+		<put-attribute name="title" value="Welcome page" />
+		<put-attribute name="body" value="/pages/welcome.jsp" />
+	</definition>
+
+	<definition name="org.tiles" extends="baselayout">
+		<put-attribute name="title" value="Organistation page" />
+		<put-attribute name="body"
+			value="/pages/organistations/organistationList.jsp" />
+	</definition>
+
+</tiles-definitions>
