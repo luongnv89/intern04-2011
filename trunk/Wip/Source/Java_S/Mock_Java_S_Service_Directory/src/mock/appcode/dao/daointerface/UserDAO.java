@@ -19,7 +19,8 @@ public class UserDAO extends HibernateUtil {
 
 	public boolean authenticate(String account, String password) {
 		try {
-			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+			Session session = HibernateUtil.getSessionFactory()
+					.openSession();
 			session.beginTransaction();
 
 			Query query = (Query) session
@@ -29,17 +30,9 @@ public class UserDAO extends HibernateUtil {
 			result = query.uniqueResult();
 			session.flush();
 			session.getTransaction().commit();
-
 			if (result != null) {
 				return true;
 			}
-			// Iterator<Object> us = query.iterate();
-			// while (us.hasNext()) {
-			// session.close();
-			// return true;
-			// }
-			// session.close();
-			// return false;
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
 				session.getTransaction().rollback();
