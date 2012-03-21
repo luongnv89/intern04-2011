@@ -14,11 +14,11 @@
 				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
 
-		<action name="login" method="doLogin"
+		<action name="login" method="doLogin" 
 			class="mock.appcode.web.action.UserAction">
 			<result name="input">/index.jsp</result>
 			<result name="success" type="tiles">welcome.tiles</result>
-			<result name="errorlogin">/index.jsp</result>
+			<result name="error">/index.jsp</result>
 		</action>
 
 

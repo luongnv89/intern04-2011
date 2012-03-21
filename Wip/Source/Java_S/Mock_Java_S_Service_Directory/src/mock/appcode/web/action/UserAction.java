@@ -3,9 +3,8 @@ package mock.appcode.web.action;
 import mock.appcode.dao.daointerface.UserDAO;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
 
-public class UserAction extends ActionSupport implements ModelDriven{
+public class UserAction extends ActionSupport {
 
 	private String account = null;
 	private String password = null;
@@ -17,7 +16,7 @@ public class UserAction extends ActionSupport implements ModelDriven{
 			return SUCCESS;
 		}
 
-		return "errorlogin";
+		return ERROR;
 
 	}
 
@@ -37,11 +36,6 @@ public class UserAction extends ActionSupport implements ModelDriven{
 		this.password = password;
 	}
 
-	@Override
-	public Object getModel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	// public void validate() {
 	// if (account.length() == 0) {
