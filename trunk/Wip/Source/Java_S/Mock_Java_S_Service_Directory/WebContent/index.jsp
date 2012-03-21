@@ -29,7 +29,7 @@
 		<div id="body">
 			<table>
 
-				<s:form action="login" method="post">
+				<s:form action="login" method="post" >
 
 					<br>
 					<s:textfield name="account" label="Account"></s:textfield>
