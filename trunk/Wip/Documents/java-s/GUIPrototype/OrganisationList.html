@@ -3,56 +3,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
-<style type="text/css">
-<!--
-.style1 {
-	color: #009900;
-	font-weight: bold;
-	font-size: 24px;
-}
-.style2 {color: #33CCFF}
-.style3 {
-	font-size: 14px;
-	font-weight: bold;
-	color: #0066FF;
-}
--->
-</style>
+<link href="css.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<span class="style1">Organisation List</span>
+<span class="title">Organisation List</span>
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFEFEF">
   <tr>
-    <td colspan="7" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999;">&nbsp;</td>
+    <td colspan="7" class="top">&nbsp;</td>
   </tr>
   <tr>
-    <td width="2%" rowspan="3" style="border-left: 1px solid #999999;">&nbsp;</td>
-    <td colspan="3" ><span class="style3"><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a></span></td>
+    <td width="2%" rowspan="3" class="left">&nbsp;</td>
+    <td colspan="3" ><span class="filter"><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a></span></td>
     <td colspan="2" align="right"><label>
       <input name="create" type="submit" id="create" value="Create" />
     </label>      <label>
       <input type="checkbox" name="checkbox" value="checkbox" />
       Include In-active</label></td>
-    <td width="2%" rowspan="3" style=" border-right:1px solid #999999;">&nbsp;</td>
+    <td width="2%" rowspan="3" class="right">&nbsp;</td>
   </tr>
   <tr>
-    <td width="19%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Organisation Name </strong></td>
-    <td width="31%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Head Office Address Line 1 </strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Postcode</strong></td>
-    <td width="26%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Contact</strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Is Active? </strong></td>
+    <td width="19%" class="titleColumn"><strong>Organisation Name </strong></td>
+    <td width="31%" class="titleColumn"><strong>Head Office Address Line 1 </strong></td>
+    <td width="10%" class="titleColumn"><strong>Postcode</strong></td>
+    <td width="26%" class="titleColumn"><strong>Contact</strong></td>
+    <td width="10%" class="titleColumn"><strong>Is Active? </strong></td>
   </tr>
   <tr >
-    <td style="border:1px solid #999999;"><span class="style2">1</span></td>
-    <td style="border:1px solid #999999;">10 Maurer Court Greenwich Line 1 </td>
-    <td style="border:1px solid #999999;">SE10 0SS </td>
-    <td style="border:1px solid #999999;">Isax NewTon </td>
-    <td style="border:1px solid #999999;">Yes</td>
+    <td class="border"><span class="number">1</span></td>
+    <td class="border">10 Maurer Court Greenwich Line 1 </td>
+    <td class="border">SE10 0SS </td>
+    <td class="border">Isax NewTon </td>
+    <td class="border">Yes</td>
   </tr>
   <tr>
-    <td colspan="7" style="border-bottom: 1px solid #999999; border-left:1px solid #999999; border-right:1px solid #999999;">&nbsp;</td>
+    <td colspan="7" class="bottom">&nbsp;</td>
   </tr>
 </table>
 </form>

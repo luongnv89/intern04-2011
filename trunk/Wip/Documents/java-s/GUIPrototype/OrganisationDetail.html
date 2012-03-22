@@ -9,7 +9,7 @@
 
 <body>
 
-<h3 class="style1">Organisation Detail</h3>
+<h3 class="title">Organisation Detail</h3>
 <br />
 <div id="bar">
 <form>
@@ -37,11 +37,11 @@
   <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="6" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999;">&nbsp;</td>
+    <td colspan="6" class="top">&nbsp;</td>
   </tr>
   <tr>
-    <td width="1%" rowspan="12" style="border-left:1px solid #999999;">&nbsp;</td>
-    <td width="15%">Organisation Name <span class="style1">*</span></td>
+    <td width="1%" rowspan="12" class="left">&nbsp;</td>
+    <td width="15%">Organisation Name <span class="title">*</span></td>
     <td width="35%"><label>
       <input type="text" name="textfield" />
     </label></td>
@@ -49,10 +49,10 @@
     <td width="33%"><label>
       <input type="checkbox" name="checkbox" value="checkbox" />
     </label></td>
-    <td width="1%" rowspan="12" style="border-right: 1px solid #999999;">&nbsp;</td>
+    <td width="1%" rowspan="12" class="right">&nbsp;</td>
   </tr>
   <tr>
-    <td rowspan="2">Organisation Short Description <span class="style1">*</span></td>
+    <td rowspan="2">Organisation Short Description <span class="title">*</span></td>
     <td rowspan="2"><label>
       <textarea name="textarea"></textarea>
     </label></td>
@@ -60,19 +60,19 @@
     <td><input type="checkbox" name="checkbox2" value="checkbox" /></td>
   </tr>
   <tr>
-    <td>Type of Business <span class="style1">*</span></td>
+    <td>Type of Business <span class="title">*</span></td>
     <td><input type="text" name="textfield32" disabled="disabled" />
-      <span class="style2">Lookup</span> </td>
+      <span class="number">Lookup</span> </td>
   </tr>
   <tr>
     <td>Lead Contact </td>
     <td><input type="text" name="textfield3" disabled="disabled" />
-      <span class="style2">Lookup</span> </td>
+      <span class="number">Lookup</span> </td>
     <td>SIC code </td>
     <td><input type="text" name="textfield33" disabled="disabled"  /></td>
   </tr>
   <tr>
-    <td>Address Line 1 <span class="style1">*</span></td>
+    <td>Address Line 1 <span class="title">*</span></td>
     <td><input type="text" name="textfield22" /></td>
     <td rowspan="2">Organisation full Description </td>
     <td rowspan="2"><label>
@@ -86,13 +86,13 @@
   <tr>
     <td>Address Line 3 </td>
     <td><input type="text" name="textfield24" /></td>
-    <td>Phone Number <span class="style1">*</span></td>
+    <td>Phone Number <span class="title">*</span></td>
     <td><input type="text" name="textfield222" /></td>
   </tr>
   <tr>
-    <td>Postcode <span class="style1">*</span></td>
+    <td>Postcode <span class="title">*</span></td>
     <td><input type="text" name="textfield25" />
-      <span class="style2">Lookup</span></td>
+      <span class="number">Lookup</span></td>
     <td>Fax</td>
     <td><input type="text" name="textfield223" /></td>
   </tr>
@@ -126,7 +126,7 @@
     <td><input type="text" name="textfield227" /></td>
   </tr>
   <tr>
-    <td colspan="6" style="border-bottom:1px solid #999999; border-left: 1px solid #999999; border-right: 1px solid #999999;">&nbsp;</td>
+    <td colspan="6" class="top">&nbsp;</td>
   </tr>
 </table>
 </form>
@@ -137,12 +137,12 @@
  <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="6" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999;">&nbsp;</td>
+    <td colspan="6" class="top">&nbsp;</td>
   </tr>
   <tr>
-    <td width="1%" rowspan="4" style="border-left:1px solid #999999;">&nbsp;</td>
+    <td width="1%" rowspan="4" class="left">&nbsp;</td>
     <td width="11%">Organisation Specicallism </td>
-    <td width="39%"><div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td width="39%"><div id="block">
       <label>
       <input type="checkbox" name="checkbox" value="checkbox" />
       Blind/Partially Sighted 
@@ -157,7 +157,7 @@
 </label>
     </div></td>
     <td width="15%">Service Personal Circumtances Capabilities </td>
-    <td width="33%"> <div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td width="33%"> <div id="block">
       <label>
       <input type="checkbox" name="checkbox18" value="checkbox" />
       Carer Resboncibilities</label>
@@ -166,12 +166,12 @@
 	  <input type="checkbox" name="checkbox19" value="checkbox" />
 	  Lone Parent</label>
     </div> </td>
-    <td width="1%" rowspan="4" style="border-right: 1px solid #999999;">&nbsp;</td>
+    <td width="1%" rowspan="4" class="right">&nbsp;</td>
   </tr>
   
   <tr>
     <td>Service Disabilities Capabilities</td>
-    <td> <div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td> <div id="block">
       <label>
       <input type="checkbox" name="checkbox6" value="checkbox" />
       Chest, Breathing problems</label>
@@ -189,7 +189,7 @@
 	  Difficulty in hearing</label>
     </div> </td>
     <td>Service Ethnicity Capabilities </td>
-    <td> <div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td> <div id="block">
       <label>
       <input type="checkbox" name="checkbox20" value="checkbox" />
       White British</label>
@@ -215,7 +215,7 @@
   
   <tr>
     <td>Service Barriers Capabilities </td>
-    <td> <div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td> <div id="block">
       <label>
       <input type="checkbox" name="checkbox10" value="checkbox" />
       Lone Parent</label>
@@ -233,7 +233,7 @@
 	  Basic Skills</label>
     </div> </td>
     <td>Accreditation</td>
-    <td> <div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td> <div id="block">
       <label>
       <input type="checkbox" name="checkbox25" value="checkbox" />
       Two Ticks</label>
@@ -258,7 +258,7 @@
   
   <tr>
     <td>Service Benefits Capabilities </td>
-    <td> <div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td> <div id="block">
       <label>
       <input type="checkbox" name="checkbox14" value="checkbox" />
       Disability Living Allowance</label>
@@ -276,11 +276,11 @@
 	  Income Support</label>
     </div> </td>
     <td>&nbsp;</td>
-    <td> <div style="display:block; overflow:scroll; height:100px; width:400px;"></div> </td>
+    <td>  </td>
   </tr>
   
   <tr>
-    <td colspan="6" style="border-bottom:1px solid #999999; border-left: 1px solid #999999; border-right: 1px solid #999999;">&nbsp;</td>
+    <td colspan="6" class="bottom">&nbsp;</td>
   </tr>
 </table>
 </form>
@@ -290,12 +290,12 @@
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="6" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999;">&nbsp;</td>
+    <td colspan="6" class="top">&nbsp;</td>
   </tr>
   <tr>
-    <td width="1%" rowspan="2" style="border-left:1px solid #999999;">&nbsp;</td>
+    <td width="1%" rowspan="2" class="left">&nbsp;</td>
     <td width="11%">EOI Programmes </td>
-    <td width="39%"><div style="display:block; overflow:scroll; height:100px; width:400px;">
+    <td width="39%"><div id="block">
       <label>
       <input type="checkbox" name="checkbox" value="checkbox" />
       Programme 1</label>
@@ -318,14 +318,14 @@
     </div></td>
     <td width="15%">&nbsp;</td>
     <td width="33%">&nbsp;</td>
-    <td width="1%" rowspan="2" style="border-right: 1px solid #999999;">&nbsp;</td>
+    <td width="1%" rowspan="2" class="right">&nbsp;</td>
   </tr>
   
 
   
   <tr>
     <td>EOI Services </td>
-    <td><div style="overflow:scroll; display:block; height:100px; width:400px;">
+    <td><div id="block">
       <label>
       <input type="checkbox" name="checkbox6" value="checkbox" />
       Service 1</label>
@@ -344,7 +344,7 @@
   
 
   <tr>
-    <td colspan="6" style="border-bottom:1px solid #999999; border-left: 1px solid #999999; border-right: 1px solid #999999;">&nbsp;</td>
+    <td colspan="6" class="bottom">&nbsp;</td>
   </tr>
 </table>
 </form>
@@ -358,36 +358,36 @@ Tab 4 Content
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFEFEF">
   <tr>
-    <td colspan="8" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999;">&nbsp;</td>
+    <td colspan="8" class="top">&nbsp;</td>
   </tr>
   <tr>
-    <td width="2%" rowspan="3" style="border-left: 1px solid #999999;">&nbsp;</td>
+    <td width="2%" rowspan="3" class="left">&nbsp;</td>
     <td colspan="3"><strong>Current List of Supporting Materials</strong></td>
     <td colspan="3" align="right"><label>
       <input name="create" type="submit" id="create" value="Create" />
     </label>      <label>
       <input type="checkbox" name="checkbox" value="checkbox" />
       Include In-active</label></td>
-    <td width="2%" rowspan="3" style=" border-right:1px solid #999999;">&nbsp;</td>
+    <td width="2%" rowspan="3" class="right">&nbsp;</td>
   </tr>
   <tr>
-    <td width="19%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>URL</strong></td>
-    <td width="31%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Description</strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Type</strong></td>
-    <td width="26%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Added By </strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Added Date</strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg">&nbsp;</td>
+    <td width="19%" class="titleColumn"><strong>URL</strong></td>
+    <td width="31%" class="titleColumn"><strong>Description</strong></td>
+    <td width="10%" class="titleColumn"><strong>Type</strong></td>
+    <td width="26%" class="titleColumn"><strong>Added By </strong></td>
+    <td width="10%" class="titleColumn"><strong>Added Date</strong></td>
+    <td width="10%" class="titleColumn">&nbsp;</td>
   </tr>
   <tr >
-    <td style="border:1px solid #999999;"><span class="style2">http://www.google.com.vn</span></td>
-    <td style="border:1px solid #999999;">Google corp. </td>
-    <td style="border:1px solid #999999;">Doc</td>
-    <td style="border:1px solid #999999;">Van Vu  </td>
-    <td style="border:1px solid #999999;">10/26/2009</td>
-    <td style="border:1px solid #999999;">&nbsp;</td>
+    <td class="border">http://www.google.com.vn</td>
+    <td class="border">Google corp. </td>
+    <td class="border">Doc</td>
+    <td class="border">Van Vu  </td>
+    <td class="border">10/26/2009</td>
+    <td class="border">&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="8" style="border-bottom: 1px solid #999999; border-left:1px solid #999999; border-right:1px solid #999999;">&nbsp;</td>
+    <td colspan="8" class="bottom">&nbsp;</td>
   </tr>
 </table>
 </form>
@@ -397,34 +397,34 @@ Tab 4 Content
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFEFEF">
   <tr>
-    <td colspan="7" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999;">&nbsp;</td>
+    <td colspan="7" class="top">&nbsp;</td>
   </tr>
   <tr>
-    <td width="2%" rowspan="3" style="border-left: 1px solid #999999;">&nbsp;</td>
-    <td colspan="3"><span class="style3"><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a></span></td>
+    <td width="2%" rowspan="3" class="left">&nbsp;</td>
+    <td colspan="3"><span class="filter"><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a></span></td>
     <td colspan="2" align="right"><label>
       <input name="create" type="submit" id="create" value="Create" />
     </label>      <label>
       <input type="checkbox" name="checkbox" value="checkbox" />
       Include In-active</label></td>
-    <td width="2%" rowspan="3" style=" border-right:1px solid #999999;">&nbsp;</td>
+    <td width="2%" rowspan="3" class="right">&nbsp;</td>
   </tr>
   <tr>
-    <td width="19%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>BU/Directorate Name </strong></td>
-    <td width="31%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Office Address Line 1 </strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Postcode</strong></td>
-    <td width="26%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Contact</strong></td>
-    <td width="10%" style=" border:1px solid #999999;" background="picture/tab.jpg"><strong>Is Active? </strong></td>
+    <td width="19%" class="titleColumn"><strong>BU/Directorate Name </strong></td>
+    <td width="31%" class="titleColumn"><strong>Office Address Line 1 </strong></td>
+    <td width="10%" class="titleColumn"><strong>Postcode</strong></td>
+    <td width="26%" class="titleColumn"><strong>Contact</strong></td>
+    <td width="10%" class="titleColumn"><strong>Is Active? </strong></td>
   </tr>
   <tr >
-    <td style="border:1px solid #999999;"><span class="style2">1</span></td>
-    <td style="border:1px solid #999999;">10 Maurer Court Greenwich Line 1 </td>
-    <td style="border:1px solid #999999;">SE10 0SS </td>
-    <td style="border:1px solid #999999;">Isax NewTon </td>
-    <td style="border:1px solid #999999;">Yes</td>
+    <td class="border"><span class="number">1</span></td>
+    <td class="border">10 Maurer Court Greenwich Line 1 </td>
+    <td class="border">SE10 0SS </td>
+    <td class="border">Isax NewTon </td>
+    <td class="border">Yes</td>
   </tr>
   <tr>
-    <td colspan="7" style="border-bottom: 1px solid #999999; border-left:1px solid #999999; border-right:1px solid #999999;">&nbsp;</td>
+    <td colspan="7" class="bottom">&nbsp;</td>
   </tr>
 </table>
 </form>
