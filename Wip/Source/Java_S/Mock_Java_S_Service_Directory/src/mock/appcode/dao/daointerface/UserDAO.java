@@ -17,6 +17,7 @@ public class UserDAO extends HibernateUtil {
 
 	}
 
+	//Ham xac thuc tai khoan nguoi dung
 	public boolean authenticate(String account, String password) {
 		try {
 			Session session = HibernateUtil.getSessionFactory()
@@ -43,6 +44,7 @@ public class UserDAO extends HibernateUtil {
 		return false;
 	}
 
+	//Tim kiem nguoi dung theo tai khoan account
 	public User[] findByAccount(String account) {
 		try {
 			session.getTransaction().begin();
@@ -59,6 +61,7 @@ public class UserDAO extends HibernateUtil {
 		return null;
 	}
 
+	//Ham chinh sua thong tin cua 1 nguoi dung
 	public void amend(User newUser, String account) {
 		try {
 			session.getTransaction().begin();
