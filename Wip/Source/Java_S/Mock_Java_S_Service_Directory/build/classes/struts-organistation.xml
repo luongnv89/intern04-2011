@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.action.extension" value="Intern_004" />
+	<constant name="struts.enable.DynamicMethFodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+	<package name="organistation" namespace="/organistation"
+		extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<default-action-ref name="default-action">
+		</default-action-ref>
+
+		<action name="getAllOrganistation" method="getAll"
+			class="mock.appcode.web.action.OrganistationAction">
+			<result name="success" type="tiles">org.tiles
+			</result>
+		</action>
+		<action name="default-action">
+			<result type="">/pages/errors/error.jsp</result>
+		</action>
+	</package>
+
+</struts>
