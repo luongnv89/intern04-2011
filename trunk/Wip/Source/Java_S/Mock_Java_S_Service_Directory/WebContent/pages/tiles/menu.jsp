@@ -3,12 +3,11 @@
 
 <%@ taglib uri="/struts-tags" prefix="s"%>
 
-
-<a href="<s:url action="viewAllOrganistation" />"> Organistation</a>
-<br>
+<html>
 
 
+<a href="<s:url action="getAllOrganistation"   />"> Organistation</a>
 <br>
 <a href="<s:url action="logout" />"> Logout</a>
 
-
+</html>
