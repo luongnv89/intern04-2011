@@ -30,7 +30,7 @@
 
 		<action name="getAllOrganistation" method="getAll"
 			class="mock.appcode.web.action.OrganistationAction">
-			<result name="success" type="tiles">org.tiles
+			<result name="getAllSuccess" type="tiles">org.tiles
 			</result>
 		</action>
 
