@@ -34,8 +34,8 @@
 </form>
 </div>
 
-<div id="container" >
-<div class="maintab">
+<div id="container" />
+<div class="maintab" />
 
 <div id="tab1">
   <form id="form1" name="form1" method="post" action="">
