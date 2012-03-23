@@ -9,12 +9,17 @@
 	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
 
 	<package name="default" extends="struts-default" namespace="">
+
+
 		<result-types>
 			<result-type name="tiles"
 				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
 
-		<action name="login" method="doLogin" 
+		<default-action-ref name="default-action">
+		</default-action-ref>
+
+		<action name="login" method="doLogin"
 			class="mock.appcode.web.action.UserAction">
 			<result name="input">/index.jsp</result>
 			<result name="success" type="tiles">welcome.tiles</result>
@@ -32,6 +37,11 @@
 			class="mock.appcode.web.action.ViewAllOrganistationAction">
 			<result name="success" type="tiles">org.tiles
 			</result>
+		</action>
+
+
+		<action name="default-action">
+			<result type="">/pages/errors/error.jsp</result>
 		</action>
 
 
