@@ -7,6 +7,6 @@
 <title>Error Page</title>
 </head>
 <body>
-<h1><font color="red">Error</font></h1>
+<h1><font color="red">Error Page !!!</font></h1>
 </body>
 </html>

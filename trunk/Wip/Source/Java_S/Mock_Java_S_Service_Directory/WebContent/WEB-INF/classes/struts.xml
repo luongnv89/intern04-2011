@@ -34,7 +34,7 @@
 
 
 		<action name="viewAllOrganistation" method="execute"
-			class="mock.appcode.web.action.ViewAllOrganistationAction">
+			class="mock.appcode.web.action.OrganistationAction">
 			<result name="success" type="tiles">org.tiles
 			</result>
 		</action>
