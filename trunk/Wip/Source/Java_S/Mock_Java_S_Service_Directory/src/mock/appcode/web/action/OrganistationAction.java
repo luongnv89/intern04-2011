@@ -5,7 +5,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class OrganistationAction extends ActionSupport implements IAction {
 
 	public String getAll()  {
-		return SUCCESS;
+		return "getAllSuccess";
 	}
 
 	public String add()  {

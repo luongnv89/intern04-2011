@@ -26,14 +26,5 @@
 		<welcome-file>/index.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- <resource-ref>
-		<description>Resource reference to javax.sql.Connection </description>
-		<res-ref-name>jdbc/dbo_MicrosoftSQLServer</res-ref-name>
-		<res-type>javax.sql.Datasource</res-type>
-		<res-auth>Container</res-auth>
-	</resource-ref> -->
-
-	<!-- <listener> <listener-class> mock.appcode.common.utility.HibernateListener 
-		</listener-class> </listener> -->
 
 </web-app>
