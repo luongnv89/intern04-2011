@@ -22,7 +22,7 @@
 	<definition name="org.tiles" extends="baselayout">
 		<put-attribute name="title" value="Organistation page" />
 		<put-attribute name="body"
-			value="/pages/organistations/organistationList.jsp" />
+			value="/pages/organistations/OrganistationList.jsp" />
 	</definition>
 
 </tiles-definitions>
