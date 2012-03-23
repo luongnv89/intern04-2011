@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Reload Page</title>
+<script type="text/javascript">
+function reload()
+{
+	if(document.myform.cb.checked == false ) {
+		
+		// bo tham so checkit ra khoi href
+		var href = document.location.href;
+		if(document.location.href.match(/\?checkit/)) {
+		
+			var str = href.replace("?checkit=1","");
+		}
+		var str = href.replace("?checkit=1","");
+		//alert(str);
+		document.location.href = str;
+		
+	}
+	
+	if (document.myform.cb.checked == true )
+	{
+		var parameter = (document.location.href.match(/\?/) ? '&' : '?') + 'checkit=1';
+		document.location.href = document.location.href + parameter;
+	}
+	//else
+		//document.location.reload();
+}
+
+window.onload = function()
+{
+	if (document.location.href.match(/checkit=1/)) 
+		document.myform.cb.checked = true;
+	if (!document.location.href.match(/checkit=1/)) 
+		document.myform.cb.checked = false;
+		
+}
+</script>
+
+	</head>
+	<body>
+		<form name="myform" method="post" action="thispage.htm">
+		<input type="checkbox" name="cb" value="checkbox" onClick="reload();">
+		<a href="#" onClick="window.location.reload( true );">Reload</a>
+		</form>
+
+	</body>
+
+</html>
+
+

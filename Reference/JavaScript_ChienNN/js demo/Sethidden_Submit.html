@@ -1,0 +1,25 @@
+<html>
+<head>
+<script language="JavaScript">
+function setItemDetails()
+{
+document.myform.pageAction.value = action;
+document.myform.itemId.value = id;
+document.myform.itemQty.value = qty;
+document.myform.submit();
+}
+
+</script>
+</head>
+<body>
+<form name="myform" action="google.com" method="post">
+<input type="hidden" name="pageAction" value="0" />
+<input type="hidden" name="itemId" value="0" />
+<input type="hidden" name="itemQty" value="0" />
+
+
+<a href="#" onclick="setItemDetails();"> All </a>
+<p>kekekek</p>
+</form>
+</body>
+</html>
