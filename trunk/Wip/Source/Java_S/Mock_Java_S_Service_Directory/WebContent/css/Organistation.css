@@ -1,0 +1,83 @@
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#bar a {
+	padding: 4px 6px;
+	background: #EFEFEF;
+	text-decoration: none;
+	font-weight: bold;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+}
+
+#bar a:hover {
+	color: #003366;
+}
+
+#container {
+	background: #EFEFEF;
+	padding: 10px;
+}
+
+div.maintab div {
+	display: none
+}
+
+div.maintab div:target {
+	display: block
+}
+
+.title {
+	color: #009900;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.number {
+	color: #33CCFF
+}
+
+.filter {
+	font-size: 14px;
+	font-weight: bold;
+	color: #0066FF;
+}
+
+.top {
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-top: 1px solid #999999;
+}
+
+.left {
+	border-left: 1px solid #999999;
+}
+
+.right {
+	border-right: 1px solid #999999;
+}
+
+.bottom {
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+
+.titleColumn {
+	border: 1px solid #999999;
+	background-image: url(picture/tab.jpg);
+}
+
+.border {
+	border: 1px solid #999999;
+}
+
+#block {
+	display: block;
+	overflow: scroll;
+	height: 100px;
+	width: 400px;
+}
