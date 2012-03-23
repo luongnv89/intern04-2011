@@ -30,8 +30,8 @@
 </form>
 </div>
 
-<div id="container" >
-<div class="maintab">
+<div id="container" />
+<div class="maintab" />
 
 <form id="form1" name="form1" method="post" action="">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -45,7 +45,7 @@
         <input type="text" name="textfield" />
       </label></td>
       <td width="16%">Added By <span class="title">*</span></td>
-      <td width="31%"><input name="textfield32" type="text" disabled="enabled" value="Van Vu" /></td>
+      <td width="31%"><input name="textfield32" type="text"  value="Van Vu" /></td>
       <td width="2%" rowspan="4" class="right">&nbsp;</td>
     </tr>
     <tr>

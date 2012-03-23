@@ -33,8 +33,8 @@
 </form>
 </div>
 
-<div id="container" >
-<div class="maintab">
+<div id="container" />
+<div class="maintab" />
 
 <div id="tab1">
   <form id="form1" name="form1" method="post" action="">
@@ -59,7 +59,7 @@
       <textarea name="textarea"></textarea>
     </label></td>
     <td>SIC code </td>
-    <td><input type="text" name="textfield33" disabled="disabled"></td>
+    <td><input type="text" name="textfield33" /></td>
   </tr>
   <tr>
     <td rowspan="2">Bu/Directorate full Description </td>
