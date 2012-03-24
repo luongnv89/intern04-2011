@@ -3,7 +3,7 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<!-- <constant name="struts.action.extension" value="action_Intern_004" /> -->
+	 <constant name="struts.action.extension" value="action_Intern_004" />
 	<constant name="struts.enable.DynamicMethFodInvocation" value="false" />
 	<constant name="struts.devMode" value="false" />
 	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
@@ -35,7 +35,7 @@
 		</action>
 
 		<action name="default-action">
-			<result>/pages/errors/error.jsp</result>
+			<result type="tiles">error.tiles</result>
 		</action>
 	</package>
 
