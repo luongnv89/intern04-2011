@@ -5,42 +5,36 @@ import java.util.List;
 import mock.appcode.common.utility.HibernateUtil;
 import mock.appcode.common.utility.Organistation;
 
-public class OrganistationDAO extends HibernateUtil implements IDAO {
+public class OrganistationDAO extends HibernateUtil {
 
-	@Override
-	public List getAll() throws Exception {
+	public List<Organistation> getAll() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public void addNew(Object entity) throws Exception {
+	public void addNew(Organistation entity) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	@Override
-	public void amend(Object entity, String id) throws Exception {
+	public void amend(Organistation entity, String id) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	@Override
-	public void getByActive() throws Exception {
+	public List<Organistation> getByActive() throws Exception {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
-	@Override
 	public void setInActive(String id) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	@Override
 	public void setActive(String id) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

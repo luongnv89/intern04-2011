@@ -2,7 +2,7 @@ package mock.appcode.web.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class OrganistationAction extends ActionSupport implements IAction {
+public class OrganistationAction extends ActionSupport {
 
 	public String getAll()  {
 		return "getAllSuccess";
