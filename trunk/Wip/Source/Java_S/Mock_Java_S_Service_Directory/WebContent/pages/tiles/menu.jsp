@@ -7,5 +7,8 @@
 
 <a href="<s:url action="getAllOrganistation" />"> Organistation</a>
 <br>
+
+<a href="<s:url action="getAllService" />"> Service</a>
+<br>
 <a href="<s:url action="logout" />"> Logout</a>
 

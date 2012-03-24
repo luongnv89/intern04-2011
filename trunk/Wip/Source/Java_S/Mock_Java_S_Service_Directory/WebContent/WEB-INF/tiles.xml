@@ -25,5 +25,12 @@
 			value="/pages/organistations/OrganistationList.jsp" />
 
 	</definition>
+	
+		<definition name="error.tiles" extends="baselayout">
+		<put-attribute name="title" value="Error Page" />
+		<put-attribute name="body"
+			value="/pages/errors/error.jsp" />
+
+	</definition>
 
 </tiles-definitions>
