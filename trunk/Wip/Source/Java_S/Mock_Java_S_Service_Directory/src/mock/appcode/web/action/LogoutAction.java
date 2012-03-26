@@ -9,7 +9,8 @@ public class LogoutAction extends ActionSupport {
 
 	public String logout() {
 		Map<String, Object> session=ActionContext.getContext().getSession();
-		session.remove("ACCOUNT");
+//		session.remove("ACCOUNT");
+		session.clear();
 		return "logout_success";
 	}
 
