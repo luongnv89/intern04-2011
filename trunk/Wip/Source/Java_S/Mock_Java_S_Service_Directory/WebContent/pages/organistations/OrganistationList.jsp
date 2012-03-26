@@ -13,7 +13,7 @@
 </head>
 <body>
 	<span class="title">Organisation List</span>
-	<s:form id="form1" name="form1" method="post" action="">
+	<s:form id="form1" name="form1" method="post" action="addOrganistation">
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFEFEF">
   <tr>

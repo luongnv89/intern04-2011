@@ -19,17 +19,24 @@
 		<put-attribute name="body" value="/pages/welcome.jsp" />
 	</definition>
 
-	<definition name="org.tiles" extends="baselayout">
+	<definition name="org.getByActive.tiles" extends="baselayout">
 		<put-attribute name="title" value="Organistation Page" />
 		<put-attribute name="body"
 			value="/pages/organistations/OrganistationList.jsp" />
-
 	</definition>
-	
-		<definition name="error.tiles" extends="baselayout">
-		<put-attribute name="title" value="Error Page" />
+
+
+	<definition name="org.add.tiles" extends="baselayout">
+		<put-attribute name="title" value="Organistation Add Page" />
 		<put-attribute name="body"
-			value="/pages/errors/error.jsp" />
+			value="/pages/organistations/OrganistationDetail.jsp" />
+	</definition>
+
+
+
+	<definition name="error.tiles" extends="baselayout">
+		<put-attribute name="title" value="Error Page" />
+		<put-attribute name="body" value="/pages/errors/error.jsp" />
 
 	</definition>
 

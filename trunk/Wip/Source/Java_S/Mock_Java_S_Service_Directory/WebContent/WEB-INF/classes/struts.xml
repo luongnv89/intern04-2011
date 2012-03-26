@@ -3,7 +3,7 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	 <constant name="struts.action.extension" value="action_Intern_004" />
+	<constant name="struts.action.extension" value="action_Intern_004" />
 	<constant name="struts.enable.DynamicMethFodInvocation" value="false" />
 	<constant name="struts.devMode" value="false" />
 	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
@@ -28,9 +28,15 @@
 			<result name="logout_success">/index.jsp</result>
 		</action>
 
-		<action name="getAllOrganistation" method="getAll"
+		<action name="getOrganistationByActive" method="getOrganistatioByActive"
 			class="mock.appcode.web.action.OrganistationAction">
-			<result name="getAllSuccess" type="tiles">org.tiles
+			<result name="success" type="tiles">org.getByActive.tiles
+			</result>
+		</action>
+
+		<action name="addOrganistation" method="addOrganistation"
+			class="mock.appcode.web.action.OrganistationAction">
+			<result name="success" type="tiles">org.add.tiles
 			</result>
 		</action>
 

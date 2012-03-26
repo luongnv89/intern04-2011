@@ -4,27 +4,31 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganistationAction extends ActionSupport {
 
-	public String getAll()  {
-		return "getAllSuccess";
+	public String addOrganistation() {
+		return "success";
 	}
 
-	public String add()  {
+	public String setOrganistationIsActive() {
 		return SUCCESS;
 	}
 
-	public String setActive()  {
+	public String setOrganistationIsInActive() {
 		return SUCCESS;
 	}
 
-	public String setInActive() {
+	public String amendOrganistation() {
 		return SUCCESS;
 	}
 
-	public String amend()  {
+	public String getOrganistatioByActive() {
 		return SUCCESS;
 	}
 
-	public String getByActive()  {
+	public String getOrganistationByInActive() {
+		return SUCCESS;
+	}
+
+	public String getAll() {
 		return SUCCESS;
 	}
 }
