@@ -30,7 +30,13 @@
 
 		<action name="getOrganistationByActive" method="getOrganistationByActive"
 			class="mock.appcode.web.action.OrganistationAction">
-			<result name="success1" type="tiles">org.getByActive.tiles
+			<result name="success" type="tiles">org.getByActive.tiles
+			</result>
+		</action>
+
+	<action name="addOrganistation" method="addOrganistation"
+			class="mock.appcode.web.action.OrganistationAction">
+			<result name="success" type="tiles">org.add.tiles
 			</result>
 		</action>
 

@@ -21,7 +21,7 @@ public class OrganistationAction extends ActionSupport {
 	}
 
 	public String getOrganistationByActive() {
-		return "success1";
+		return "success";
 	}
 
 	public String getOrganistationByInActive() {
