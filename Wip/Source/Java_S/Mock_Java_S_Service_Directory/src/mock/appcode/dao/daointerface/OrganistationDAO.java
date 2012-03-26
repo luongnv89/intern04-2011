@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import mock.appcode.common.utility.HibernateUtil;
 import mock.appcode.common.valueobjects.Organistation;
 
-;
+
 
 public class OrganistationDAO extends HibernateUtil {
 
