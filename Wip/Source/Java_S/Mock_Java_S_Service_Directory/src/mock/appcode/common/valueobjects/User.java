@@ -1,4 +1,4 @@
-package mock.appcode.common.utility;
+package mock.appcode.common.valueobjects;
 
 import java.io.Serializable;
 

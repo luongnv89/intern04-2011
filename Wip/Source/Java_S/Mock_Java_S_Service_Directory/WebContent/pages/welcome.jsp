@@ -15,7 +15,7 @@
 			
 				Welcome,
 
-				<s:property value="%{#session.USER}" />
+				<s:property value="%{#session.ACCOUNT}" />
 			
 		</font>
 	</s:if>
