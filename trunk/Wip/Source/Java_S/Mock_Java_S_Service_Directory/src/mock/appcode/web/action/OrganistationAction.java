@@ -20,8 +20,8 @@ public class OrganistationAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public String getOrganistatioByActive() {
-		return SUCCESS;
+	public String getOrganistationByActive() {
+		return "success";
 	}
 
 	public String getOrganistationByInActive() {
@@ -31,4 +31,13 @@ public class OrganistationAction extends ActionSupport {
 	public String getAll() {
 		return SUCCESS;
 	}
+	
+	public String searchByNumeric(){
+		return SUCCESS;
+	}
+	
+	public String searchByCharacter(){
+		return SUCCESS;
+	}
+	
 }

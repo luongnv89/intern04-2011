@@ -28,7 +28,7 @@
 			<result name="logout_success">/index.jsp</result>
 		</action>
 
-		<action name="getOrganistationByActive" method="getOrganistatioByActive"
+		<action name="getOrganistationByActive" method="getOrganistationByActive"
 			class="mock.appcode.web.action.OrganistationAction">
 			<result name="success" type="tiles">org.getByActive.tiles
 			</result>

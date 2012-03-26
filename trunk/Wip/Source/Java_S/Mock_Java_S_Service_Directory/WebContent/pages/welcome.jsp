@@ -11,12 +11,7 @@
 </head>
 <body>
 	<s:if test="true">
-		<font>
-			
-				Welcome,
-
-				<s:property value="%{#session.ACCOUNT}" />
-			
+		<font> Welcome, <s:property value="%{#session.ACCOUNT}" />
 		</font>
 	</s:if>
 </body>

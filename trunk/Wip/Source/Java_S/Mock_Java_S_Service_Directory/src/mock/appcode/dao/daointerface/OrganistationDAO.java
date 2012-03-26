@@ -150,4 +150,12 @@ public class OrganistationDAO extends HibernateUtil {
 
 		}
 	}
+
+	public Organistation[] searchByNumeric() throws Exception {
+		return null;
+	}
+
+	public Organistation[] searchByCharacter() throws Exception {
+		return null;
+	}
 }
