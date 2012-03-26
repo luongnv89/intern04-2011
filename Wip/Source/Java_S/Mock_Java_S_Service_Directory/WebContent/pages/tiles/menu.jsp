@@ -5,10 +5,10 @@
 
 
 
-<a href="<s:url action="getAllOrganistation" />"> Organistation</a>
+<a href="<s:url action="getOrganistationByActive" />"> Organistation</a>
 <br>
 
-<a href="<s:url action="getAllService" />"> Service</a>
+<a href="<s:url action="getServiceByActive" />"> Service</a>
 <br>
 <a href="<s:url action="logout" />"> Logout</a>
 
