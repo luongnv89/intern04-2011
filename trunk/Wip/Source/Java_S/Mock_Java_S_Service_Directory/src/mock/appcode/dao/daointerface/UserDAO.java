@@ -3,7 +3,7 @@ package mock.appcode.dao.daointerface;
 import java.util.List;
 
 import mock.appcode.common.utility.HibernateUtil;
-import mock.appcode.common.utility.User;
+import mock.appcode.common.valueobjects.User;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
