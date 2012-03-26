@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Welcome</title>
+<title>Welcome Page</title>
 
 </head>
 <body>
 	<s:if test="true">
-		<font> Welcome, <s:property value="%{#session.ACCOUNT}" />
+		<font color="red"> Welcome, <s:property value="%{#session.ACCOUNT}" />
 		</font>
 	</s:if>
 </body>

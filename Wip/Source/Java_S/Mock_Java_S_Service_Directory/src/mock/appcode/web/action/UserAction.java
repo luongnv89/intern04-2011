@@ -21,9 +21,8 @@ public class UserAction extends ActionSupport {
 			session.put("ACCOUNT", getAccount());
 			return SUCCESS;
 		}
-
+			
 		return ERROR;
-
 	}
 
 	public String getAccount() {

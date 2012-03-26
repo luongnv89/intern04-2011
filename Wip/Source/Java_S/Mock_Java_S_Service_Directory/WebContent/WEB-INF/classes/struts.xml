@@ -20,7 +20,7 @@
 			class="mock.appcode.web.action.UserAction">
 			<result name="input">/index.jsp</result>
 			<result name="success" type="tiles">welcome.tiles</result>
-			<result name="error">/index.jsp</result>
+			<result name="error">/loginFailure.jsp</result>
 		</action>
 
 		<action name="logout" method="logout"
