@@ -1,5 +1,13 @@
 package mock.appcode.common.valueobjects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Organistation")
 public class OrganistationVO {
 	private String orgid;
 	private String orgName;
@@ -26,6 +34,9 @@ public class OrganistationVO {
 	private byte statusPreferred;
 	private byte statusExpression;
 
+	@Id
+	@GeneratedValue
+	@Column(name = "OrgID")
 	public String getOrgid() {
 		return orgid;
 	}
@@ -34,6 +45,7 @@ public class OrganistationVO {
 		this.orgid = orgid;
 	}
 
+	@Column(name = "OrgName")
 	public String getOrgName() {
 		return orgName;
 	}
