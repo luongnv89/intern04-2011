@@ -6,7 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import mock.appcode.common.utility.HibernateUtil;
-import mock.appcode.common.valueobjects.Organistation;
+import mock.appcode.common.valueobjects.OrganistationVO;
 
 public class OrganistationDAO extends HibernateUtil {
 
@@ -17,20 +17,17 @@ public class OrganistationDAO extends HibernateUtil {
 		this.session = session;
 	}
 
-	// Ham lay ve tat ca cac ban ghi trong Table Organistation
-	// Gia tri tra ve la 1 doi tuong mang co kieu la Organistation
-	public Organistation[] getAll() throws Exception {
+	// Ham lay ve tat ca cac ban ghi trong Table OrganistationVO
+	// Gia tri tra ve la 1 doi tuong mang co kieu la OrganistationVO
+	public List<OrganistationVO> getAll() throws Exception {
 
 		try {
 			session.beginTransaction();
-			Query query = (Query) session.createQuery("from Organistation");
-			List queryResult = query.list();
-			Organistation[] organistationArray = new Organistation[queryResult
-					.size()];
-			queryResult.toArray(organistationArray);
+			Query query = (Query) session.createQuery("from OrganistationVO");
+			List listResult = query.list();
 			session.flush();
 			session.getTransaction().commit();
-			return organistationArray;
+			return listResult;
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
 				session.getTransaction().rollback();
@@ -40,11 +37,11 @@ public class OrganistationDAO extends HibernateUtil {
 		return null;
 	}
 
-	public void addNew(Organistation organistation) throws Exception {
+	public void addNew(OrganistationVO organistationVO) throws Exception {
 		try {
 
 			session.beginTransaction();
-			session.save(organistation);
+			session.save(organistationVO);
 			session.flush();
 			session.getTransaction().commit();
 		} catch (Exception e) {
@@ -56,14 +53,14 @@ public class OrganistationDAO extends HibernateUtil {
 
 	}
 
-	public void amend(Organistation newOrganistation, String id)
+	public void amend(OrganistationVO newOrganistation, String id)
 			throws Exception {
 		try {
 			session.beginTransaction();
-			Organistation organistation = (Organistation) session.get(
-					Organistation.class, id);
-			organistation.setOrgName(newOrganistation.getOrgFullDescription());
-			session.update(organistation);
+			OrganistationVO organistationVO = (OrganistationVO) session.get(
+					OrganistationVO.class, id);
+			organistationVO.setOrgName(newOrganistation.getOrgFullDescription());
+			session.update(organistationVO);
 			session.flush();
 			session.getTransaction().commit();
 		} catch (Exception e) {
@@ -73,18 +70,15 @@ public class OrganistationDAO extends HibernateUtil {
 		}
 	}
 
-	public Organistation[] getByActive() throws Exception {
+	public List<OrganistationVO> getByActive() throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
-					.createQuery("from Organistation org where org.statusActive='1'");
-			List queryResult = query.list();
-			Organistation[] organistationArray = new Organistation[queryResult
-					.size()];
-			queryResult.toArray(organistationArray);
+					.createQuery("from OrganistationVO org where org.statusActive='1'");
+			List listResult = query.list();
 			session.flush();
 			session.getTransaction().commit();
-			return organistationArray;
+			return listResult;
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
 				session.getTransaction().rollback();
@@ -94,18 +88,15 @@ public class OrganistationDAO extends HibernateUtil {
 		return null;
 	}
 
-	public Organistation[] getByInActive() throws Exception {
+	public List<OrganistationVO> getByInActive() throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
-					.createQuery("from Organistation org where org.statusActive='0'");
-			List queryResult = query.list();
-			Organistation[] organistationArray = new Organistation[queryResult
-					.size()];
-			queryResult.toArray(organistationArray);
+					.createQuery("from OrganistationVO org where org.statusActive='0'");
+			List listResult = query.list();
 			session.flush();
 			session.getTransaction().commit();
-			return organistationArray;
+			return listResult;
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
 				session.getTransaction().rollback();
@@ -115,14 +106,14 @@ public class OrganistationDAO extends HibernateUtil {
 		return null;
 	}
 
-	public void setInActive(Organistation newOrganistation, String id)
+	public void setInActive(OrganistationVO newOrganistation, String id)
 			throws Exception {
 		try {
 			session.beginTransaction();
-			Organistation organistation = (Organistation) session.get(
-					Organistation.class, id);
-			organistation.setStatusActive(newOrganistation.getStatusActive());
-			session.update(organistation);
+			OrganistationVO organistationVO = (OrganistationVO) session.get(
+					OrganistationVO.class, id);
+			organistationVO.setStatusActive(newOrganistation.getStatusActive());
+			session.update(organistationVO);
 			session.flush();
 			session.getTransaction().commit();
 		} catch (Exception e) {
@@ -133,14 +124,14 @@ public class OrganistationDAO extends HibernateUtil {
 
 	}
 
-	public void setActive(Organistation newOrganistation, String id)
+	public void setActive(OrganistationVO newOrganistation, String id)
 			throws Exception {
 		try {
 			session.beginTransaction();
-			Organistation organistation = (Organistation) session.get(
-					Organistation.class, id);
-			organistation.setStatusActive(newOrganistation.getStatusActive());
-			session.update(organistation);
+			OrganistationVO organistationVO = (OrganistationVO) session.get(
+					OrganistationVO.class, id);
+			organistationVO.setStatusActive(newOrganistation.getStatusActive());
+			session.update(organistationVO);
 			session.flush();
 			session.getTransaction().commit();
 		} catch (Exception e) {
@@ -151,11 +142,11 @@ public class OrganistationDAO extends HibernateUtil {
 		}
 	}
 
-	public Organistation[] searchByNumeric() throws Exception {
+	public List<OrganistationVO> searchByNumeric() throws Exception {
 		return null;
 	}
 
-	public Organistation[] searchByCharacter() throws Exception {
+	public List<OrganistationVO> searchByCharacter() throws Exception {
 		return null;
 	}
 }

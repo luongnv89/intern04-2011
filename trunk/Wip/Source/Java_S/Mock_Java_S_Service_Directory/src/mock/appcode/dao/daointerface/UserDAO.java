@@ -3,7 +3,7 @@ package mock.appcode.dao.daointerface;
 import java.util.List;
 
 import mock.appcode.common.utility.HibernateUtil;
-import mock.appcode.common.valueobjects.User;
+import mock.appcode.common.valueobjects.UserVO;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -11,7 +11,7 @@ import org.hibernate.Session;
 public class UserDAO extends HibernateUtil {
 
 	private Session session = null;
-	User user = null;
+	UserVO userVO = null;
 
 	public UserDAO() {
 
@@ -25,7 +25,7 @@ public class UserDAO extends HibernateUtil {
 			session.beginTransaction();
 
 			Query query = (Query) session
-					.createQuery("from User u where u.account='" + account
+					.createQuery("from UserVO u where u.account='" + account
 							+ "' and u.password='" + password + "'");
 			Object result = null;
 			result = query.uniqueResult();
@@ -45,7 +45,7 @@ public class UserDAO extends HibernateUtil {
 	}
 
 	//Tim kiem nguoi dung theo tai khoan account
-	public User[] findByAccount(String account) {
+	public UserVO[] findByAccount(String account) {
 		try {
 			session.getTransaction().begin();
 			String sql = "from User2 where account like ?";
@@ -62,17 +62,17 @@ public class UserDAO extends HibernateUtil {
 	}
 
 	//Ham chinh sua thong tin cua 1 nguoi dung
-	public void amend(User newUser, String account) {
+	public void amend(UserVO newUser, String account) {
 		try {
 			session.getTransaction().begin();
-			User user = (User) session.get(User.class, account);
+			UserVO userVO = (UserVO) session.get(UserVO.class, account);
 
-			user.setAccount(newUser.getAccount());
-			user.setEmail(newUser.getEmail());
-			user.setPassword(newUser.getPassword());
-			user.setRole(newUser.getPassword());
+			userVO.setAccount(newUser.getAccount());
+			userVO.setEmail(newUser.getEmail());
+			userVO.setPassword(newUser.getPassword());
+			userVO.setRole(newUser.getPassword());
 
-			session.update(user);
+			session.update(userVO);
 			session.flush();
 			session.getTransaction().commit();
 

@@ -1,8 +1,15 @@
 package mock.appcode.web.action;
 
+import java.util.ArrayList;
+import java.util.List;
+import mock.appcode.common.valueobjects.OrganistationVO;
+import mock.appcode.dao.daointerface.OrganistationDAO;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganistationAction extends ActionSupport {
+
+	private List<OrganistationVO> listOrgByActive = null;
 
 	public String addOrganistation() {
 		return "success";
@@ -21,6 +28,12 @@ public class OrganistationAction extends ActionSupport {
 	}
 
 	public String getOrganistationByActive() {
+		try {
+			listOrgByActive = new OrganistationDAO().getByActive();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "success";
 	}
 
@@ -31,13 +44,13 @@ public class OrganistationAction extends ActionSupport {
 	public String getAll() {
 		return SUCCESS;
 	}
-	
-	public String searchByNumeric(){
+
+	public String searchByNumeric() {
 		return SUCCESS;
 	}
-	
-	public String searchByCharacter(){
+
+	public String searchByCharacter() {
 		return SUCCESS;
 	}
-	
+
 }

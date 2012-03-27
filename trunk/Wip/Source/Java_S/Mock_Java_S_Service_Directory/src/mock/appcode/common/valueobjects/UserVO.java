@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="User2")
-public class User implements Serializable{
+public class UserVO implements Serializable{
 
 	private String userid;
 	private String account;
@@ -20,7 +20,7 @@ public class User implements Serializable{
 	private String role;
 	private String password;
 
-	public User(String userid, String account, String email, String role,
+	public UserVO(String userid, String account, String email, String role,
 			String password) {
 		this.userid = userid;
 		this.account = account;
@@ -29,7 +29,7 @@ public class User implements Serializable{
 		this.password = password;
 	}
 
-	public User() {
+	public UserVO() {
 	}
 
 	@Id
