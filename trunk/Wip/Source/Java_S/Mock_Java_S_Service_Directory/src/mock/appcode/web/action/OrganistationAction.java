@@ -3,7 +3,7 @@ package mock.appcode.web.action;
 import java.util.ArrayList;
 import java.util.List;
 import mock.appcode.common.valueobjects.OrganistationVO;
-import mock.appcode.dao.daointerface.OrganistationDAO;
+import mock.appcode.dao.daointerface.OrganistationDAOImpl;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -29,7 +29,7 @@ public class OrganistationAction extends ActionSupport {
 
 	public String getOrganistationByActive() {
 		try {
-			listOrgByActive = new OrganistationDAO().getByActive();
+			listOrgByActive = new OrganistationDAOImpl().getByActive();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

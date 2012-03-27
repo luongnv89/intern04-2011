@@ -9,10 +9,18 @@
 	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
 
 	<package name="default" extends="struts-default" namespace="">
+
 		<result-types>
 			<result-type name="tiles"
 				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
+
+		<interceptors>
+			<interceptor name="authorizationinterceptor"
+				class="mock.appcode.web.filter.AuthorizationInterceptor" />
+		</interceptors>
+		<!-- <default-interceptor-ref name="authorizationinterceptor" /> -->
+
 		<default-action-ref name="default-action">
 		</default-action-ref>
 
@@ -30,11 +38,12 @@
 
 		<action name="getOrganistationByActive" method="getOrganistationByActive"
 			class="mock.appcode.web.action.OrganistationAction">
+			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
 			<result name="success" type="tiles">org.getByActive.tiles
 			</result>
 		</action>
 
-	<action name="addOrganistation" method="addOrganistation"
+		<action name="addOrganistation" method="addOrganistation"
 			class="mock.appcode.web.action.OrganistationAction">
 			<result name="success" type="tiles">org.add.tiles
 			</result>
@@ -43,6 +52,7 @@
 		<action name="default-action">
 			<result type="tiles">error.tiles</result>
 		</action>
+
 	</package>
 
 </struts>
