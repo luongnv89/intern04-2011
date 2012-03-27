@@ -6,7 +6,7 @@
 <validators>
 	<field name="account">
 		<field-validator type="requiredstring">
-			<message>User Name is required.</message>
+			<message>Account is required.</message>
 		</field-validator>
 		
 		<field-validator type="stringlength">
