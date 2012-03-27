@@ -8,9 +8,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login Page</title>
-<s:head />
 <link href="css/style.css" media="screen" rel="stylesheet"
 	type="text/css" />
+<s:head />
+
 
 </head>
 

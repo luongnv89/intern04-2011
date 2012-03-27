@@ -26,14 +26,14 @@
 
 		<action name="login" method="doLogin"
 			class="mock.appcode.web.action.UserAction">
-			<result name="input">/index.jsp</result>
-			<result name="success" type="tiles">welcome.tiles</result>
-			<result name="error">/loginFailure.jsp</result>
+			<result name="input">/_index.jsp</result>
+			<result name="loginsuccess" type="tiles">welcome.tiles</result>
+			<result name="loginfailure">/_loginFailure.jsp</result>
 		</action>
 
 		<action name="logout" method="logout"
 			class="mock.appcode.web.action.LogoutAction">
-			<result name="logout_success">/index.jsp</result>
+			<result name="logout_success">/_index.jsp</result>
 		</action>
 
 		<action name="getOrganistationByActive" method="getOrganistationByActive"

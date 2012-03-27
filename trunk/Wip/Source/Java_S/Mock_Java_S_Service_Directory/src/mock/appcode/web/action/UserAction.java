@@ -19,11 +19,10 @@ public class UserAction extends ActionSupport {
 			Map<String, Object> session = ActionContext.getContext()
 					.getSession();
 			session.put("ACCOUNT", getAccount());
-			
-			return SUCCESS;
+			return "loginsuccess";
 		}
 			
-		return ERROR;
+		return "loginfailure";
 	}
 
 	public String getAccount() {
