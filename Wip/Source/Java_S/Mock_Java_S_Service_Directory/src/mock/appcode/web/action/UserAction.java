@@ -2,7 +2,7 @@ package mock.appcode.web.action;
 
 import java.util.Map;
 
-import mock.appcode.dao.daointerface.UserDAO;
+import mock.appcode.dao.daointerface.UserDAOImpl;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -13,12 +13,13 @@ public class UserAction extends ActionSupport {
 	private String password = null;
 
 	public String doLogin() throws Exception {
-		UserDAO userDAO = new UserDAO();
-		boolean result = userDAO.authenticate(getAccount(), getPassword());
+		UserDAOImpl userDAOImpl = new UserDAOImpl();
+		boolean result = userDAOImpl.authenticate(getAccount(), getPassword());
 		if (result) {
 			Map<String, Object> session = ActionContext.getContext()
 					.getSession();
 			session.put("ACCOUNT", getAccount());
+			
 			return SUCCESS;
 		}
 			

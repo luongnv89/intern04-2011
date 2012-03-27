@@ -11,6 +11,8 @@
 </head>
 <body>
 	<span class="title">Organisation List</span>
+	<s:if test="%{#session.ACCOUNT ==null}">
+	</s:if>
 	<s:form method="post" action="addOrganistation">
 
 		<table width="100%" border="0" cellspacing="0" cellpadding="0"
