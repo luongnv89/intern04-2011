@@ -9,11 +9,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Organistation")
 public class OrganistationVO {
-	private String orgid;
+	private String orgId;
 	private String orgName;
 	private String contactId;
 	private String orgShortDescription;
 	private String addressId;
+	private int refId;
 
 	private String sic;
 	private String orgFullDescription;
@@ -21,7 +22,6 @@ public class OrganistationVO {
 	private String fax;
 	private String email;
 
-	private String refID;
 	private String webAddress;
 	private String charityNumber;
 
@@ -34,15 +34,49 @@ public class OrganistationVO {
 	private byte statusPreferred;
 	private byte statusExpression;
 
+	public OrganistationVO(String orgId, String orgName, String contactId,
+			String orgShortDescription, String addressId, int refId,
+			String sic, String orgFullDescription, String phone, String fax,
+			String email, String webAddress, String charityNumber,
+			String companyNumber, String govOfficeRegionId,
+			String trustRegionId, String trustDistrictId, byte statusActive,
+			byte statusPreferred, byte statusExpression) {
+		super();
+		this.orgId = orgId;
+		this.orgName = orgName;
+		this.contactId = contactId;
+		this.orgShortDescription = orgShortDescription;
+		this.addressId = addressId;
+		this.refId = refId;
+		this.sic = sic;
+		this.orgFullDescription = orgFullDescription;
+		this.phone = phone;
+		this.fax = fax;
+		this.email = email;
+		this.webAddress = webAddress;
+		this.charityNumber = charityNumber;
+		this.companyNumber = companyNumber;
+		this.govOfficeRegionId = govOfficeRegionId;
+		this.trustRegionId = trustRegionId;
+		this.trustDistrictId = trustDistrictId;
+		this.statusActive = statusActive;
+		this.statusPreferred = statusPreferred;
+		this.statusExpression = statusExpression;
+	}
+
+	public OrganistationVO() {
+		super();
+	}
+
 	@Id
 	@GeneratedValue
 	@Column(name = "OrgID")
-	public String getOrgid() {
-		return orgid;
+	public String getOrgId() {
+		return orgId;
 	}
 
-	public void setOrgid(String orgid) {
-		this.orgid = orgid;
+	public void setOrgId(String orgId) {
+		this.orgId = orgId;
 	}
 
 	@Column(name = "OrgName")
@@ -54,6 +88,7 @@ public class OrganistationVO {
 		this.orgName = orgName;
 	}
 
+	@Column(name = "ContactId")
 	public String getContactId() {
 		return contactId;
 	}
@@ -62,6 +97,7 @@ public class OrganistationVO {
 		this.contactId = contactId;
 	}
 
+	@Column(name = "OrgShortDescription")
 	public String getOrgShortDescription() {
 		return orgShortDescription;
 	}
@@ -70,6 +106,7 @@ public class OrganistationVO {
 		this.orgShortDescription = orgShortDescription;
 	}
 
+	@Column(name = "AddressID")
 	public String getAddressId() {
 		return addressId;
 	}
@@ -78,6 +115,16 @@ public class OrganistationVO {
 		this.addressId = addressId;
 	}
 
+	@Column(name = "RefID")
+	public int getRefId() {
+		return refId;
+	}
+
+	public void setRefId(int refId) {
+		this.refId = refId;
+	}
+
+	@Column(name = "SIC")
 	public String getSic() {
 		return sic;
 	}
@@ -86,6 +133,7 @@ public class OrganistationVO {
 		this.sic = sic;
 	}
 
+	@Column(name = "OrgFullDescription")
 	public String getOrgFullDescription() {
 		return orgFullDescription;
 	}
@@ -94,6 +142,7 @@ public class OrganistationVO {
 		this.orgFullDescription = orgFullDescription;
 	}
 
+	@Column(name = "Phone")
 	public String getPhone() {
 		return phone;
 	}
@@ -102,6 +151,7 @@ public class OrganistationVO {
 		this.phone = phone;
 	}
 
+	@Column(name = "Fax")
 	public String getFax() {
 		return fax;
 	}
@@ -110,6 +160,7 @@ public class OrganistationVO {
 		this.fax = fax;
 	}
 
+	@Column(name = "Email")
 	public String getEmail() {
 		return email;
 	}
@@ -118,6 +169,7 @@ public class OrganistationVO {
 		this.email = email;
 	}
 
+	@Column(name = "WebAddress")
 	public String getWebAddress() {
 		return webAddress;
 	}
@@ -126,6 +178,7 @@ public class OrganistationVO {
 		this.webAddress = webAddress;
 	}
 
+	@Column(name = "CharityNumber")
 	public String getCharityNumber() {
 		return charityNumber;
 	}
@@ -134,6 +187,7 @@ public class OrganistationVO {
 		this.charityNumber = charityNumber;
 	}
 
+	@Column(name = "CompanyNumber")
 	public String getCompanyNumber() {
 		return companyNumber;
 	}
@@ -142,6 +196,7 @@ public class OrganistationVO {
 		this.companyNumber = companyNumber;
 	}
 
+	@Column(name = "GovOfficeRegionID")
 	public String getGovOfficeRegionId() {
 		return govOfficeRegionId;
 	}
@@ -150,6 +205,7 @@ public class OrganistationVO {
 		this.govOfficeRegionId = govOfficeRegionId;
 	}
 
+	@Column(name = "TrustRegionID")
 	public String getTrustRegionId() {
 		return trustRegionId;
 	}
@@ -158,6 +214,7 @@ public class OrganistationVO {
 		this.trustRegionId = trustRegionId;
 	}
 
+	@Column(name = "TrustDistrictID")
 	public String getTrustDistrictId() {
 		return trustDistrictId;
 	}
@@ -166,6 +223,7 @@ public class OrganistationVO {
 		this.trustDistrictId = trustDistrictId;
 	}
 
+	@Column(name = "StatusActive")
 	public byte getStatusActive() {
 		return statusActive;
 	}
@@ -174,6 +232,7 @@ public class OrganistationVO {
 		this.statusActive = statusActive;
 	}
 
+	@Column(name = "StatusPreferred")
 	public byte getStatusPreferred() {
 		return statusPreferred;
 	}
@@ -182,54 +241,13 @@ public class OrganistationVO {
 		this.statusPreferred = statusPreferred;
 	}
 
+	@Column(name = "StatusExpression")
 	public byte getStatusExpression() {
 		return statusExpression;
 	}
 
 	public void setStatusExpression(byte statusExpression) {
 		this.statusExpression = statusExpression;
-	}
-
-	public OrganistationVO() {
-		super();
-	}
-
-	public OrganistationVO(String orgid, String orgName, String contactId,
-			String orgShortDescription, String addressId, String sic,
-			String orgFullDescription, String phone, String fax, String email,
-			String refID, String webAddress, String charityNumber,
-			String companyNumber, String govOfficeRegionId,
-			String trustRegionId, String trustDistrictId, byte statusActive,
-			byte statusPreferred, byte statusExpression) {
-		super();
-		this.orgid = orgid;
-		this.orgName = orgName;
-		this.contactId = contactId;
-		this.orgShortDescription = orgShortDescription;
-		this.addressId = addressId;
-		this.sic = sic;
-		this.orgFullDescription = orgFullDescription;
-		this.phone = phone;
-		this.fax = fax;
-		this.email = email;
-		this.refID = refID;
-		this.webAddress = webAddress;
-		this.charityNumber = charityNumber;
-		this.companyNumber = companyNumber;
-		this.govOfficeRegionId = govOfficeRegionId;
-		this.trustRegionId = trustRegionId;
-		this.trustDistrictId = trustDistrictId;
-		this.statusActive = statusActive;
-		this.statusPreferred = statusPreferred;
-		this.statusExpression = statusExpression;
-	}
-
-	public String getRefID() {
-		return refID;
-	}
-
-	public void setRefID(String refID) {
-		this.refID = refID;
 	}
 
 }
