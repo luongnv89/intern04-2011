@@ -1,6 +1,6 @@
 package mock.appcode.common.valueobjects;
 
-public class Organistation {
+public class OrganistationVO {
 	private String orgid;
 	private String orgName;
 	private String contactId;
@@ -178,11 +178,11 @@ public class Organistation {
 		this.statusExpression = statusExpression;
 	}
 
-	public Organistation() {
+	public OrganistationVO() {
 		super();
 	}
 
-	public Organistation(String orgid, String orgName, String contactId,
+	public OrganistationVO(String orgid, String orgName, String contactId,
 			String orgShortDescription, String addressId, String sic,
 			String orgFullDescription, String phone, String fax, String email,
 			String refID, String webAddress, String charityNumber,

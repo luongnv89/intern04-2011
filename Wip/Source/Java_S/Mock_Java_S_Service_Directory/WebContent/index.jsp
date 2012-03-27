@@ -9,7 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login Page</title>
 <s:head />
-<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style.css" media="screen" rel="stylesheet"
+	type="text/css" />
 
 </head>
 
@@ -29,12 +30,12 @@
 		<div id="body">
 			<table>
 
-				<s:form action="login" method="post" >
+				<s:form action="login" method="post">
 
 					<br>
-					<s:textfield name="account" label="Account"></s:textfield>
+					<s:textfield name="account" label="Account" required="true"></s:textfield>
 
-					<s:password name="password" label="Password"></s:password>
+					<s:password name="password" label="Password" required="true"></s:password>
 
 					<s:submit value="Submit"></s:submit>
 

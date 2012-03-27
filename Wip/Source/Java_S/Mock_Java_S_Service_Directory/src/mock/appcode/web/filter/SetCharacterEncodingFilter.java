@@ -50,8 +50,8 @@ import javax.servlet.UnavailableException;
  * and make the <code>selectEncoding( )</code> method more intelligent about
  * what encoding to choose, based on characteristics of the incoming request
  * (such as the values of the <code>Accept-Language
- * </code> and <code>User-Agent</code> headers, or a value stashed in the
- * current user's session.
+ * </code> and <code>UserVO-Agent</code> headers, or a value stashed in the
+ * current userVO's session.
  * </p>
  * 
  * @author Craig McClanahan

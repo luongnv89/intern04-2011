@@ -3,28 +3,28 @@ package mock.appcode.dao.daointerface;
 import java.util.List;
 
 import mock.appcode.common.utility.HibernateUtil;
-import mock.appcode.common.valueobjects.Service;
+import mock.appcode.common.valueobjects.ServiceVO;
 
 ;
 
 public class ServiceDAO extends HibernateUtil {
 
-	public Service[] getAll() throws Exception {
+	public ServiceVO[] getAll() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void addNew(Service entity) throws Exception {
+	public void addNew(ServiceVO entity) throws Exception {
 		// TODO Auto-generated method stub
 
 	}
 
-	public void amend(Service entity, String str) throws Exception {
+	public void amend(ServiceVO entity, String str) throws Exception {
 		// TODO Auto-generated method stub
 
 	}
 
-	public Service[] getByActive() throws Exception {
+	public ServiceVO[] getByActive() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
