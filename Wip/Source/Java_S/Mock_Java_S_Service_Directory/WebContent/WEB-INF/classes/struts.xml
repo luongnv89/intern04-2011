@@ -24,6 +24,10 @@
 		<default-action-ref name="default-action">
 		</default-action-ref>
 
+		<global-exception-mappings>
+			<exception-mapping result="error"
+				exception="java.lang.NullPointerException"></exception-mapping>
+		</global-exception-mappings>
 		<action name="login" method="doLogin"
 			class="mock.appcode.web.action.UserAction">
 			<result name="input">/_index.jsp</result>
@@ -37,16 +41,21 @@
 		</action>
 
 		<action name="getOrganistationByActive" method="getOrganistationByActive"
-			class="mock.appcode.web.action.OrganistationAction">
+			class="mock.appcode.web.action.OrganisationAction">
 			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
 			<result name="success" type="tiles">org.getByActive.tiles
 			</result>
 		</action>
 
 		<action name="addOrganistation" method="addOrganistation"
-			class="mock.appcode.web.action.OrganistationAction">
+			class="mock.appcode.web.action.OrganisationAction">
+			
+			<exception-mapping exception="java.lang.NullPointerException"
+				result="error" />
+				
 			<result name="success" type="tiles">org.add.tiles
 			</result>
+			<result name="error">error.tiles</result>
 		</action>
 
 		<action name="default-action">

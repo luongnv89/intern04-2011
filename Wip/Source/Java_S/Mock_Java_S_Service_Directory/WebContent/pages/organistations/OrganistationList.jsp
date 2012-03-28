@@ -62,9 +62,9 @@
 			<tr>
 				<td class="border"><span class="number"><s:property
 							value="orgName" /></span></td>
-				<td class="border"><s:property value="addressID" /></td>
+				<td class="border"><s:property value="addressId" /></td>
 				<td class="border"></td>
-				<td class="border"><s:property value="contactID" /></td>
+				<td class="border"><s:property value="contactId" /></td>
 				<td class="border"><s:property value="statusActive" /></td>
 			</tr>
 			</s:iterator>
