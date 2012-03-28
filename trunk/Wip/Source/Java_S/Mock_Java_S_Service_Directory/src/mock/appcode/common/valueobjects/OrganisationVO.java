@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Organistation")
-public class OrganistationVO {
+@Table(name = "Organisation")
+public class OrganisationVO {
 	private String orgId;
 	private String orgName;
 	private String contactId;
@@ -29,18 +29,18 @@ public class OrganistationVO {
 	private String govOfficeRegionId;
 	private String trustRegionId;
 	private String trustDistrictId;
-	private byte statusActive;
+	private int statusActive;
 
-	private byte statusPreferred;
-	private byte statusExpression;
+	private int statusPreferred;
+	private int statusExpression;
 
-	public OrganistationVO(String orgId, String orgName, String contactId,
+	public OrganisationVO(String orgId, String orgName, String contactId,
 			String orgShortDescription, String addressId, int refId,
 			String sic, String orgFullDescription, String phone, String fax,
 			String email, String webAddress, String charityNumber,
 			String companyNumber, String govOfficeRegionId,
-			String trustRegionId, String trustDistrictId, byte statusActive,
-			byte statusPreferred, byte statusExpression) {
+			String trustRegionId, String trustDistrictId, int statusActive,
+			int statusPreferred, int statusExpression) {
 		super();
 		this.orgId = orgId;
 		this.orgName = orgName;
@@ -64,7 +64,7 @@ public class OrganistationVO {
 		this.statusExpression = statusExpression;
 	}
 
-	public OrganistationVO() {
+	public OrganisationVO() {
 		super();
 	}
 
@@ -224,29 +224,29 @@ public class OrganistationVO {
 	}
 
 	@Column(name = "StatusActive")
-	public byte getStatusActive() {
+	public int getStatusActive() {
 		return statusActive;
 	}
 
-	public void setStatusActive(byte statusActive) {
+	public void setStatusActive(int statusActive) {
 		this.statusActive = statusActive;
 	}
 
 	@Column(name = "StatusPreferred")
-	public byte getStatusPreferred() {
+	public int getStatusPreferred() {
 		return statusPreferred;
 	}
 
-	public void setStatusPreferred(byte statusPreferred) {
+	public void setStatusPreferred(int statusPreferred) {
 		this.statusPreferred = statusPreferred;
 	}
 
 	@Column(name = "StatusExpression")
-	public byte getStatusExpression() {
+	public int getStatusExpression() {
 		return statusExpression;
 	}
 
-	public void setStatusExpression(byte statusExpression) {
+	public void setStatusExpression(int statusExpression) {
 		this.statusExpression = statusExpression;
 	}
 
