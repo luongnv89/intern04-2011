@@ -11,10 +11,23 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganisationAction extends ActionSupport {
 
-	private List<OrganisationVO> listOrgByActive;
-	private List<AddressVO> listAddressVO=new ArrayList<AddressVO>();
+// ----------------------------------- PROPERTIES ----------------------------------///
 	
-
+	
+	private static List<OrganisationVO> listOrgByActive;
+	
+	
+	// Organisation Bean
+	private OrganisationVO org;
+	
+	// Address Bean
+	private AddressVO address;
+	
+	
+	
+	
+//-----------------------------------    METHOD ----------------------------------///
+	
 	public  List<AddressVO> getListAddressVO() {
 		return listAddressVO;
 	}
@@ -31,11 +44,39 @@ public class OrganisationAction extends ActionSupport {
 		this.listOrgByActive = listOrgByActive;
 	}
 
-	public String addOrganisation() {
+	
+	// action hien thi man hinh Add Organisation  
+	
+	
+	public String addOrganistation() {
 		return "success";
 	}
+	
+	// action save Organisation 
 
-	public String setOrganisationIsActive() {
+	public String saveOrganisation() {
+		
+		
+		System.out.println(getOrg());
+		System.out.println(getAddress());
+		
+		org.setAddressVO(getAddress());
+		
+		OrganisationDAOImpl orgImpl = new OrganisationDAOImpl();
+		try {
+			
+			orgImpl.addNew(org);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "success";
+	}
+	
+	
+	
+	public String setOrganistationIsActive() {
 		return SUCCESS;
 	}
 
@@ -84,4 +125,27 @@ public class OrganisationAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	
+// ------------------------------------------ GETTER , SETTER --------------------------------//
+	
+	public OrganisationVO getOrg() {
+		return org;
+	}
+
+	public void setOrg(OrganisationVO org) {
+		this.org = org;
+	}
+
+	public AddressVO getAddress() {
+		return address;
+	}
+
+	public void setAddress(AddressVO address) {
+		this.address = address;
+	}
+	
+	
+
+
+	
 }
