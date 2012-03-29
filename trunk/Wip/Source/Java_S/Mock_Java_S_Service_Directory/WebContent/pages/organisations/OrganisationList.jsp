@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Insert title here</title>
-<link href="css/Organistation.css" rel="stylesheet" type="text/css" />
+<link href="css/Organisation.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<span class="title">Organisation List</span>
@@ -26,37 +26,38 @@
 						| <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F
 							G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a
 						href="#">S T U V</a> | <a href="#">W X Y Z </a></span></td>
-				<td colspan="2" align="right">
-				 <input type="submit" name="create" id="create" value="Create" />
-					<!--	<s:submit value="Create" />  -->
-					<!-- <s:checkbox label="Include In-Active" name="checkbox" /> -->
-						 <input type="checkbox" name="checkbox" value="checkbox" /> Include In-active 
-				</td>
+				<td colspan="2" align="right"><input type="submit"
+					name="create" id="create" value="Create" /> <!--	<s:submit value="Create" />  -->
+					<!-- <s:checkbox label="Include In-Active" name="checkbox" /> --> <input
+					type="checkbox" name="checkbox" value="checkbox" /> Include
+					In-active</td>
 
 				<td width="2%" rowspan="3" class="right">&nbsp;</td>
 			</tr>
-					
-				<tr>
 
-					<td width="19%" class="titleColumn"><strong>Organisation
-							Name </strong></td>
-					<td width="31%" class="titleColumn"><strong>Head
-							Office Address Line 1 </strong></td>
-					<td width="7%" class="titleColumn"><strong>Postcode</strong></td>
-					<td width="29%" class="titleColumn"><strong>Contact</strong></td>
-					<td width="10%" class="titleColumn"><strong>Is
-							Active? </strong></td>
-				</tr>
-			
-			<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
 			<tr>
-				<td class="border"><s:property value="orgId" /></td>
-				<td class="border">+++</td>
-				<td class="border">+++</td>
-				<td class="border">+++</td>
-				<td class="border">+++</td>
+
+				<td width="19%" class="titleColumn"><strong>Organisation
+						Name </strong></td>
+				<td width="31%" class="titleColumn"><strong>Head
+						Office Address Line 1 </strong></td>
+				<td width="7%" class="titleColumn"><strong>Postcode</strong></td>
+				<td width="29%" class="titleColumn"><strong>Contact</strong></td>
+				<td width="10%" class="titleColumn"><strong>Is Active?
+				</strong></td>
 			</tr>
+
+			<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
+				<tr>
+					<td class="border" width="19%"><s:property value="orgName" /></td>
+					<td class="border" width="31%"><s:property
+							value="addressLine1" /></td>
+					<td class="border" width="7%"></td>
+					<td class="border" width="29%"></td>
+					<td class="border" width="10%"></td>
+				</tr>
 			</s:iterator>
+
 			<tr>
 				<td colspan="7" class="bottom">&nbsp;</td>
 			</tr>

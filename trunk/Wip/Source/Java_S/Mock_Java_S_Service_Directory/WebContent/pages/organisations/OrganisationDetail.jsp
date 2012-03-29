@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
-<link href="css/Organistation.css" rel="stylesheet" type="text/css" />
+<link href="css/Organisation.css" rel="stylesheet" type="text/css" />
 
 </head>
 

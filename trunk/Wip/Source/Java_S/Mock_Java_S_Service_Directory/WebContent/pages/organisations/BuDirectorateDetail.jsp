@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
-<link href="css/Organistation.css" rel="stylesheet" type="text/css" />
+<link href="css/Organisation.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -163,7 +163,7 @@
     <td width="10%" class="titleColumn"><strong>Is Active? </strong></td>
   </tr>
   <tr >
-    <td class="border"><span class="number">1</span></td>
+    <td class="border">1</span></td>
     <td class="border">10 Maurer Court Greenwich Line 1 </td>
     <td class="border">SE10 0SS </td>
     <td class="border">Isax NewTon </td>

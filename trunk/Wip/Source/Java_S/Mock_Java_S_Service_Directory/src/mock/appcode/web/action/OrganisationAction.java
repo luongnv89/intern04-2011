@@ -9,15 +9,15 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganisationAction extends ActionSupport {
 
-	private static List<OrganisationVO> listOrgByActive;
+	private  List<OrganisationVO> listOrgByActive;
 	
 
-	public static List<OrganisationVO> getListOrgByActive() {
+	public  List<OrganisationVO> getListOrgByActive() {
 		return listOrgByActive;
 	}
 
-	public static void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
-		OrganisationAction.listOrgByActive = listOrgByActive;
+	public  void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
+		this.listOrgByActive = listOrgByActive;
 	}
 
 	public String addOrganistation() {
