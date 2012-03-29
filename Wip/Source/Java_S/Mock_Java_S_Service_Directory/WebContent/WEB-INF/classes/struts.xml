@@ -58,9 +58,24 @@
 			<result name="error">error.tiles</result>
 		</action>
 
+		<action name="saveOrganisation" method="saveOrganisation"
+			class="mock.appcode.web.action.OrganisationAction">
+			
+				
+			<result name="success">/_index.jsp </result>
+			
+		</action>
+
+		<action name="LeadContact" method="getContact" class="mock.appcode.web.action.ContactAction">
+			
+			<result name="success">/lookupContact.jsp</result>
+			
+		</action>
+		
 		<action name="default-action">
 			<result type="tiles">error.tiles</result>
 		</action>
+		
 
 	</package>
 

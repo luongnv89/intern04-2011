@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Organisation")
+@Table(name = "Address")
 public class AddressVO {
 	private int addressID;
 	private String postCode;

@@ -5,20 +5,24 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Organisation")
 public class OrganisationVO {
 
-	private String orgId;
+	private int orgId;
 	private String orgName;
 
 	private ContactVO contactVO;
 	private String orgShortDescription;
 
+	
 	private AddressVO addressVO;
+	
 	private ReferenceDataVO referenceDataVO;
 
 	private String sic;
@@ -42,7 +46,7 @@ public class OrganisationVO {
 	private int statusPreferred;
 	private int statusExpression;
 
-	public OrganisationVO(String orgId, String orgName, ContactVO contactVO,
+	public OrganisationVO(int orgId, String orgName, ContactVO contactVO,
 			String orgShortDescription, AddressVO addressVO,
 			ReferenceDataVO referenceDataVO, String sic,
 			String orgFullDescription, String phone, String fax, String email,
@@ -77,14 +81,39 @@ public class OrganisationVO {
 		super();
 	}
 
+	public OrganisationVO(OrganisationVO org , AddressVO address) {
+		
+		this.orgId = org.orgId;
+		this.orgName = org.orgName;
+		this.contactVO = org.contactVO;
+		this.orgShortDescription = org.orgShortDescription;
+		this.addressVO = address;
+		this.referenceDataVO = org.referenceDataVO;
+		this.sic = org.sic;
+		this.orgFullDescription = org.orgFullDescription;
+		this.phone = org.phone;
+		this.fax = org.fax;
+		this.email = org.email;
+		this.webAddress = org.webAddress;
+		this.charityNumber = org.charityNumber;
+		this.companyNumber = org.companyNumber;
+		this.govOfficeRegionVO = org.govOfficeRegionVO;
+		this.trustRegionVO = org.trustRegionVO;
+		this.trustDistrictVO = org.trustDistrictVO;
+		this.statusActive = org.statusActive;
+		this.statusPreferred = org.statusPreferred;
+		this.statusExpression = org.statusExpression;
+	}
+	
+	
 	@Id
 	@GeneratedValue
 	@Column(name = "OrgID")
-	public String getOrgId() {
+	public int getOrgId() {
 		return orgId;
 	}
 
-	public void setOrgId(String orgId) {
+	public void setOrgId(int orgId) {
 		this.orgId = orgId;
 	}
 
@@ -115,7 +144,8 @@ public class OrganisationVO {
 		this.orgShortDescription = orgShortDescription;
 	}
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="AddressID")
 	public AddressVO getAddressVO() {
 		return addressVO;
 	}
