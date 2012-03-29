@@ -43,8 +43,8 @@
 		<action name="getOrganistationByActive" method="getOrganistationByActive"
 			class="mock.appcode.web.action.OrganisationAction">
 			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
-			<result name="success" type="tiles">org.getByActive.tiles
-			</result>
+			<result name="success" type="tiles">org.getByActive.tiles</result>
+			<result name="fail" type="tiles">error.tiles</result>
 		</action>
 
 		<action name="addOrganistation" method="addOrganistation"

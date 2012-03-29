@@ -9,7 +9,16 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganisationAction extends ActionSupport {
 
-	private List<OrganisationVO> listOrgByActive = null;
+	private static List<OrganisationVO> listOrgByActive;
+	
+
+	public static List<OrganisationVO> getListOrgByActive() {
+		return listOrgByActive;
+	}
+
+	public static void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
+		OrganisationAction.listOrgByActive = listOrgByActive;
+	}
 
 	public String addOrganistation() {
 		return "success";
@@ -30,11 +39,14 @@ public class OrganisationAction extends ActionSupport {
 	public String getOrganistationByActive() {
 		try {
 			listOrgByActive = new OrganisationDAOImpl().getByActive();
+			if(listOrgByActive!=null){
+				return "success";
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "success";
+		return "fail";
 	}
 
 	public String getOrganistationByInActive() {
