@@ -15,7 +15,7 @@ public class OrganisationAction extends ActionSupport {
 	
 	
 	private static List<OrganisationVO> listOrgByActive;
-	
+	private List<AddressVO> listAddressVO;
 	
 	// Organisation Bean
 	private OrganisationVO org;

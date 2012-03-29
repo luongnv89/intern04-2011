@@ -31,7 +31,7 @@
 		<div id="body">
 			<table>
 
-				<s:form action="addOrganistation" method="post">
+				<s:form action="login" method="post">
 
 					<br>
 					<s:textfield name="account" label="Account" required="true"></s:textfield>
