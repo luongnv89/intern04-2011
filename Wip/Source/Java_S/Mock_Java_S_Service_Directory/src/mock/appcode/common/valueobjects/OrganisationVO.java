@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "Organisation")
 public class OrganisationVO {
@@ -105,6 +104,7 @@ public class OrganisationVO {
 		this.contactVO = contactVO;
 	}
 
+	@ManyToOne(cascade = CascadeType.ALL)
 	public String getOrgShortDescription() {
 		return this.orgShortDescription;
 	}
@@ -113,6 +113,7 @@ public class OrganisationVO {
 		this.orgShortDescription = orgShortDescription;
 	}
 
+	@ManyToOne(cascade = CascadeType.ALL)
 	public AddressVO getAddressVO() {
 		return addressVO;
 	}
@@ -121,6 +122,7 @@ public class OrganisationVO {
 		this.addressVO = addressVO;
 	}
 
+	@ManyToOne(cascade = CascadeType.ALL)
 	public ReferenceDataVO getReferenceDataVO() {
 		return referenceDataVO;
 	}
@@ -129,6 +131,7 @@ public class OrganisationVO {
 		this.referenceDataVO = referenceDataVO;
 	}
 
+	@Column(name = "SIC")
 	public String getSic() {
 		return sic;
 	}
@@ -137,6 +140,7 @@ public class OrganisationVO {
 		this.sic = sic;
 	}
 
+	@Column(name = "OrgFullDescription")
 	public String getOrgFullDescription() {
 		return orgFullDescription;
 	}
@@ -145,6 +149,7 @@ public class OrganisationVO {
 		this.orgFullDescription = orgFullDescription;
 	}
 
+	@Column(name = "Phone")
 	public String getPhone() {
 		return phone;
 	}
@@ -153,6 +158,7 @@ public class OrganisationVO {
 		this.phone = phone;
 	}
 
+	@Column(name = "Fax")
 	public String getFax() {
 		return fax;
 	}
@@ -161,6 +167,7 @@ public class OrganisationVO {
 		this.fax = fax;
 	}
 
+	@Column(name = "Email")
 	public String getEmail() {
 		return email;
 	}
@@ -169,6 +176,7 @@ public class OrganisationVO {
 		this.email = email;
 	}
 
+	@Column(name = "WebAddress")
 	public String getWebAddress() {
 		return webAddress;
 	}
@@ -177,6 +185,7 @@ public class OrganisationVO {
 		this.webAddress = webAddress;
 	}
 
+	@Column(name = "CharityNumber")
 	public String getCharityNumber() {
 		return charityNumber;
 	}
@@ -185,6 +194,7 @@ public class OrganisationVO {
 		this.charityNumber = charityNumber;
 	}
 
+	@Column(name = "CompanyNumber")
 	public String getCompanyNumber() {
 		return companyNumber;
 	}
@@ -193,6 +203,7 @@ public class OrganisationVO {
 		this.companyNumber = companyNumber;
 	}
 
+	@ManyToOne(cascade = CascadeType.ALL)
 	public GovOfficeRegionVO getGovOfficeRegionVO() {
 		return govOfficeRegionVO;
 	}
@@ -201,6 +212,7 @@ public class OrganisationVO {
 		this.govOfficeRegionVO = govOfficeRegionVO;
 	}
 
+	@ManyToOne(cascade = CascadeType.ALL)
 	public TrustRegionVO getTrustRegionVO() {
 		return trustRegionVO;
 	}
@@ -209,6 +221,7 @@ public class OrganisationVO {
 		this.trustRegionVO = trustRegionVO;
 	}
 
+	@ManyToOne(cascade = CascadeType.ALL)
 	public TrustDistrictVO getTrustDistrictVO() {
 		return trustDistrictVO;
 	}
@@ -217,6 +230,7 @@ public class OrganisationVO {
 		this.trustDistrictVO = trustDistrictVO;
 	}
 
+	@Column(name = "StatusActive")
 	public int getStatusActive() {
 		return statusActive;
 	}
@@ -225,6 +239,7 @@ public class OrganisationVO {
 		this.statusActive = statusActive;
 	}
 
+	@Column(name = "StatusPreferred")
 	public int getStatusPreferred() {
 		return statusPreferred;
 	}
@@ -233,6 +248,7 @@ public class OrganisationVO {
 		this.statusPreferred = statusPreferred;
 	}
 
+	@Column(name = "StatusExpression")
 	public int getStatusExpression() {
 		return statusExpression;
 	}
