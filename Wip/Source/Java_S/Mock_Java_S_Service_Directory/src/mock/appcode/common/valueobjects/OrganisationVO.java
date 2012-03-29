@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Organisation")
 public class OrganisationVO {
-	
+
 	private String orgId;
 	private String orgName;
 
@@ -23,22 +23,22 @@ public class OrganisationVO {
 
 	private String sic;
 	private String orgFullDescription;
-	
+
 	private String phone;
 	private String fax;
-	
+
 	private String email;
 	private String webAddress;
-	
+
 	private String charityNumber;
 	private String companyNumber;
-	
+
 	private GovOfficeRegionVO govOfficeRegionVO;
 	private TrustRegionVO trustRegionVO;
 
 	private TrustDistrictVO trustDistrictVO;
 	private int statusActive;
-	
+
 	private int statusPreferred;
 	private int statusExpression;
 
@@ -106,7 +106,7 @@ public class OrganisationVO {
 		this.contactVO = contactVO;
 	}
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@Column(name = "OrgShortDescription")
 	public String getOrgShortDescription() {
 		return this.orgShortDescription;
 	}
