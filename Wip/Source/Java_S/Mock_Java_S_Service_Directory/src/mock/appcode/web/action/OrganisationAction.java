@@ -11,37 +11,54 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganisationAction extends ActionSupport {
 
-	private  List<OrganisationVO> listOrgByActive;
-	private AddressVO addressVO;
+	private List<OrganisationVO> listOrgByActive;
+	private List<AddressVO> listAddressVO=new ArrayList<AddressVO>();
+	
 
-	public  List<OrganisationVO> getListOrgByActive() {
+	public  List<AddressVO> getListAddressVO() {
+		return listAddressVO;
+	}
+
+	public  void setListAddressVO(List<AddressVO> listAddressVO) {
+		listAddressVO = listAddressVO;
+	}
+
+	public List<OrganisationVO> getListOrgByActive() {
 		return listOrgByActive;
 	}
 
-	public  void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
+	public void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
 		this.listOrgByActive = listOrgByActive;
 	}
 
-	public String addOrganistation() {
+	public String addOrganisation() {
 		return "success";
 	}
 
-	public String setOrganistationIsActive() {
+	public String setOrganisationIsActive() {
 		return SUCCESS;
 	}
 
-	public String setOrganistationIsInActive() {
+	public String setOrganisationIsInActive() {
 		return SUCCESS;
 	}
 
-	public String amendOrganistation() {
+	public String amendOrganisation() {
 		return SUCCESS;
 	}
 
-	public String getOrganistationByActive() {
+	public String getOrganisationByActive() {
 		try {
 			listOrgByActive = new OrganisationDAOImpl().getByActive();
-			if(listOrgByActive!=null){
+			List<AddressVO> myList = null;
+			for(int i=0;i<listOrgByActive.size();i++)
+			{
+				AddressVO advo=listOrgByActive.get(i).getAddressVO();
+				listAddressVO.add(advo);
+			}
+			
+				
+			if (listOrgByActive != null) {
 				return "success";
 			}
 		} catch (Exception e) {
@@ -51,7 +68,7 @@ public class OrganisationAction extends ActionSupport {
 		return "fail";
 	}
 
-	public String getOrganistationByInActive() {
+	public String getOrganisationByInActive() {
 		return SUCCESS;
 	}
 
