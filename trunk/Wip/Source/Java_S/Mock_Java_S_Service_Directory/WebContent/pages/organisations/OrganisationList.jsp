@@ -50,8 +50,7 @@
 			<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
 				<tr>
 					<td class="border" width="19%"><s:property value="orgName" /></td>
-					<td class="border" width="31%"><s:property
-							value="addressLine1" /></td>
+					<td class="border" width="31%"><s:property value="addressLine1" /></td>
 					<td class="border" width="7%"></td>
 					<td class="border" width="29%"></td>
 					<td class="border" width="10%"></td>
