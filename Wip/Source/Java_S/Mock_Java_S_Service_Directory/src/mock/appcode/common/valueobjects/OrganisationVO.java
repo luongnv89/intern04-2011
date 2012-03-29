@@ -1,20 +1,25 @@
 package mock.appcode.common.valueobjects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "Organisation")
 public class OrganisationVO {
 	private String orgId;
 	private String orgName;
-	private String contactId;
+
+	private ContactVO contactVO;
 	private String orgShortDescription;
-	private String addressId;
-	private int refId;
+
+	private AddressVO addressVO;
+	private ReferenceDataVO referenceDataVO;
 
 	private String sic;
 	private String orgFullDescription;
@@ -26,28 +31,31 @@ public class OrganisationVO {
 	private String charityNumber;
 
 	private String companyNumber;
-	private String govOfficeRegionId;
-	private String trustRegionId;
-	private String trustDistrictId;
-	private int statusActive;
+	private GovOfficeRegionVO govOfficeRegionVO;
 
+	private TrustRegionVO trustRegionVO;
+
+	private TrustDistrictVO trustDistrictVO;
+
+	private int statusActive;
 	private int statusPreferred;
 	private int statusExpression;
 
-	public OrganisationVO(String orgId, String orgName, String contactId,
-			String orgShortDescription, String addressId, int refId,
-			String sic, String orgFullDescription, String phone, String fax,
-			String email, String webAddress, String charityNumber,
-			String companyNumber, String govOfficeRegionId,
-			String trustRegionId, String trustDistrictId, int statusActive,
+	public OrganisationVO(String orgId, String orgName, ContactVO contactVO,
+			String orgShortDescription, AddressVO addressVO,
+			ReferenceDataVO referenceDataVO, String sic,
+			String orgFullDescription, String phone, String fax, String email,
+			String webAddress, String charityNumber, String companyNumber,
+			GovOfficeRegionVO govOfficeRegionVO, TrustRegionVO trustRegionVO,
+			TrustDistrictVO trustDistrictVO, int statusActive,
 			int statusPreferred, int statusExpression) {
 		super();
 		this.orgId = orgId;
 		this.orgName = orgName;
-		this.contactId = contactId;
+		this.contactVO = contactVO;
 		this.orgShortDescription = orgShortDescription;
-		this.addressId = addressId;
-		this.refId = refId;
+		this.addressVO = addressVO;
+		this.referenceDataVO = referenceDataVO;
 		this.sic = sic;
 		this.orgFullDescription = orgFullDescription;
 		this.phone = phone;
@@ -56,9 +64,9 @@ public class OrganisationVO {
 		this.webAddress = webAddress;
 		this.charityNumber = charityNumber;
 		this.companyNumber = companyNumber;
-		this.govOfficeRegionId = govOfficeRegionId;
-		this.trustRegionId = trustRegionId;
-		this.trustDistrictId = trustDistrictId;
+		this.govOfficeRegionVO = govOfficeRegionVO;
+		this.trustRegionVO = trustRegionVO;
+		this.trustDistrictVO = trustDistrictVO;
 		this.statusActive = statusActive;
 		this.statusPreferred = statusPreferred;
 		this.statusExpression = statusExpression;
@@ -88,43 +96,39 @@ public class OrganisationVO {
 		this.orgName = orgName;
 	}
 
-	@Column(name = "ContactId")
-	public String getContactId() {
-		return contactId;
+	@ManyToOne(cascade = CascadeType.ALL)
+	public ContactVO getContactVO() {
+		return this.contactVO;
 	}
 
-	public void setContactId(String contactId) {
-		this.contactId = contactId;
+	public void setContactVO(ContactVO contactVO) {
+		this.contactVO = contactVO;
 	}
 
-	@Column(name = "OrgShortDescription")
 	public String getOrgShortDescription() {
-		return orgShortDescription;
+		return this.orgShortDescription;
 	}
 
 	public void setOrgShortDescription(String orgShortDescription) {
 		this.orgShortDescription = orgShortDescription;
 	}
 
-	@Column(name = "AddressID")
-	public String getAddressId() {
-		return addressId;
+	public AddressVO getAddressVO() {
+		return addressVO;
 	}
 
-	public void setAddressId(String addressId) {
-		this.addressId = addressId;
+	public void setAddressVO(AddressVO addressVO) {
+		this.addressVO = addressVO;
 	}
 
-	@Column(name = "RefID")
-	public int getRefId() {
-		return refId;
+	public ReferenceDataVO getReferenceDataVO() {
+		return referenceDataVO;
 	}
 
-	public void setRefId(int refId) {
-		this.refId = refId;
+	public void setReferenceDataVO(ReferenceDataVO referenceDataVO) {
+		this.referenceDataVO = referenceDataVO;
 	}
 
-	@Column(name = "SIC")
 	public String getSic() {
 		return sic;
 	}
@@ -133,7 +137,6 @@ public class OrganisationVO {
 		this.sic = sic;
 	}
 
-	@Column(name = "OrgFullDescription")
 	public String getOrgFullDescription() {
 		return orgFullDescription;
 	}
@@ -142,7 +145,6 @@ public class OrganisationVO {
 		this.orgFullDescription = orgFullDescription;
 	}
 
-	@Column(name = "Phone")
 	public String getPhone() {
 		return phone;
 	}
@@ -151,7 +153,6 @@ public class OrganisationVO {
 		this.phone = phone;
 	}
 
-	@Column(name = "Fax")
 	public String getFax() {
 		return fax;
 	}
@@ -160,7 +161,6 @@ public class OrganisationVO {
 		this.fax = fax;
 	}
 
-	@Column(name = "Email")
 	public String getEmail() {
 		return email;
 	}
@@ -169,7 +169,6 @@ public class OrganisationVO {
 		this.email = email;
 	}
 
-	@Column(name = "WebAddress")
 	public String getWebAddress() {
 		return webAddress;
 	}
@@ -178,7 +177,6 @@ public class OrganisationVO {
 		this.webAddress = webAddress;
 	}
 
-	@Column(name = "CharityNumber")
 	public String getCharityNumber() {
 		return charityNumber;
 	}
@@ -187,7 +185,6 @@ public class OrganisationVO {
 		this.charityNumber = charityNumber;
 	}
 
-	@Column(name = "CompanyNumber")
 	public String getCompanyNumber() {
 		return companyNumber;
 	}
@@ -196,34 +193,30 @@ public class OrganisationVO {
 		this.companyNumber = companyNumber;
 	}
 
-	@Column(name = "GovOfficeRegionID")
-	public String getGovOfficeRegionId() {
-		return govOfficeRegionId;
+	public GovOfficeRegionVO getGovOfficeRegionVO() {
+		return govOfficeRegionVO;
 	}
 
-	public void setGovOfficeRegionId(String govOfficeRegionId) {
-		this.govOfficeRegionId = govOfficeRegionId;
+	public void setGovOfficeRegionVO(GovOfficeRegionVO govOfficeRegionVO) {
+		this.govOfficeRegionVO = govOfficeRegionVO;
 	}
 
-	@Column(name = "TrustRegionID")
-	public String getTrustRegionId() {
-		return trustRegionId;
+	public TrustRegionVO getTrustRegionVO() {
+		return trustRegionVO;
 	}
 
-	public void setTrustRegionId(String trustRegionId) {
-		this.trustRegionId = trustRegionId;
+	public void setTrustRegionVO(TrustRegionVO trustRegionVO) {
+		this.trustRegionVO = trustRegionVO;
 	}
 
-	@Column(name = "TrustDistrictID")
-	public String getTrustDistrictId() {
-		return trustDistrictId;
+	public TrustDistrictVO getTrustDistrictVO() {
+		return trustDistrictVO;
 	}
 
-	public void setTrustDistrictId(String trustDistrictId) {
-		this.trustDistrictId = trustDistrictId;
+	public void setTrustDistrictVO(TrustDistrictVO trustDistrictVO) {
+		this.trustDistrictVO = trustDistrictVO;
 	}
 
-	@Column(name = "StatusActive")
 	public int getStatusActive() {
 		return statusActive;
 	}
@@ -232,7 +225,6 @@ public class OrganisationVO {
 		this.statusActive = statusActive;
 	}
 
-	@Column(name = "StatusPreferred")
 	public int getStatusPreferred() {
 		return statusPreferred;
 	}
@@ -241,7 +233,6 @@ public class OrganisationVO {
 		this.statusPreferred = statusPreferred;
 	}
 
-	@Column(name = "StatusExpression")
 	public int getStatusExpression() {
 		return statusExpression;
 	}
