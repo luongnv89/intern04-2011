@@ -40,7 +40,7 @@
 			<result name="logout_success">/_index.jsp</result>
 		</action>
 
-		<action name="getOrganistationByActive" method="getOrganistationByActive"
+		<action name="getOrganisationByActive" method="getOrganisationByActive"
 			class="mock.appcode.web.action.OrganisationAction">
 			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
 			<result name="success" type="tiles">org.getByActive.tiles</result>
