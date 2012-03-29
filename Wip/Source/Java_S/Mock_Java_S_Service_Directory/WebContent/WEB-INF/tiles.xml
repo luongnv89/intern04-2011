@@ -25,14 +25,14 @@
 	<definition name="org.getByActive.tiles" extends="baselayout">
 		<put-attribute name="title" value="Organistation List Page" />
 		<put-attribute name="body"
-			value="/pages/organistations/OrganistationList.jsp" />
+			value="/pages/organisations/OrganisationList.jsp" />
 	</definition>
 
 
 	<definition name="org.add.tiles" extends="baselayout">
 		<put-attribute name="title" value="Organistation Add Page" />
 		<put-attribute name="body"
-			value="/pages/organistations/OrganistationDetail.jsp" />
+			value="/pages/organisations/OrganisationDetail.jsp" />
 	</definition>
 
 

@@ -25,7 +25,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		try {
 			session.beginTransaction();
 			Query query = (Query) session.createQuery("from OrganisationVO");
-			List listResult = query.list();
+			List<OrganisationVO> listResult = query.list();
 			session.flush();
 			session.getTransaction().commit();
 			return listResult;
