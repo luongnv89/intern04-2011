@@ -2,6 +2,8 @@ package mock.appcode.web.action;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import mock.appcode.common.valueobjects.AddressVO;
 import mock.appcode.common.valueobjects.OrganisationVO;
 import mock.appcode.dao.daointerface.OrganisationDAOImpl;
 
@@ -10,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class OrganisationAction extends ActionSupport {
 
 	private  List<OrganisationVO> listOrgByActive;
-	
+	private AddressVO addressVO;
 
 	public  List<OrganisationVO> getListOrgByActive() {
 		return listOrgByActive;
