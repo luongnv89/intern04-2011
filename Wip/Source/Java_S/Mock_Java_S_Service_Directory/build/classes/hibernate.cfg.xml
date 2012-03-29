@@ -17,5 +17,12 @@
 		<mapping class="mock.appcode.common.valueobjects.UserVO" />
 		<mapping class="mock.appcode.common.valueobjects.OrganisationVO" />
 		<mapping class="mock.appcode.common.valueobjects.ServiceVO" />
+		<mapping class="mock.appcode.common.valueobjects.AddressVO" />
+		<mapping class="mock.appcode.common.valueobjects.ContactVO" />
+		<mapping class="mock.appcode.common.valueobjects.GovOfficeRegionVO" />
+		<mapping class="mock.appcode.common.valueobjects.ReferenceDateVO" />
+		<mapping class="mock.appcode.common.valueobjects.TownVO" />
+		<mapping class="mock.appcode.common.valueobjects.TrustDistrictVO" />
+		<mapping class="mock.appcode.common.valueobjects.TrustRegionVO" />
 	</session-factory>
 </hibernate-configuration>
