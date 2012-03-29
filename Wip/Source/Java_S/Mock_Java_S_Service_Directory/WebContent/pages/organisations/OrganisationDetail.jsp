@@ -1,21 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
-<link href="css/Organisation.css" rel="stylesheet" type="text/css" />
+<title>Organisation Detail</title>
+<link href="css/Organistation.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
 
+<form method="post" action="/Mock_Java_S_Service_Directory/saveOrganisation.action_Intern_004" name="saveOrganisation">
 <h3 class="title">Organisation Detail</h3>
 <br />
 <div id="bar">
-<form>
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><a href="#tab1">Detail 1</a><a href="#tab2">Detail 2</a><a href="#tab3">Detail 3</a><a href="#tab4">Detail 4</a><a href="#tab5">Detail 5</a><a href="#tab6">BU/Directorates</a></td>
@@ -30,7 +30,7 @@
     </label></td>
   </tr>
 </table>
-</form>
+
 </div>
 
 <div id="container" >
@@ -46,7 +46,7 @@
     <td width="1%" rowspan="12" class="left">&nbsp;</td>
     <td width="15%">Organisation Name <span class="title">*</span></td>
     <td width="35%"><label>
-      <input type="text" name="textfield" />
+      <input type="text" name="org.orgName" />
     </label></td>
     <td width="15%">Preferred Organisation </td>
     <td width="33%"><label>
@@ -57,7 +57,7 @@
   <tr>
     <td rowspan="2">Organisation Short Description <span class="title">*</span></td>
     <td rowspan="2"><label>
-      <textarea name="textarea"></textarea>
+      <textarea name="org.orgShortDescription"></textarea>
     </label></td>
     <td>Expression of Interest </td>
     <td><input type="checkbox" name="checkbox2" value="checkbox" /></td>
@@ -65,51 +65,55 @@
   <tr>
     <td>Type of Business <span class="title">*</span></td>
     <td><input type="text" name="textfield32" disabled="disabled" />
-      <span class="number">Lookup</span> </td>
+      <a href="javascript:void(0);" name="Name" title=" My title here " 
+		onclick=window.open("<s:url action="TypeOfBusiness"/>","Ratting","width=550,height=170");>Lookup</a></td>
+      
   </tr>
   <tr>
     <td>Lead Contact </td>
     <td><input type="text" name="textfield3" disabled="disabled" />
-      <span class="number">Lookup</span> </td>
+      <a href="javascript:void(0);" name="Name" title=" My title here " 
+		onclick=window.open("<s:url action="LeadContact"/>","Ratting","width=550,height=170");>Lookup</a></td>
     <td>SIC code </td>
     <td><input type="text" name="textfield33" disabled="disabled"  /></td>
   </tr>
   <tr>
     <td>Address Line 1 <span class="title">*</span></td>
-    <td><input type="text" name="textfield22" /></td>
+    <td><input type="text" name="address.addressLine1" /></td>
     <td rowspan="2">Organisation full Description </td>
     <td rowspan="2"><label>
-      <textarea name="textarea2"></textarea>
+      <textarea name="org.orgFullDescription"></textarea>
     </label></td>
   </tr>
   <tr>
     <td>Address Line 2 </td>
-    <td><input type="text" name="textfield23" /></td>
+    <td><input type="text" name="address.addressLine2" /></td>
   </tr>
   <tr>
     <td>Address Line 3 </td>
-    <td><input type="text" name="textfield24" /></td>
+    <td><input type="text" name="address.addressLine3" /></td>
     <td>Phone Number <span class="title">*</span></td>
-    <td><input type="text" name="textfield222" /></td>
+    <td><input type="text" name="org.phone" /></td>
   </tr>
   <tr>
     <td>Postcode <span class="title">*</span></td>
     <td><input type="text" name="textfield25" />
-      <span class="number">Lookup</span></td>
+      <a href="javascript:void(0);" name="Name" title=" My title here " 
+		onclick=window.open("<s:url action="Postcode"/>","Ratting","width=550,height=170");>Lookup</a></td>
     <td>Fax</td>
-    <td><input type="text" name="textfield223" /></td>
+    <td><input type="text" name="org.fax" /></td>
   </tr>
   <tr>
     <td>City/Town</td>
     <td><input type="text" name="textfield26" /></td>
     <td>Email</td>
-    <td><input type="text" name="textfield224" /></td>
+    <td><input type="text" name="org.email" /></td>
   </tr>
   <tr>
     <td>County</td>
     <td><input type="text" name="textfield27" /></td>
     <td>Web Address </td>
-    <td><input type="text" name="textfield225" /></td>
+    <td><input type="text" name="org.webAddress" /></td>
   </tr>
   <tr>
     <td>Nation Country </td>
@@ -120,13 +124,13 @@
       </select>
     </label></td>
     <td>Charity Number </td>
-    <td><input type="text" name="textfield226" /></td>
+    <td><input type="text" name="org.charityNumber" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>Company Number</td>   
-    <td><input type="text" name="textfield227" /></td>
+    <td><input type="text" name="org.companyNumber" /></td>
   </tr>
   <tr>
     <td colspan="6" class="top">&nbsp;</td>
@@ -434,5 +438,10 @@ Tab 4 Content
 </div>
 </div>
 </div>
+
+</form>
+
 </body>
+
+
 </html>

@@ -3,6 +3,11 @@ html {
 	font-size: 12px;
 }
 
+a {
+	
+	text-decoration: none;
+}
+
 #bar a {
 	padding: 4px 6px;
 	background: #EFEFEF;
