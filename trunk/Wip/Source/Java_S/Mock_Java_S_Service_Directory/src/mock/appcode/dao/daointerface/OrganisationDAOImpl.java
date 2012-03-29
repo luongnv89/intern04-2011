@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import mock.appcode.common.utility.HibernateUtil;
+import mock.appcode.common.valueobjects.AddressVO;
 import mock.appcode.common.valueobjects.OrganisationVO;
 
 public class OrganisationDAOImpl extends HibernateUtil implements
@@ -38,12 +39,15 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 
-	public void addNew(OrganisationVO organisationVO) throws Exception {
+	// them moi vao ca 2 bang address va organisation
+	
+	public void addNew(OrganisationVO organisationVO ) throws Exception {
 		try {
 
 			session.beginTransaction();
+			//session.save(addressVO);
 			session.save(organisationVO);
-			session.flush();
+			//session.flush();
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			if (session.getTransaction().isActive()) {
@@ -153,4 +157,6 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 	public List<OrganisationVO> searchByCharacter() throws Exception {
 		return null;
 	}
+
+	
 }

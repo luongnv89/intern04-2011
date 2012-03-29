@@ -9,6 +9,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Contact")
 public class ContactVO {
+	
+	
 	private int contactID;
 	private String firstName;
 
@@ -108,7 +110,7 @@ public class ContactVO {
 		this.surName = surName;
 	}
 
-	@Column(name = "Mobile")
+	@Column(name = "MobilePhone")
 	public String getMobilePhone() {
 		return mobilePhone;
 	}
