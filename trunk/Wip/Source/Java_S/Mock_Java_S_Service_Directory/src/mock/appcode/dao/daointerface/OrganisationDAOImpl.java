@@ -13,6 +13,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		OrganisationDAO {
 
 	private Session session;
+	private static int pageSize=15;
 
 	public OrganisationDAOImpl() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -76,12 +77,15 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		}
 	}
 
-	public List<OrganisationVO> getByActive() throws Exception {
+	public List<OrganisationVO> getByActive(int pageNumber) throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
 					.createQuery("from OrganisationVO where statusActive = '1'");
-//			query.setParameter(0, new Integer(1));
+
+			query.setFirstResult(pageSize*(pageNumber-1));
+			query.setMaxResults(pageSize);
+			
 			List listResult = query.list();
 
 			session.flush();
@@ -96,11 +100,13 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 
-	public List<OrganisationVO> getByInActive() throws Exception {
+	public List<OrganisationVO> getByInActive(int pageNumber) throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
 					.createQuery("from OrganisationVO org where org.statusActive='0'");
+			query.setFirstResult(pageSize*(pageNumber-1));
+			query.setMaxResults(pageSize);
 			List listResult = query.list();
 			session.flush();
 			session.getTransaction().commit();
@@ -157,6 +163,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 	public List<OrganisationVO> searchByCharacter() throws Exception {
 		return null;
 	}
+
 
 	
 }
