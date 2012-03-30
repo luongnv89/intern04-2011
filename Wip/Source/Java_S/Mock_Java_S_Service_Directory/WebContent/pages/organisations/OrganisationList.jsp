@@ -13,7 +13,7 @@
 	<span class="title">Organisation List</span>
 	<s:if test="%{#session.ACCOUNT ==null}">
 	</s:if>
-	<s:form method="post" action="addOrganisation">
+	<s:form method="post" action="addOrganisation" id="form1" name="form1">
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFEFEF">
 
@@ -58,11 +58,11 @@
   </tr>
 			<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
 				<tr id='<s:property value="orgId" />'>
-					<td class="border" width="19%"><span class="number"><s:property value="orgName" /></span></td>
-					<td class="border" width="31%"><s:property value="addressVO.addressLine1" /></td>
-					<td class="border" width="7%"><s:property value="addressVO.postCode" /></td>
-					<td class="border" width="29%"><s:property value="contactVO.firstName" /></td>
-					<td class="border" width="10%">
+					<td class="border" ><span class="number"><s:property value="orgName" /></span></td>
+					<td class="border" ><s:property value="addressVO.addressLine1" /></td>
+					<td class="border" ><s:property value="addressVO.postCode" /></td>
+					<td class="border" ><s:property value="contactVO.firstName" /></td>
+					<td class="border" >
 					<s:if test="statusActive==1">Yes
 					</s:if>
 					<s:else>
