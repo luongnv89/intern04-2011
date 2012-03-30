@@ -71,6 +71,16 @@
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
 
+
+ <action name="firstOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+ 		
+ 		 <action name="endOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+ 		
+ 		
 		<action name="saveOrganisation" method="saveOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">
 			<result name="success">/_index.jsp </result>

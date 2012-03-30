@@ -15,9 +15,14 @@ public class OrganisationAction extends ActionSupport {
 
 	private List<OrganisationVO> listOrgByActive;
 
+	private int pageSize=5;
 	private static int currentPageNumber =0;
-	private int paramNext;
+	private int paramFirst;
 	private int paramBack;
+	private int paramNext;
+	
+	private int paramEnd;
+	
 	public List<OrganisationVO> getListOrgByActive() {
 		return listOrgByActive;
 	}
@@ -45,21 +50,56 @@ public class OrganisationAction extends ActionSupport {
 	public String getOrganisationByActive() {
 			try {
 				
+				int count=new OrganisationDAOImpl().getByActive().size();
+				
+				int pageNumber=count/pageSize;
 				if(currentPageNumber==0){
 					currentPageNumber=1;
 				listOrgByActive = new OrganisationDAOImpl().getByActive(1);
 				}
 				
-				else if(paramNext ==4){
-				listOrgByActive = new OrganisationDAOImpl().getByActive(getCurrentPageNumber()+1);
-				currentPageNumber++;
+				
+				else if(paramFirst ==1)
+				{
+					listOrgByActive = new OrganisationDAOImpl().getByActive(1);
+					currentPageNumber = 1;
+				}
+					
+				
+				else if(paramBack == 2)
+				{
+					if(currentPageNumber>1)
+					{
+						listOrgByActive=new OrganisationDAOImpl().getByActive(getCurrentPageNumber()-1);
+						currentPageNumber--;
+					}
+					else
+					{
+						listOrgByActive = new OrganisationDAOImpl().getByActive(1);
+					}
 				}
 				
-				else if(paramBack == 2){
-					listOrgByActive=new OrganisationDAOImpl().getByActive(getCurrentPageNumber()-1);
-					currentPageNumber--;
+				
+				else if(paramNext ==4)
+				{
+					if(currentPageNumber<pageNumber)
+					{
+						listOrgByActive = new OrganisationDAOImpl().getByActive(getCurrentPageNumber()+1);
+						currentPageNumber++;
+					}
+					else
+					{
+						listOrgByActive = new OrganisationDAOImpl().getByActive(pageNumber);
+					}
 				}
 				
+			
+				else if(paramEnd ==5)
+				{
+					listOrgByActive = new OrganisationDAOImpl().getByActive(pageNumber);
+					currentPageNumber=pageNumber;
+				}
+					
 					
 				
 				
@@ -120,6 +160,22 @@ public class OrganisationAction extends ActionSupport {
 
 	public void setParamBack(int paramBack) {
 		this.paramBack = paramBack;
+	}
+
+	public int getParamFirst() {
+		return paramFirst;
+	}
+
+	public void setParamFirst(int paramFirst) {
+		this.paramFirst = paramFirst;
+	}
+
+	public int getParamEnd() {
+		return paramEnd;
+	}
+
+	public void setParamEnd(int paramEnd) {
+		this.paramEnd = paramEnd;
 	}
 
 

@@ -72,7 +72,7 @@
 			</s:iterator>
 			
 			<tr>
-			<s:url id="first" action="First">
+			<s:url id="first" action="firstOrganistationList">
 			<s:param name="paramFirst" value="1"></s:param>
 			</s:url>
 			
@@ -86,8 +86,8 @@
 			<s:param name="paramNext" value="4"></s:param>
 			</s:url>
 			
-			<s:url id="end" action="End">
-			<s:param name="paramEnd" value="end"></s:param>
+			<s:url id="end" action="endOrganistationList">
+			<s:param name="paramEnd" value="5"></s:param>
 			</s:url>
 			
 			<td class="titleColumn" colspan="4"><strong> </strong></td>
