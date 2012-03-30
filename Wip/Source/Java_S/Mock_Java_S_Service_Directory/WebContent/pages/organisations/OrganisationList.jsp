@@ -62,14 +62,12 @@
 					<td class="border" ><s:property value="addressVO.addressLine1" /></td>
 					<td class="border" ><s:property value="addressVO.postCode" /></td>
 					<td class="border" ><s:property value="contactVO.firstName" /></td>
-					<td class="border" >
-					<s:if test="statusActive==1">Yes
-					</s:if>
+					<td class="border" ><s:if test="statusActive==1">Yes</s:if>
 					<s:else>
 					No
 					</s:else>
-					
 					</td>
+					</tr>
 			</s:iterator>
 
 		</table>
