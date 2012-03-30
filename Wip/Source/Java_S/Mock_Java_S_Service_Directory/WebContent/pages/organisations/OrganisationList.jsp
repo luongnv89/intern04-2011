@@ -53,7 +53,14 @@
 					<td class="border" width="31%"><s:property value="addressVO.addressLine1" /></td>
 					<td class="border" width="7%"><s:property value="addressVO.postCode" /></td>
 					<td class="border" width="29%"><s:property value="contactVO.firstName" /></td>
-					<td class="border" width="10%"><s:property value="statusActive" /></td>
+					<td class="border" width="10%">
+					<s:if test="statusActive==1">Yes
+					</s:if>
+					<s:else>
+					No
+					</s:else>
+					
+					</td>
 			</s:iterator>
 
 		</table>
