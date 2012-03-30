@@ -100,6 +100,24 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 
+	public List<OrganisationVO> getByActive() throws Exception {
+		try {
+			session.beginTransaction();
+			Query query = (Query) session
+					.createQuery("from OrganisationVO where statusActive = '1'");
+			List listResult = query.list();
+			session.flush();
+			session.getTransaction().commit();
+			return listResult;
+		} catch (Exception e) {
+			if (session.getTransaction().isActive()) {
+				session.getTransaction().rollback();
+			}
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public List<OrganisationVO> getByInActive(int pageNumber) throws Exception {
 		try {
 			session.beginTransaction();
