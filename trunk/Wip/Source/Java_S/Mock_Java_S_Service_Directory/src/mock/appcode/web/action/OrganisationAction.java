@@ -11,23 +11,10 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrganisationAction extends ActionSupport {
 
-// ----------------------------------- PROPERTIES ----------------------------------///
+	private List<OrganisationVO> listOrgByActive;
+	private List<AddressVO> listAddressVO=new ArrayList<AddressVO>();
 	
-	
-	private static List<OrganisationVO> listOrgByActive;
-	private List<AddressVO> listAddressVO;
-	
-	// Organisation Bean
-	private OrganisationVO org;
-	
-	// Address Bean
-	private AddressVO address;
-	
-	
-	
-	
-//-----------------------------------    METHOD ----------------------------------///
-	
+
 	public  List<AddressVO> getListAddressVO() {
 		return listAddressVO;
 	}
@@ -44,39 +31,11 @@ public class OrganisationAction extends ActionSupport {
 		this.listOrgByActive = listOrgByActive;
 	}
 
-	
-	// action hien thi man hinh Add Organisation  
-	
-	
-	public String addOrganistation() {
+	public String addOrganisation() {
 		return "success";
 	}
-	
-	// action save Organisation 
 
-	public String saveOrganisation() {
-		
-		
-		System.out.println(getOrg());
-		System.out.println(getAddress());
-		
-		org.setAddressVO(getAddress());
-		
-		OrganisationDAOImpl orgImpl = new OrganisationDAOImpl();
-		try {
-			
-			orgImpl.addNew(org);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "success";
-	}
-	
-	
-	
-	public String setOrganistationIsActive() {
+	public String setOrganisationIsActive() {
 		return SUCCESS;
 	}
 
@@ -94,6 +53,7 @@ public class OrganisationAction extends ActionSupport {
 			List<AddressVO> myList = null;
 			for(int i=0;i<listOrgByActive.size();i++)
 			{
+				
 				AddressVO advo=listOrgByActive.get(i).getAddressVO();
 				listAddressVO.add(advo);
 			}
@@ -125,27 +85,4 @@ public class OrganisationAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	
-// ------------------------------------------ GETTER , SETTER --------------------------------//
-	
-	public OrganisationVO getOrg() {
-		return org;
-	}
-
-	public void setOrg(OrganisationVO org) {
-		this.org = org;
-	}
-
-	public AddressVO getAddress() {
-		return address;
-	}
-
-	public void setAddress(AddressVO address) {
-		this.address = address;
-	}
-	
-	
-
-
-	
 }
