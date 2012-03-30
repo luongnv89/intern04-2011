@@ -4,6 +4,8 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Database"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Huongdan_cauhinh_dechay_Project"/>
         <property name="java-output-path" value="/Mock_Java_S_Service_Directory/build/classes"/>
         <property name="context-root" value="Mock_Java_S_Service_Directory"/>
     </wb-module>

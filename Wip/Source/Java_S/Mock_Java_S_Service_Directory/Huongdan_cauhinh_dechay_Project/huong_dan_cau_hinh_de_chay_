@@ -1,0 +1,30 @@
+Mọi người khi login vào thì dùng dữ liệu trong bảng user2 nhé
+
+(dùng account và password lưu trong bảng user2,không phải bảng user đâu),
+
+tại mình không thể nào connect được đến bảng User nên đành phải tạo bảng User2.Mọi người thông cảm nhé.
+
+Ngoài ra,nếu project báo lỗi thì mọi người làm như sau:
+
+Click chuột phải vào project chọn Build Path --> Configure Build Path...Chọn đến tab Libraries,
+
+Nhìn trong JRE System Libraries,nếu thấy màu đỏ thì click vào đó và chọn Edit, 
+
+Trong Alternate JRE,chọn đến JRE tương ứng trong máy của mình.Sau đó nhấn OK là được
+
+Nếu bạn nào chưa có file servlet-api.jar trong JRE thì nhớ add vào nhé.
+
+Các bạn có thể thay đổi thông số kết nối đến SQLServer2005 ở file /resources/hibernate.cfg.xml nhé
+(chỉ áp dụng trong trường hợp các bạn có tài khoản đăng nhập SQLServer 2005 không phải với username là sa và password là 123456 )
+
+Mọi thắc mắc về việc cấu hình để chạy ứng dụng,các bạn cứ post ở đây nhé.
+
+
+“Nếu là con chim, chiếc lá,
+Con chim phải hót, chiếc lá phải xanh
+Lẽ nào vay mà không trả,
+Sống là cho, đâu chỉ nhận riêng mình.”
+(Tố Hữu)
+
+
+
