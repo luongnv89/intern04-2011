@@ -37,10 +37,8 @@
 
 			<tr>
 
-				<td width="19%" class="titleColumn"><strong>Organisation
-						Name </strong></td>
-				<td width="31%" class="titleColumn"><strong>Head
-						Office Address Line 1 </strong></td>
+				<td width="19%" class="titleColumn"><strong>Organisation Name </strong></td>
+				<td width="31%" class="titleColumn"><strong>Head Office Address Line 1 </strong></td>
 				<td width="7%" class="titleColumn"><strong>Postcode</strong></td>
 				<td width="29%" class="titleColumn"><strong>Contact</strong></td>
 				<td width="10%" class="titleColumn"><strong>Is Active?
@@ -50,18 +48,14 @@
 			<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
 				<tr>
 					<td class="border" width="19%"><s:property value="orgName" /></td>
-					
-					<td class="border" width="31%"><s:property	value="" /></td>
+					<td class="border" width="31%"><s:property	value="#listOrgByActiveStatus.addressLine1" /></td>
 					<td class="border" width="7%"></td>
 					<td class="border" width="29%"></td>
 					<td class="border" width="10%"></td>
 				</tr>
 			</s:iterator>
 
-			<tr>
-				<td colspan="7" class="bottom">&nbsp;</td>
-			</tr>
-		</table>
+			</table>
 	</s:form>
 </body>
 </html>
