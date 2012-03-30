@@ -17,14 +17,10 @@ Nếu bạn nào chưa có file servlet-api.jar trong JRE thì nhớ add vào nh
 Các bạn có thể thay đổi thông số kết nối đến SQLServer2005 ở file /resources/hibernate.cfg.xml nhé
 (chỉ áp dụng trong trường hợp các bạn có tài khoản đăng nhập SQLServer 2005 không phải với username là sa và password là 123456 )
 
+Mọi người nhớ là trước khi vào code thì ta update,code xong thì ta commit luôn nhé.
+
 Mọi thắc mắc về việc cấu hình để chạy ứng dụng,các bạn cứ post ở đây nhé.
 
-
-“Nếu là con chim, chiếc lá,
-Con chim phải hót, chiếc lá phải xanh
-Lẽ nào vay mà không trả,
-Sống là cho, đâu chỉ nhận riêng mình.”
-(Tố Hữu)
 
 
 
