@@ -38,16 +38,14 @@ public class OrganisationAction extends ActionSupport {
 	}
 
 	public String getOrganisationByActive() {
-		try {
-			listOrgByActive = new OrganisationDAOImpl().getByActive();
-
-			if (listOrgByActive != null) {
-				return "success";
+			try {
+				listOrgByActive = new OrganisationDAOImpl().getByActive();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return "fail";
+
+				return "success";
 	}
 
 	public String getOrganisationByInActive() {
