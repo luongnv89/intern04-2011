@@ -4,4 +4,14 @@
 	<schema-selection match-catalog="Service_Directory4.0" />
 	<table-filter match-name="User2" />
 	<table-filter match-name="Organisation" />
+	<table-filter match-name="Address" />
+	<table-filter match-name="Contact" />
+	<table-filter match-name="Country" />
+	<table-filter match-name="County" />
+	<table-filter match-name="GovOfficeRegion" />
+	<table-filter match-name="ReferenceData" />
+	<table-filter match-name="Service" />
+	<table-filter match-name="Town" />
+	<table-filter match-name="TrustDistrict" />
+	<table-filter match-name="TrustRegion" />
 </hibernate-reverse-engineering>

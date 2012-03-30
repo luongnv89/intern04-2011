@@ -127,6 +127,7 @@ public class OrganisationVO {
 	}
 
 	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="ContactID")
 	public ContactVO getContactVO() {
 		return this.contactVO;
 	}
@@ -144,7 +145,7 @@ public class OrganisationVO {
 		this.orgShortDescription = orgShortDescription;
 	}
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="AddressID")
 	public AddressVO getAddressVO() {
 		return addressVO;
