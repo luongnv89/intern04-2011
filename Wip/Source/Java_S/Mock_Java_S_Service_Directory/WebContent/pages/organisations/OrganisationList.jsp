@@ -68,7 +68,28 @@
 					</s:else>
 					</td>
 					</tr>
+					
 			</s:iterator>
+			
+			<tr>
+			<s:url id="first" action="First">
+			<s:param name="firstParam" value="1"></s:param>
+			</s:url>
+			<s:url id="back" action="Back"></s:url>
+			<s:url id="to" action="To"></s:url>
+			<s:url id="next" action="Next">
+			<s:param name="nextParam" value="4"></s:param>
+			</s:url>
+			<s:url id="end" action="End"></s:url>
+			<td class="titleColumn" colspan="4"><strong> </strong></td>
+    		<td class="titleColumn" colspan="3">
+    		
+    		<s:a href="%{first}" >First</s:a>&nbsp;&nbsp;
+    		<s:a href="%{back}" >Back</s:a>&nbsp;&nbsp;
+    		<s:a href="%{next}" >Next</s:a>&nbsp;&nbsp;
+    		<s:a href="%{end}" >End</s:a>
+    		</td>
+			</tr>
 
 		</table>
 	</s:form>
