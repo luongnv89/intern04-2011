@@ -13,7 +13,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		OrganisationDAO {
 
 	private Session session;
-	private static int pageSize=15;
+	private static int pageSize=5;
 
 	public OrganisationDAOImpl() {
 		Session session = HibernateUtil.getSessionFactory().openSession();

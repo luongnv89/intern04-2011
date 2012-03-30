@@ -73,14 +73,23 @@
 			
 			<tr>
 			<s:url id="first" action="First">
-			<s:param name="firstParam" value="1"></s:param>
+			<s:param name="paramFirst" value="1"></s:param>
 			</s:url>
-			<s:url id="back" action="Back"></s:url>
+			
+			<s:url id="back" action="backOrganistationList">
+			<s:param name="paramBack" value="2"></s:param>
+			</s:url>
+			
 			<s:url id="to" action="To"></s:url>
-			<s:url id="next" action="Next">
-			<s:param name="nextParam" value="4"></s:param>
+			
+			<s:url id="next" action="nextOrganistationList">
+			<s:param name="paramNext" value="4"></s:param>
 			</s:url>
-			<s:url id="end" action="End"></s:url>
+			
+			<s:url id="end" action="End">
+			<s:param name="paramEnd" value="end"></s:param>
+			</s:url>
+			
 			<td class="titleColumn" colspan="4"><strong> </strong></td>
     		<td class="titleColumn" colspan="3">
     		
@@ -88,6 +97,7 @@
     		<s:a href="%{back}" >Back</s:a>&nbsp;&nbsp;
     		<s:a href="%{next}" >Next</s:a>&nbsp;&nbsp;
     		<s:a href="%{end}" >End</s:a>
+    		<s:hidden name="currentPageNumber" value="currentPageNumber"></s:hidden>
     		</td>
 			</tr>
 

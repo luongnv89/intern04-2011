@@ -45,13 +45,9 @@
 
 		<action name="getOrganisationByActive" method="getOrganisationByActive"
 			class="mock.appcode.web.action.OrganisationAction">
-			
 			<!-- 
 			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
 			 -->
-			
-			
-			
 			<result name="success" type="tiles">org.getByActive.tiles</result>
 			<result name="fail" type="tiles">error.tiles</result>
 		</action>
@@ -59,24 +55,29 @@
 		<action name="addOrganisation" method="addOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">
 <!-- 
-
 			<exception-mapping exception="java.lang.NullPointerException"
 				result="error" />
-
  -->
-
 			<result name="success" type="tiles">org.add.tiles
 			</result>
 			<result name="error">error.tiles</result>
 		</action>
+		
+		 <action name="nextOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+
+ <action name="backOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
 
 		<action name="saveOrganisation" method="saveOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">
-
-
 			<result name="success">/_index.jsp </result>
 
 		</action>
+		
+		
 		
 		<!-- 
 		
