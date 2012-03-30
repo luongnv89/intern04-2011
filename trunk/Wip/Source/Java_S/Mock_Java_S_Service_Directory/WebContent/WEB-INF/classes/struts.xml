@@ -11,23 +11,26 @@
 	<package name="default" extends="struts-default" namespace="">
 
 		<result-types>
-			<result-type name="tiles"
-				class="org.apache.struts2.views.tiles.TilesResult" />
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
+<!-- 
 
 		<interceptors>
-			<interceptor name="authorizationinterceptor"
-				class="mock.appcode.web.filter.AuthorizationInterceptor" />
+			<interceptor name="authorizationinterceptor" class="mock.appcode.web.filter.AuthorizationInterceptor" />
 		</interceptors>
+
+ -->
 		<!-- <default-interceptor-ref name="authorizationinterceptor" /> -->
 
-		<default-action-ref name="default-action">
-		</default-action-ref>
-
-		<global-exception-mappings>
-			<exception-mapping result="error"
-				exception="java.lang.NullPointerException"></exception-mapping>
-		</global-exception-mappings>
+		<default-action-ref name="default-action" />
+		
+<!-- 
+		<global-exception-mappings> 
+		<exception-mapping result="error" exception="java.lang.NullPointerException"></exception-mapping> 
+			</global-exception-mappings> 
+-->
+			
+			
 		<action name="login" method="doLogin"
 			class="mock.appcode.web.action.UserAction">
 			<result name="input">/_index.jsp</result>
@@ -42,17 +45,26 @@
 
 		<action name="getOrganisationByActive" method="getOrganisationByActive"
 			class="mock.appcode.web.action.OrganisationAction">
+			
+			<!-- 
 			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
+			 -->
+			
+			
+			
 			<result name="success" type="tiles">org.getByActive.tiles</result>
 			<result name="fail" type="tiles">error.tiles</result>
 		</action>
 
 		<action name="addOrganisation" method="addOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">
-			
+<!-- 
+
 			<exception-mapping exception="java.lang.NullPointerException"
 				result="error" />
-				
+
+ -->
+
 			<result name="success" type="tiles">org.add.tiles
 			</result>
 			<result name="error">error.tiles</result>
@@ -60,22 +72,28 @@
 
 		<action name="saveOrganisation" method="saveOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">
-			
-				
-			<result name="success">/_index.jsp </result>
-			
-		</action>
 
-		<action name="LeadContact" method="getContact" class="mock.appcode.web.action.ContactAction">
-			
-			<result name="success">/lookupContact.jsp</result>
-			
+
+			<result name="success">/_index.jsp </result>
+
 		</action>
 		
+		<!-- 
+		
+		<action name="LeadContact" method="getContact"
+			class="mock.appcode.web.action.ContactAction">
+
+			<result name="success">/lookupContact.jsp</result>
+
+		</action>
+		 -->
+
+		
+
 		<action name="default-action">
 			<result type="tiles">error.tiles</result>
 		</action>
-		
+
 
 	</package>
 
