@@ -47,7 +47,7 @@
 			<result name="fail" type="tiles">error.tiles</result>
 		</action>
 
-		<action name="addOrganistation" method="addOrganistation"
+		<action name="addOrganisation" method="addOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">
 			
 			<exception-mapping exception="java.lang.NullPointerException"
