@@ -97,10 +97,11 @@ div{
 	bgcolor:gray;
 }
 
-#odd{
-	
+.InActive{
+	color: red;
+	background-color: red;
 }
 
-#even{
+.Active{
 	
 }
