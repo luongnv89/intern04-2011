@@ -5,7 +5,7 @@
 
 
 
-<a href="<s:url action="getOrganisationByActive" />"> Organisation</a>
+<a href="<s:url action="getOrganisationsByActive" />"> Organisation</a>
 <br>
 
 <a href="<s:url action="getServiceByActive" />"> Service</a>

@@ -43,7 +43,7 @@
 			<result name="logout_success">/_index.jsp</result>
 		</action>
 
-		<action name="getOrganisationByActive" method="getOrganisationByActive"
+		<action name="getOrganisationsByActive" method="getOrganisationsByActive"
 			class="mock.appcode.web.action.OrganisationAction">
 			<!-- 
 			<interceptor-ref name="authorizationinterceptor"></interceptor-ref>
@@ -65,23 +65,57 @@
 		
 	
 
-		<action name="firstOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+		<action name="firstOrganistationList" method=" getOrganisationsByActive" class="mock.appcode.web.action.OrganisationAction">
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
  		
- 		<action name="backOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+ 		<action name="backOrganistationList" method=" getOrganisationsByActive" class="mock.appcode.web.action.OrganisationAction">
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
 
-	 	<action name="nextOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+	 	<action name="nextOrganistationList" method=" getOrganisationsByActive" class="mock.appcode.web.action.OrganisationAction">
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
  	
  		
- 		 <action name="endOrganistationList" method="getOrganisationByActive" class="mock.appcode.web.action.OrganisationAction">
+ 		 <action name="endOrganistationList" method=" getOrganisationsByActive" class="mock.appcode.web.action.OrganisationAction">
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
  		
+ 		
+ 		
+ 		
+ 		
+ 			<action name="firstOrganistationList2" method="getAllOrganisations" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+ 		
+ 		<action name="backOrganistationList2" method=" getAllOrganisations" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+
+	 	<action name="nextOrganistationList2" method=" getAllOrganisations" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+ 	
+ 		
+ 		 <action name="endOrganistationList2" method=" getAllOrganisations" class="mock.appcode.web.action.OrganisationAction">
+ 			<result name="success" type="tiles" >org.getByActive.tiles</result>
+ 		</action>
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 			<action name="getAllOrganisations" method="getAllOrganisations"
+			class="mock.appcode.web.action.OrganisationAction">
+				<result name="success" type="tiles">org.getByActive.tiles
+				</result>
+				<result name="error">error.tiles</result>
+			</action>
  		
 		<action name="saveOrganisation" method="saveOrganisation"
 			class="mock.appcode.web.action.OrganisationAction">

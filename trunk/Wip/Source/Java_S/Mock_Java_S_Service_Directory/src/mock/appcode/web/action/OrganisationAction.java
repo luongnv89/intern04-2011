@@ -10,21 +10,142 @@ import com.opensymphony.xwork2.ActionSupport;
 public class OrganisationAction extends ActionSupport {
 
 	private List<OrganisationVO> listOrgByActive;
+	private List<OrganisationVO> listOrgAll;
 
-	private int pageSize=5;
+	private static int pageSize=5;
 	private static int currentPageNumber =1;
-	private int paramFirst;
-	private int paramBack;
-	private int paramNext;
-	private int paramEnd;
 	
-	public List<OrganisationVO> getListOrgByActive() {
-		return listOrgByActive;
+	private int statusCheckBoxIncludeInActive=0;
+	
+	private int firstPage;
+	private int backPage;
+	private int nextPage;
+	private int endPage;
+	
+	private static int countByActive;
+	private static int countByAll;
+	
+	private static int pageNumberByActive;
+	private static int pageNumberAll;
+	
+
+	public String getOrganisationsByActive() 
+	{
+			try {
+				countByActive=new OrganisationDAOImpl().getOrganisationsByActive().size();
+				pageNumberByActive=countByActive/pageSize;
+				
+				if(firstPage==1)
+				{
+					listOrgByActive = new OrganisationDAOImpl().getOrganisationsByActive(1);
+					currentPageNumber=1;
+				}
+				
+				else if(backPage==2)
+				{
+					if(currentPageNumber>1)
+					{
+						listOrgByActive=new OrganisationDAOImpl().getOrganisationsByActive(currentPageNumber-1);
+						currentPageNumber--;
+					}
+					else
+					{
+						listOrgByActive = new OrganisationDAOImpl().getOrganisationsByActive(1);
+					}
+				}
+				
+				else if(nextPage==4)
+				{
+					if(currentPageNumber<pageNumberByActive)
+						{
+							listOrgByActive = new OrganisationDAOImpl().getOrganisationsByActive(currentPageNumber+1);
+							currentPageNumber++;
+						}	
+					else
+						{
+							listOrgByActive = new OrganisationDAOImpl().getOrganisationsByActive(pageNumberByActive);
+						}
+				}
+				
+				else if(endPage==5)
+				{
+					listOrgByActive = new OrganisationDAOImpl().getOrganisationsByActive(pageNumberByActive);
+					currentPageNumber=pageNumberByActive;
+				}
+				
+				else {
+				listOrgByActive = new OrganisationDAOImpl().getOrganisationsByActive(1);
+				currentPageNumber=1;
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return "success";
+	}
+	
+	
+	public String getAllOrganisations() 
+	{
+		statusCheckBoxIncludeInActive=1;
+		try {
+			countByAll=new OrganisationDAOImpl().getAllOrganisations().size();
+			pageNumberAll=countByAll/pageSize;
+			
+			
+				if(firstPage==1)
+				{
+					listOrgAll = new OrganisationDAOImpl().getAllOrganisations(1);
+					currentPageNumber=1;
+				}
+			
+				else if(backPage==2)
+				{
+					if(currentPageNumber>1)
+					{
+						listOrgAll=new OrganisationDAOImpl().getAllOrganisations(currentPageNumber-1);
+						currentPageNumber--;
+					}
+					else
+					{
+						listOrgAll = new OrganisationDAOImpl().getAllOrganisations(1);
+					}
+				}
+			
+				else if(nextPage==4)
+				{
+					if(currentPageNumber<pageNumberByActive)
+						{
+							listOrgAll = new OrganisationDAOImpl().getAllOrganisations(currentPageNumber+1);
+							currentPageNumber++;
+						}	
+					else
+						{
+							listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberByActive);
+						}
+				}
+			
+				else if(endPage==5)
+				{
+					listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberByActive);
+					currentPageNumber=pageNumberByActive;
+				}
+			
+				else 
+				{
+					
+					
+					listOrgAll = new OrganisationDAOImpl().getAllOrganisations(1);
+					currentPageNumber=1;
+				}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "success";
 	}
 
-	public void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
-		this.listOrgByActive = listOrgByActive;
-	}
+	
 
 	public String addOrganisation() {
 		return "success";
@@ -41,86 +162,23 @@ public class OrganisationAction extends ActionSupport {
 	public String amendOrganisation() {
 		return SUCCESS;
 	}
-
-	public String getOrganisationByActive() {
-			try {
-				
-				int count=new OrganisationDAOImpl().getByActive().size();
-				
-				int pageNumber=count/pageSize;
-				
-					
-				
-				
-				if(paramFirst==1)
-				{
-					listOrgByActive = new OrganisationDAOImpl().getByActive(1);
-					currentPageNumber = 1;
-				}
-					
-				
-				else if(paramBack==1)
-				{
-					if(currentPageNumber>1)
-					{
-						listOrgByActive=new OrganisationDAOImpl().getByActive(currentPageNumber-1);
-						currentPageNumber--;
-					}
-					else
-					{
-						listOrgByActive = new OrganisationDAOImpl().getByActive(1);
-					}
-				}
-				
-				
-				else if(paramNext==1)
-				{
-					if(currentPageNumber<pageNumber)
-					{
-						listOrgByActive = new OrganisationDAOImpl().getByActive(currentPageNumber+1);
-						currentPageNumber++;
-					}
-					else
-					{
-						listOrgByActive = new OrganisationDAOImpl().getByActive(pageNumber);
-					}
-				}
-				
-			
-				else if(paramEnd==1)
-				{
-					listOrgByActive = new OrganisationDAOImpl().getByActive(pageNumber);
-					currentPageNumber=pageNumber;
-				}
-				
-//				currentPageNumber=1;
-				else if(true){
-				listOrgByActive = new OrganisationDAOImpl().getByActive(1);
-				currentPageNumber=1;
-				}
-				return "success";
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			return "success";
-				
+	
+	
+	public String getOrganisationByInActive() 
+	{
+		return "success";
 	}
+	
 
 	
-	public String getOrganisationByInActive() {
+	
+	public String searchByNumeric() 
+	{
 		return SUCCESS;
 	}
 
-	public String getAll() {
-		return SUCCESS;
-	}
-
-	public String searchByNumeric() {
-		return SUCCESS;
-	}
-
-	public String searchByCharacter() {
+	public String searchByCharacter() 
+	{
 		return SUCCESS;
 	}
 
@@ -129,7 +187,7 @@ public class OrganisationAction extends ActionSupport {
 	}
 
 	public static void setCurrentPageNumber(int currentPageNumber) {
-		currentPageNumber = currentPageNumber;
+		OrganisationAction.currentPageNumber = currentPageNumber;
 	}
 
 	public int getPageSize() {
@@ -140,37 +198,70 @@ public class OrganisationAction extends ActionSupport {
 		this.pageSize = pageSize;
 	}
 
-	public int getParamFirst() {
-		return paramFirst;
+	public int isStatusCheckBoxIncludeInActive() {
+		return statusCheckBoxIncludeInActive;
 	}
 
-	public void setParamFirst(int paramFirst) {
-		this.paramFirst = paramFirst;
+	public void setStatusCheckBoxIncludeInActive(
+			int statusCheckBoxIncludeInActive) {
+		this.statusCheckBoxIncludeInActive = statusCheckBoxIncludeInActive;
 	}
 
-	public int getParamBack() {
-		return paramBack;
+	public int getStatusCheckBoxIncludeInActive() {
+		return statusCheckBoxIncludeInActive;
 	}
 
-	public void setParamBack(int paramBack) {
-		this.paramBack = paramBack;
+	public int getFirstPage() {
+		return firstPage;
 	}
 
-	public int getParamNext() {
-		return paramNext;
+	public void setFirstPage(int firstPage) {
+		this.firstPage = firstPage;
 	}
 
-	public void setParamNext(int paramNext) {
-		this.paramNext = paramNext;
+	public int getBackPage() {
+		return backPage;
 	}
 
-	public int getParamEnd() {
-		return paramEnd;
+	public void setBackPage(int backPage) {
+		this.backPage = backPage;
 	}
 
-	public void setParamEnd(int paramEnd) {
-		this.paramEnd = paramEnd;
+	public int getNextPage() {
+		return nextPage;
 	}
+
+	public void setNextPage(int nextPage) {
+		this.nextPage = nextPage;
+	}
+
+	public int getEndPage() {
+		return endPage;
+	}
+
+	public void setEndPage(int endPage) {
+		this.endPage = endPage;
+	}
+
+	public List<OrganisationVO> getListOrgByActive() {
+		return listOrgByActive;
+	}
+
+	public void setListOrgByActive(List<OrganisationVO> listOrgByActive) {
+		this.listOrgByActive = listOrgByActive;
+	}
+
+
+	public List<OrganisationVO> getListOrgAll() {
+		return listOrgAll;
+	}
+
+
+	public void setListOrgAll(List<OrganisationVO> listOrgAll) {
+		this.listOrgAll = listOrgAll;
+	}
+
+
 
 
 
