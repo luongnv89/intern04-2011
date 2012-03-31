@@ -1,11 +1,7 @@
 package mock.appcode.web.action;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
-import mock.appcode.common.valueobjects.AddressVO;
 import mock.appcode.common.valueobjects.OrganisationVO;
 import mock.appcode.dao.daointerface.OrganisationDAOImpl;
 
@@ -100,25 +96,15 @@ public class OrganisationAction extends ActionSupport {
 					currentPageNumber=pageNumber;
 				}
 					
-				
+				return "success";
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
-				return "success";
+			return "success";
+				
 	}
 
-	public String getOrganisationByActiveNext() {
-		try {
-			listOrgByActive = new OrganisationDAOImpl().getByActive(2);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-			return "success";
-}
 	
 	public String getOrganisationByInActive() {
 		return SUCCESS;
