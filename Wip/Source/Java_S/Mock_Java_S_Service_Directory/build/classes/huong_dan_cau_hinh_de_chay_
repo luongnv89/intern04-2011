@@ -24,11 +24,7 @@ Mọi người nhớ là trước khi vào code thì ta update SVN,code xong th�
 
 Mọi thắc mắc về việc cấu hình để chạy ứng dụng,các bạn cứ post ở đây nhé.
 
-
 -------------------------------------------------------------------------------------------------------------------------
+Trang orgList mình đã sửa lại rồi,chỉ dùng các thẻ div,các bạn vào xem rồi sửa tiếp nhé.
 
-Ngay 31-03-2012
-
-Giao diện trang Orglist mình đã chỉnh lại,bây giờ chỉ dùng thẻ div thôi,không dùng table nữa.
-
--------------------------------------------------------------------------------------------------------------------------
+Mình mới chỉ sửa để khi điền dữ liệu vào không bị xộc xệch thôi .

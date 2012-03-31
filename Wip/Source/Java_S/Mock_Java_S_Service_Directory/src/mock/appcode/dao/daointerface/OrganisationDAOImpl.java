@@ -6,7 +6,6 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import mock.appcode.common.utility.HibernateUtil;
-import mock.appcode.common.valueobjects.AddressVO;
 import mock.appcode.common.valueobjects.OrganisationVO;
 
 public class OrganisationDAOImpl extends HibernateUtil implements
