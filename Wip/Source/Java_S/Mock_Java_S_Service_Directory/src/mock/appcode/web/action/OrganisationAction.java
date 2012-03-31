@@ -12,7 +12,7 @@ public class OrganisationAction extends ActionSupport {
 	private List<OrganisationVO> listOrgByActive;
 
 	private int pageSize=5;
-	private static int currentPageNumber =0;
+	private static int currentPageNumber =1;
 	private int paramFirst;
 	private int paramBack;
 	private int paramNext;
@@ -49,13 +49,10 @@ public class OrganisationAction extends ActionSupport {
 				
 				int pageNumber=count/pageSize;
 				
-				if(currentPageNumber==0){
-					currentPageNumber=1;
-				listOrgByActive = new OrganisationDAOImpl().getByActive(1);
-				}
+					
 				
 				
-				else if(paramFirst==1)
+				if(paramFirst==1)
 				{
 					listOrgByActive = new OrganisationDAOImpl().getByActive(1);
 					currentPageNumber = 1;
@@ -95,7 +92,12 @@ public class OrganisationAction extends ActionSupport {
 					listOrgByActive = new OrganisationDAOImpl().getByActive(pageNumber);
 					currentPageNumber=pageNumber;
 				}
-					
+				
+//				currentPageNumber=1;
+				else if(true){
+				listOrgByActive = new OrganisationDAOImpl().getByActive(1);
+				currentPageNumber=1;
+				}
 				return "success";
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
