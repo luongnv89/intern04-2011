@@ -86,3 +86,9 @@ div.maintab div:target {
 	height: 100px;
 	width: 400px;
 }
+
+div{
+  border-style: 1px solid;
+  border-width:1px;
+  border:1px
+}
