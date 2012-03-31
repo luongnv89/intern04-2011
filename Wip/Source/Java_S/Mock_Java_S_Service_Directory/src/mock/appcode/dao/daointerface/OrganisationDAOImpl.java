@@ -22,7 +22,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 
 	// Ham lay ve tat ca cac ban ghi trong Table OrganisationVO
 	// Gia tri tra ve la 1 doi tuong mang co kieu la OrganisationVO
-	public List<OrganisationVO> getAll() throws Exception {
+	public List<OrganisationVO> getAllOrganisations() throws Exception {
 
 		try {
 			session.beginTransaction();
@@ -39,10 +39,34 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		}
 		return null;
 	}
+	
+	
+	public List<OrganisationVO> getAllOrganisations(int pageNumber) throws Exception {
+
+		try {
+			session.beginTransaction();
+			Query query = (Query) session.createQuery("from OrganisationVO order by orgName");
+			
+			query.setFirstResult(pageSize*(pageNumber-1));
+			query.setMaxResults(pageSize);
+			List<OrganisationVO> listResult = query.list();
+			
+			session.flush();
+			session.getTransaction().commit();
+			return listResult;
+		} catch (Exception e) {
+			if (session.getTransaction().isActive()) {
+				session.getTransaction().rollback();
+			}
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 	// them moi vao ca 2 bang address va organisation
 	
-	public void addNew(OrganisationVO organisationVO ) throws Exception {
+	public void addNewOrganisation(OrganisationVO organisationVO ) throws Exception {
 		try {
 
 			session.beginTransaction();
@@ -59,7 +83,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 
 	}
 
-	public void amend(OrganisationVO newOrganistation, String id)
+	public void amendOrganisation(OrganisationVO newOrganistation, String id)
 			throws Exception {
 		try {
 			session.beginTransaction();
@@ -77,11 +101,11 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		}
 	}
 
-	public List<OrganisationVO> getByActive(int pageNumber) throws Exception {
+	public List<OrganisationVO> getOrganisationsByActive(int pageNumber) throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
-					.createQuery("from OrganisationVO where statusActive = '1'");
+					.createQuery("from OrganisationVO where statusActive = '1' order by orgName");
 
 			query.setFirstResult(pageSize*(pageNumber-1));
 			query.setMaxResults(pageSize);
@@ -100,7 +124,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 
-	public List<OrganisationVO> getByActive() throws Exception {
+	public List<OrganisationVO> getOrganisationsByActive() throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
@@ -118,7 +142,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 	
-	public List<OrganisationVO> getByInActive(int pageNumber) throws Exception {
+	public List<OrganisationVO> getOrganisationsByInActive(int pageNumber) throws Exception {
 		try {
 			session.beginTransaction();
 			Query query = (Query) session
@@ -138,7 +162,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 
-	public void setInActive(OrganisationVO newOrganistation, String id)
+	public void setOrganisationInActive(OrganisationVO newOrganistation, String id)
 			throws Exception {
 		try {
 			session.beginTransaction();
@@ -156,7 +180,7 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 
 	}
 
-	public void setActive(OrganisationVO newOrganistation, String id)
+	public void setOrganisationActive(OrganisationVO newOrganistation, String id)
 			throws Exception {
 		try {
 			session.beginTransaction();
