@@ -114,27 +114,25 @@ public class OrganisationAction extends ActionSupport {
 			
 				else if(nextPage==4)
 				{
-					if(currentPageNumber<pageNumberByActive)
+					if(currentPageNumber<pageNumberAll)
 						{
 							listOrgAll = new OrganisationDAOImpl().getAllOrganisations(currentPageNumber+1);
 							currentPageNumber++;
 						}	
 					else
 						{
-							listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberByActive);
+							listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberAll);
 						}
 				}
 			
 				else if(endPage==5)
 				{
-					listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberByActive);
-					currentPageNumber=pageNumberByActive;
+					listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberAll);
+					currentPageNumber=pageNumberAll;
 				}
 			
 				else 
 				{
-					
-					
 					listOrgAll = new OrganisationDAOImpl().getAllOrganisations(1);
 					currentPageNumber=1;
 				}

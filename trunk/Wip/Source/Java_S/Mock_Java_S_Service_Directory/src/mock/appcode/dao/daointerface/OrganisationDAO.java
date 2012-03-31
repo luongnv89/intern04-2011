@@ -2,7 +2,6 @@ package mock.appcode.dao.daointerface;
 
 import java.util.List;
 
-import mock.appcode.common.valueobjects.AddressVO;
 import mock.appcode.common.valueobjects.OrganisationVO;
 
 public interface OrganisationDAO {
