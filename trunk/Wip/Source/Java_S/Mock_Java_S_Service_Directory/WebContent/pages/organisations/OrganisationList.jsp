@@ -20,10 +20,10 @@
 <div style="width: 100%;border: 0px;padding: 0px; background-color: #EFEFEF">
 
     <div style="width: 75%;float: left;" ><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a> 
-       
 	</div>
 	
 	<div>
+	
 	<s:form method="post" action="addOrganisation" id="form1" name="formOrganisationListByActive" value="createOrganisation" >
 	<input type="submit" name="submit" value="Create" style="right: 25px"/>
 	</s:form>
@@ -35,17 +35,10 @@
 	
 	</div>
 
-<div style="clear: both;padding-bottom: 10px">
-</div>
+	<div style="clear: both;padding-bottom: 10px">
+	</div>
 
-    <!-- <div style="float: right;padding-right: 10px;padding-bottom: 10px">
-       
-       
-    </div> -->
-    
-    
        <div style="clear: both;border-width: 1px"></div>
-   
       <div style="border-color: blue;border-width: 1px" class="borderwidth">
 
 		<div style="width: 23%;float: left;border-width: 1px" class="borderwidth">Organisation Name </div>
@@ -80,22 +73,22 @@
 			</div>
 			</s:iterator>
 			
-					 <s:url id="first" action="firstOrganistationList">
-			<s:param name="firstPage" value="1"></s:param>
+			<s:url id="first" action="firstOrganistationList">
+				<s:param name="firstPage" value="1"></s:param>
 			</s:url>
 			
 			<s:url id="back" action="backOrganistationList">
-			<s:param name="backPage" value="2"></s:param>
+				<s:param name="backPage" value="2"></s:param>
 			</s:url>
 			
 			<s:url id="to" action="To"></s:url>
 			
 			<s:url id="next" action="nextOrganistationList">
-			<s:param name="nextPage" value="4" ></s:param>
+				<s:param name="nextPage" value="4" ></s:param>
 			</s:url>
 			
 			<s:url id="end" action="endOrganistationList">
-			<s:param name="endPage" value="5"></s:param>
+				<s:param name="endPage" value="5"></s:param>
 			</s:url>
 				
 			<div style="float: right;">
@@ -111,7 +104,7 @@
 	
 	<s:elseif test="%{#check==1}">
 	<s:iterator value="listOrgAll" status="listOrgAllStatus">
-			<div id='<s:property value="orgId" />' style="clear: true;width: 100%;border-width: 1px" >
+			<div id='<s:property value="orgId" />' style="clear: true;width: 100%;border-width: 1px" class='<s:if test="statusActive==0">InActive</s:if>' >
 					<div  style="float: left;width: 23%" ><span class="number"><s:property value="orgName" /></span></div>
 					<div style="float: left;width: 31%" ><s:property value="addressVO.addressLine1" /></div>
 					<div  style="float: left;width: 10%" ><s:property value="addressVO.postCode" /></div>
@@ -124,22 +117,22 @@
 			</div>
 			</s:iterator>
 			
-					 <s:url id="first" action="firstOrganistationList2">
-			<s:param name="firstPage" value="1"></s:param>
+			<s:url id="first" action="firstOrganistationList2">
+				<s:param name="firstPage" value="1"></s:param>
 			</s:url>
 			
 			<s:url id="back" action="backOrganistationList2">
-			<s:param name="backPage" value="2"></s:param>
+				<s:param name="backPage" value="2"></s:param>
 			</s:url>
 			
 			<s:url id="to" action="To"></s:url>
 			
 			<s:url id="next" action="nextOrganistationList2">
-			<s:param name="nextPage" value="4" ></s:param>
+				<s:param name="nextPage" value="4" ></s:param>
 			</s:url>
 			
 			<s:url id="end" action="endOrganistationList2">
-			<s:param name="endPage" value="5"></s:param>
+				<s:param name="endPage" value="5"></s:param>
 			</s:url>
 				
 			<div style="float: right;">
