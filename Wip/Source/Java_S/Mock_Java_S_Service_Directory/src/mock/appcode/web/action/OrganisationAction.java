@@ -53,6 +53,7 @@ public class OrganisationAction extends ActionSupport {
 				int count=new OrganisationDAOImpl().getByActive().size();
 				
 				int pageNumber=count/pageSize;
+				
 				if(currentPageNumber==0){
 					currentPageNumber=1;
 				listOrgByActive = new OrganisationDAOImpl().getByActive(1);
