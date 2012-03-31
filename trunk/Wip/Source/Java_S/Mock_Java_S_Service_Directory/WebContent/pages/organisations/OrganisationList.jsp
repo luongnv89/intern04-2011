@@ -7,72 +7,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Insert title here</title>
-<link href="css/Organisation.css" rel="stylesheet" type="text/css" />
+<!--  --><link href="css/Organisation.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 	<span class="title">Organisation List</span>
-	<s:if test="%{#session.ACCOUNT ==null}">
-	</s:if>
+	
 	<s:form method="post" action="addOrganisation" id="form1" name="form1">
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EFEFEF">
+<div style="width: 100%;border: 0px;padding: 0px; background-color: #EFEFEF">
 
-  <tr>
+    <div style="width: 75%" ><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a>
+</div>
 
-    <td colspan="7" class="top">&nbsp;</td>
+<div style="clear: both;padding-bottom: 10px;background-color: gray;">
+</div>
 
-  </tr>
+    <div style="float: right;">
+       <input type="checkbox" name="checkbox" style="right: 10px"/>Include In-Active
+       <input type="submit" name="submit" value="Create" style="right: 25px"/>
+       
+    </div>
+    
+    
+       <div style="clear: both;"></div>
+   
+      <div style="width: 100%">
 
-  <tr>
+		<div style="width: 19%;float: left;" class="titleColumn">Organisation Name </div>
+		<div style="width: 31%;float: left;" class="titleColumn">Head Office Address Line 1 </div>
 
-    <td width="2%" rowspan="3" class="left">&nbsp;</td>
+		<div style="width: 10% ;float: left;" class="titleColumn">Postcode </div>
 
-    <td colspan="3" ><span class="filter"><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a></span></td>
+		<div style="width: 26% ;float: left;" class="titleColumn">Contact </div>
+		<div style="width: 10% ;float: left;" class="titleColumn">Is Active?</div>
+	</div>
 
-    <td colspan="2" align="right"><label>
+    <div style="clear: both;">
+    </div>
 
-      <input name="create" type="submit" id="create" value="Create" />
-
-    </label>      <label>
-
-      <input type="checkbox" name="checkbox" value="checkbox" />
-
-      Include In-active</label></td>
-
-    <td width="2%" rowspan="3" class="right">&nbsp;</td>
-
-  </tr>
-
-  <tr>
-
-    <td width="19%" class="titleColumn"><strong>Organisation Name </strong></td>
-
-    <td width="31%" class="titleColumn"><strong>Head Office Address Line 1 </strong></td>
-
-    <td width="10%" class="titleColumn"><strong>Postcode</strong></td>
-
-    <td width="26%" class="titleColumn"><strong>Contact</strong></td>
-
-    <td width="10%" class="titleColumn"><strong>Is Active? </strong></td>
-
-  </tr>
-			<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
-				<tr id='<s:property value="orgId" />'>
-					<td class="border" ><span class="number"><s:property value="orgName" /></span></td>
-					<td class="border" ><s:property value="addressVO.addressLine1" /></td>
-					<td class="border" ><s:property value="addressVO.postCode" /></td>
-					<td class="border" ><s:property value="contactVO.firstName" /></td>
-					<td class="border" ><s:if test="statusActive==1">Yes</s:if>
+	<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
+			<div id='<s:property value="orgId" />' style="clear: true;width: 100%" >
+					<div class="border" style="float: left;width: 19%"><span class="number"><s:property value="orgName" /></span></div>
+					<div class="border" style="float: left;width: 31%" ><s:property value="addressVO.addressLine1" /></div>
+					<div class="border" style="float: left;width: 10%" ><s:property value="addressVO.postCode" /></div>
+					<div class="border" style="float: left;width: 26%" ><s:property value="contactVO.firstName" /></div>
+					<div class="border" style="float: left;width: 10%" ><s:if test="statusActive==1">Yes</s:if>
 					<s:else>
 					No
 					</s:else>
-					</td>
-					</tr>
-					
+					</div>
+			</div>
 			</s:iterator>
-			
-			<tr>
-			<s:url id="first" action="firstOrganistationList">
+		
+		 <s:url id="first" action="firstOrganistationList">
 			<s:param name="paramFirst" value="1"></s:param>
 			</s:url>
 			
@@ -89,19 +77,16 @@
 			<s:url id="end" action="endOrganistationList">
 			<s:param name="paramEnd" value="5"></s:param>
 			</s:url>
+				
+			<div style="float: right;">
 			
-			<td class="titleColumn" colspan="4"><strong> </strong></td>
-    		<td class="titleColumn" colspan="3">
-    		
     		<s:a href="%{first}" >First</s:a>&nbsp;&nbsp;
     		<s:a href="%{back}" >Back</s:a>&nbsp;&nbsp;
     		<s:a href="%{next}" >Next</s:a>&nbsp;&nbsp;
     		<s:a href="%{end}" >End</s:a>
     		<s:hidden name="currentPageNumber" value="currentPageNumber"></s:hidden>
-    		</td>
-			</tr>
-
-		</table>
+    		</div>
+			</div>
 	</s:form>
 </body>
 </html>
