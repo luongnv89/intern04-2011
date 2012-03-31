@@ -20,7 +20,6 @@ public class OrganisationAction extends ActionSupport {
 	private int paramFirst;
 	private int paramBack;
 	private int paramNext;
-	
 	private int paramEnd;
 	
 	public List<OrganisationVO> getListOrgByActive() {
@@ -60,18 +59,18 @@ public class OrganisationAction extends ActionSupport {
 				}
 				
 				
-				else if(paramFirst ==1)
+				else if(paramFirst==1)
 				{
 					listOrgByActive = new OrganisationDAOImpl().getByActive(1);
 					currentPageNumber = 1;
 				}
 					
 				
-				else if(paramBack == 2)
+				else if(paramBack==1)
 				{
 					if(currentPageNumber>1)
 					{
-						listOrgByActive=new OrganisationDAOImpl().getByActive(getCurrentPageNumber()-1);
+						listOrgByActive=new OrganisationDAOImpl().getByActive(currentPageNumber-1);
 						currentPageNumber--;
 					}
 					else
@@ -81,11 +80,11 @@ public class OrganisationAction extends ActionSupport {
 				}
 				
 				
-				else if(paramNext ==4)
+				else if(paramNext==1)
 				{
 					if(currentPageNumber<pageNumber)
 					{
-						listOrgByActive = new OrganisationDAOImpl().getByActive(getCurrentPageNumber()+1);
+						listOrgByActive = new OrganisationDAOImpl().getByActive(currentPageNumber+1);
 						currentPageNumber++;
 					}
 					else
@@ -95,14 +94,12 @@ public class OrganisationAction extends ActionSupport {
 				}
 				
 			
-				else if(paramEnd ==5)
+				else if(paramEnd==1)
 				{
 					listOrgByActive = new OrganisationDAOImpl().getByActive(pageNumber);
 					currentPageNumber=pageNumber;
 				}
 					
-					
-				
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -147,20 +144,12 @@ public class OrganisationAction extends ActionSupport {
 		currentPageNumber = currentPageNumber;
 	}
 
-	public int getParamNext() {
-		return paramNext;
+	public int getPageSize() {
+		return pageSize;
 	}
 
-	public void setParamNext(int paramNext) {
-		this.paramNext = paramNext;
-	}
-
-	public int getParamBack() {
-		return paramBack;
-	}
-
-	public void setParamBack(int paramBack) {
-		this.paramBack = paramBack;
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
 	}
 
 	public int getParamFirst() {
@@ -171,6 +160,22 @@ public class OrganisationAction extends ActionSupport {
 		this.paramFirst = paramFirst;
 	}
 
+	public int getParamBack() {
+		return paramBack;
+	}
+
+	public void setParamBack(int paramBack) {
+		this.paramBack = paramBack;
+	}
+
+	public int getParamNext() {
+		return paramNext;
+	}
+
+	public void setParamNext(int paramNext) {
+		this.paramNext = paramNext;
+	}
+
 	public int getParamEnd() {
 		return paramEnd;
 	}
@@ -178,6 +183,8 @@ public class OrganisationAction extends ActionSupport {
 	public void setParamEnd(int paramEnd) {
 		this.paramEnd = paramEnd;
 	}
+
+
 
 
 		
