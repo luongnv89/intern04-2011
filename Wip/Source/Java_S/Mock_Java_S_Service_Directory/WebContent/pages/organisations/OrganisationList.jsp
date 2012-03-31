@@ -65,17 +65,17 @@
 			</s:url>
 			
 			<s:url id="back" action="backOrganistationList">
-			<s:param name="paramBack" value="2"></s:param>
+			<s:param name="paramBack" value="1"></s:param>
 			</s:url>
 			
 			<s:url id="to" action="To"></s:url>
 			
 			<s:url id="next" action="nextOrganistationList">
-			<s:param name="paramNext" value="4"></s:param>
+			<s:param name="paramNext" value="1" ></s:param>
 			</s:url>
 			
 			<s:url id="end" action="endOrganistationList">
-			<s:param name="paramEnd" value="5"></s:param>
+			<s:param name="paramEnd" value="1"></s:param>
 			</s:url>
 				
 			<div style="float: right;">
