@@ -82,10 +82,6 @@
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
  		
- 		
- 		
- 		
- 		
  			<action name="firstOrganistationList2" method="getAllOrganisations" class="mock.appcode.web.action.OrganisationAction">
  			<result name="success" type="tiles" >org.getByActive.tiles</result>
  		</action>
@@ -118,7 +114,6 @@
 		</action>
 		
 		
-		
 		<!-- 
 		
 		<action name="LeadContact" method="getContact"
@@ -128,8 +123,6 @@
 
 		</action>
 		 -->
-
-		
 
 		<action name="default-action">
 			<result type="tiles">error.tiles</result>
