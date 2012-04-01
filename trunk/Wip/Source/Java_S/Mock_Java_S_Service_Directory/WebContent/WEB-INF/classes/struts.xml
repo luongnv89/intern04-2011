@@ -104,12 +104,6 @@
  		</action>
  		
  		
- 		
- 		
- 		
- 		
- 		
- 		
  			<action name="getAllOrganisations" method="getAllOrganisations"
 			class="mock.appcode.web.action.OrganisationAction">
 				<result name="success" type="tiles">org.getByActive.tiles

@@ -8,3 +8,8 @@ function setValueForHiddenField()
 {
 	document.getElementById('checkBoxInActive').value='1';
 }
+
+function createButtonIsSubmitted()
+{
+		document.formCreateButtoneIsSubmitted.submit();
+}

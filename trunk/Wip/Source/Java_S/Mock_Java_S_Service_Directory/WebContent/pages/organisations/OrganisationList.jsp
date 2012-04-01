@@ -24,14 +24,13 @@
 	
 	<div>
 	
-	<s:form method="post" action="addOrganisation" id="form1" name="formOrganisationListByActive" value="createOrganisation" >
-	<input type="submit" name="submit" value="Create" style="right: 25px"/>
+	<s:form method="post" action="addOrganisation" id="form1" name="formCreateButtoneIsSubmitted" >
+		<input type="submit" name="submit" value="Create" style="right: 25px;margin-right: 10px" onclick="createButtonIsSubmitted();"/>
+		<input type="checkbox" name="checkbox" style="right: 10px" onclick="doCheckBoxSubmit();" />Include In-Active
 	</s:form>
-	
-	<s:form method="post" action="getAllOrganisations" id="form2" name="formOrganisationListCheckBoxIsChecked" value="checkBoxIsChecked">
-    <input type="checkbox" name="checkbox" style="right: 10px" onclick="doCheckBoxSubmit();" />Include In-Active
-	<s:hidden name="nameCheckBox" id="checkBoxInActive" value="0"/>
-	</s:form>
+		
+    
+
 	
 	</div>
 
@@ -139,11 +138,19 @@
 			
     		<s:a href="%{first}" >First</s:a>&nbsp;&nbsp;
     		<s:a href="%{back}" >Back</s:a>&nbsp;&nbsp;
+    		<!-- Page<s:property value="currentPageNumber"/>Of -->
+    		
+    		<s:property value="pageNumberAll"/>
     		<s:a href="%{next}" >Next</s:a>&nbsp;&nbsp;
     		<s:a href="%{end}" >End</s:a>
+    		
     		<s:hidden name="currentPageNumber" value="currentPageNumber"></s:hidden>
     		</div>
 	</s:elseif>  
+	
+	<s:form method="post" action="getAllOrganisations" id="form2" name="formOrganisationListCheckBoxIsChecked" >
+		<s:hidden  name="nameCheckBox" id="checkBoxInActive" value="0"/>
+	</s:form>
 	
 			</div>
 </body>

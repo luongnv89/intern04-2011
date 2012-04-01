@@ -109,6 +109,7 @@ public class OrganisationAction extends ActionSupport {
 					else
 					{
 						listOrgAll = new OrganisationDAOImpl().getAllOrganisations(1);
+						currentPageNumber=1;
 					}
 				}
 			
@@ -122,6 +123,7 @@ public class OrganisationAction extends ActionSupport {
 					else
 						{
 							listOrgAll = new OrganisationDAOImpl().getAllOrganisations(pageNumberAll);
+							currentPageNumber=pageNumberAll;
 						}
 				}
 			
@@ -257,6 +259,46 @@ public class OrganisationAction extends ActionSupport {
 
 	public void setListOrgAll(List<OrganisationVO> listOrgAll) {
 		this.listOrgAll = listOrgAll;
+	}
+
+
+	public static int getPageNumberByActive() {
+		return pageNumberByActive;
+	}
+
+
+	public static void setPageNumberByActive(int pageNumberByActive) {
+		OrganisationAction.pageNumberByActive = pageNumberByActive;
+	}
+
+
+	public static int getPageNumberAll() {
+		return pageNumberAll;
+	}
+
+
+	public static void setPageNumberAll(int pageNumberAll) {
+		OrganisationAction.pageNumberAll = pageNumberAll;
+	}
+
+
+	public static int getCountByActive() {
+		return countByActive;
+	}
+
+
+	public static void setCountByActive(int countByActive) {
+		OrganisationAction.countByActive = countByActive;
+	}
+
+
+	public static int getCountByAll() {
+		return countByAll;
+	}
+
+
+	public static void setCountByAll(int countByAll) {
+		OrganisationAction.countByAll = countByAll;
 	}
 
 
