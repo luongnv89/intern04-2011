@@ -15,7 +15,7 @@ public class OrganisationAction extends ActionSupport {
 	private static int pageSize=5;
 	private static int currentPageNumber =1;
 	
-	private int statusCheckBoxIncludeInActive=0;
+	private int statusCheckBoxIncludeInActive;
 	
 	private int firstPage;
 	private int backPage;
@@ -32,6 +32,7 @@ public class OrganisationAction extends ActionSupport {
 	public String getOrganisationsByActive() 
 	{
 			try {
+				statusCheckBoxIncludeInActive=0;
 				countByActive=new OrganisationDAOImpl().getOrganisationsByActive().size();
 				pageNumberByActive=countByActive/pageSize;
 				

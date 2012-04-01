@@ -1,15 +1,21 @@
-function doCheckBoxSubmit()
+function doSubmit()
 {
-	setValueForHiddenField();
-	document.formOrganisationListCheckBoxIsChecked.submit();
+	if(document.getElementById('checkBoxInActive').checked==true){
+		document.formOrganisationListCheckBoxIsChecked.submit();
+	}
+	
+	else{
+		document.formOrganisationListByActiveWhenCheckBoxIsUnChecked.submit();
+	}
 }
 
-function setValueForHiddenField()
+function setCheckBoxIsChecked()
 {
-	document.getElementById('checkBoxInActive').value='1';
+	document.getElementById('checkBoxInActive').checked=true;
 }
 
-function createButtonIsSubmitted()
+
+function setCheckBoxIsUnChecked()
 {
-		document.formCreateButtoneIsSubmitted.submit();
+	document.getElementById('checkBoxInActive').checked=false;
 }

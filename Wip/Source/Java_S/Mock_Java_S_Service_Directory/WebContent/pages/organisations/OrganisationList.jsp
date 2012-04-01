@@ -26,11 +26,16 @@
 	
 	<s:form method="post" action="addOrganisation" id="form1" name="formCreateButtoneIsSubmitted" >
 		<input type="submit" name="submit" value="Create" style="right: 25px;margin-right: 10px" onclick="createButtonIsSubmitted();"/>
-		<input type="checkbox" name="checkbox" style="right: 10px" onclick="doCheckBoxSubmit();" />Include In-Active
+		<input type="checkbox" name="checkbox" style="right: 10px" onclick="doSubmit();" id="checkBoxInActive" />Include In-Active
 	</s:form>
-		
     
-
+	<s:form method="post" action="getAllOrganisations" id="form2" name="formOrganisationListCheckBoxIsChecked" >
+	</s:form>
+	
+	
+	<s:form method="post" action="getOrganisationsByActive" id="form3" name="formOrganisationListByActiveWhenCheckBoxIsUnChecked" >
+	</s:form>
+	
 	
 	</div>
 
@@ -57,6 +62,10 @@
     
     
     	<s:if test="%{#check==0}">
+    	
+    	<script language="javascript" type="text/javascript">
+    	setCheckBoxIsUnChecked();
+		</script>
 	
 		<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
 			<div id='<s:property value="orgId" />' style="clear: true;width: 100%;border-width: 1px" >
@@ -101,7 +110,12 @@
 	</s:if>
 	
 	
-	<s:elseif test="%{#check==1}">
+	<s:elseif test="%{#check==1}" >
+	
+		<script language="javascript" type="text/javascript">
+		setCheckBoxIsChecked();
+		</script>
+	
 	<s:iterator value="listOrgAll" status="listOrgAllStatus">
 			<div id='<s:property value="orgId" />' style="clear: true;width: 100%;border-width: 1px" class='<s:if test="statusActive==0">InActive</s:if>' >
 					<div  style="float: left;width: 23%" ><span class="number"><s:property value="orgName" /></span></div>
@@ -148,9 +162,8 @@
     		</div>
 	</s:elseif>  
 	
-	<s:form method="post" action="getAllOrganisations" id="form2" name="formOrganisationListCheckBoxIsChecked" >
-		<s:hidden  name="nameCheckBox" id="checkBoxInActive" value="0"/>
-	</s:form>
+
+	
 	
 			</div>
 </body>
