@@ -43,15 +43,15 @@
 	</div>
 
        <div style="clear: both;border-width: 1px"></div>
-      <div style="border-color: blue;border-width: 1px" class="borderwidth">
+      <div >
 
-		<div style="width: 23%;float: left;border-width: 1px" class="borderwidth">Organisation Name </div>
-		<div style="width: 31%;float: left;border-width: 1px " class="borderwidth">Head Office Address Line 1 </div>
+		<div style="width: 20%;float: left;border: 1px solid" >Organisation Name </div>
+		<div style="width: 29%;float: left;border: 1px solid" >Head Office Address Line 1 </div>
 
-		<div style="width: 10% ;float: left;border-width: 1px " class="borderwidth">Postcode </div>
+		<div style="width: 10% ;float: left;border:1px solid " >Postcode </div>
 
-		<div style="width: 26% ;float: left ;border-width: 1px " class="borderwidth">Contact </div>
-		<div style="width: 10% ;float: left ;border-width: 1px" class="borderwidth">Is Active?</div>
+		<div style="width: 26% ;float: left ;border:1px solid ">Contact </div>
+		<div style="width: 10% ;float: left ;border: 1px solid" >Is Active?</div>
 	</div>
 
     <div style="clear: both;">
@@ -68,12 +68,12 @@
 		</script>
 	
 		<s:iterator value="listOrgByActive" status="listOrgByActiveStatus">
-			<div id='<s:property value="orgId" />' style="clear: true;width: 100%;border-width: 1px" >
-					<div  style="float: left;width: 23%" ><span class="number"><s:property value="orgName" /></span></div>
-					<div style="float: left;width: 31%" ><s:property value="addressVO.addressLine1" /></div>
-					<div  style="float: left;width: 10%" ><s:property value="addressVO.postCode" /></div>
-					<div style="float: left;width: 26%" ><s:property value="contactVO.firstName" /></div>
-					<div  style="float: left;width: 10%" ><s:if test="statusActive==1">Yes</s:if>
+			<div id='<s:property value="orgId" />' >
+					<div  style="float: left;width: 20%;border: 1px solid" ><span class="number"><s:property value="orgName" /></span></div>
+					<div style="float: left;width: 29%;border:1px solid" ><s:property value="addressVO.addressLine1" /></div>
+					<div  style="float: left;width: 10%;border:1px solid" ><s:property value="addressVO.postCode" /></div>
+					<div style="float: left;width: 26%;border:1px solid" ><s:property value="contactVO.firstName" /></div>
+					<div  style="float: left;width: 10%;border:1px solid" ><s:if test="statusActive==1">Yes</s:if>
 					<s:else>
 					No
 					</s:else>
@@ -117,12 +117,12 @@
 		</script>
 	
 	<s:iterator value="listOrgAll" status="listOrgAllStatus">
-			<div id='<s:property value="orgId" />' style="clear: true;width: 100%;border-width: 1px" class='<s:if test="statusActive==0">InActive</s:if>' >
-					<div  style="float: left;width: 23%" ><span class="number"><s:property value="orgName" /></span></div>
-					<div style="float: left;width: 31%" ><s:property value="addressVO.addressLine1" /></div>
-					<div  style="float: left;width: 10%" ><s:property value="addressVO.postCode" /></div>
-					<div style="float: left;width: 26%" ><s:property value="contactVO.firstName" /></div>
-					<div  style="float: left;width: 10%" ><s:if test="statusActive==1">Yes</s:if>
+			<div id='<s:property value="orgId" />'  class='<s:if test="statusActive==0">InActive</s:if>' >
+					<div  style="float: left;width: 20%;border:1px solid" ><span class="number"><s:property value="orgName" /></span></div>
+					<div style="float: left;width: 29%;border:1px solid" ><s:property value="addressVO.addressLine1" /></div>
+					<div  style="float: left;width: 10%;border:1px solid" ><s:property value="addressVO.postCode" /></div>
+					<div style="float: left;width: 26%;border:1px solid" ><s:property value="contactVO.firstName" /></div>
+					<div  style="float: left;width: 10%;border:1px solid" ><s:if test="statusActive==1">Yes</s:if>
 					<s:else>
 					No
 					</s:else>
