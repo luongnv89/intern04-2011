@@ -15,11 +15,15 @@
 <body>
 	<span class="title">Organisation List</span>
 	
+	<!-- <a href="#">A B C D E</a> -->
 	
+	<s:url id="abcd" action="searchOrgByAbcd">
+	<s:param name="abcd" value="1"></s:param>
+	</s:url>
 
 <div style="width: 100%;border: 0px;padding: 0px; background-color: #EFEFEF">
 
-    <div style="width: 75%;float: left;" ><a href="#" >All</a> | <a href="#">0-9</a> | <a href="#">A B C D E</a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a> 
+    <div style="width: 75%;float: left;" ><a href="#" >All</a> | <a href="#">0-9</a> | <s:a href="%{abcd}">A B C D E</s:a> | <a href="#">F G H I J</a> | <a href="#">K L M N</a> | <a href="#">O P R Q </a>| <a href="#">S T U V</a> | <a href="#">W X Y Z </a> 
 	</div>
 	
 	<div>

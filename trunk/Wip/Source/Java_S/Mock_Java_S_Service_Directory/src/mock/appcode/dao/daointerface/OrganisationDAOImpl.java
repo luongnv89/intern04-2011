@@ -141,6 +141,73 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		return null;
 	}
 	
+	
+	
+	
+	public List<OrganisationVO> getOrganisationsByFirstName() throws Exception{
+		
+		try {
+			session.beginTransaction();
+			Query query = (Query) session
+					.createQuery("from OrganisationVO where statusActive = '1'");
+			List listResult = query.list();
+			session.flush();
+			session.getTransaction().commit();
+			return listResult;
+		} catch (Exception e) {
+			if (session.getTransaction().isActive()) {
+				session.getTransaction().rollback();
+			}
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+	
+	public List<OrganisationVO> getOrganisationsByFirstName(String param) throws Exception{
+		
+		try {
+			session.beginTransaction();
+			Query query = (Query) session
+					.createQuery("from OrganisationVO where orgName like  'ABCD%'");
+			List listResult = query.list();
+			session.flush();
+			session.getTransaction().commit();
+			return listResult;
+		} catch (Exception e) {
+			if (session.getTransaction().isActive()) {
+				session.getTransaction().rollback();
+			}
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+	
+	
+	
+	public List<OrganisationVO> getOrganisationsByFirstName(int pageNumber) throws Exception{
+		
+		try {
+			session.beginTransaction();
+			Query query = (Query) session
+					.createQuery("from OrganisationVO where statusActive = '1'");
+			List listResult = query.list();
+			session.flush();
+			session.getTransaction().commit();
+			return listResult;
+		} catch (Exception e) {
+			if (session.getTransaction().isActive()) {
+				session.getTransaction().rollback();
+			}
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+	
+	
+	
 	public List<OrganisationVO> getOrganisationsByInActive(int pageNumber) throws Exception {
 		try {
 			session.beginTransaction();
@@ -160,6 +227,8 @@ public class OrganisationDAOImpl extends HibernateUtil implements
 		}
 		return null;
 	}
+	
+	
 
 	public void setOrganisationInActive(OrganisationVO newOrganistation, String id)
 			throws Exception {
