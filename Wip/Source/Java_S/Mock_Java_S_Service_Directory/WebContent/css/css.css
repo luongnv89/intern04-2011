@@ -1,0 +1,183 @@
+html{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+#bar a{
+padding:4px 6px;
+background:#EFEFEF;
+text-decoration:none;
+font-weight:bold;
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-top:1px solid #CCCCCC;
+}
+#bar a:hover{
+color:#003366;
+}
+#container{
+background:#EFEFEF;
+padding:10px;
+}
+div.maintab div {
+display: none
+}
+div.maintab div:target {
+display: block
+}
+.title {
+	color: #009900;
+	font-weight: bold;
+	font-size: 24px;
+}
+.number {color: #33CCFF}
+.filter {
+	font-size: 14px;
+	font-weight: bold;
+	color: #0066FF;
+}
+.top{
+	border-left:1px solid #999999; 
+	border-right:1px solid #999999;
+	border-top:1px solid #999999;
+}
+.left{
+	border-left:1px solid #999999;
+}
+.right{
+	border-right: 1px solid #999999;
+}
+.bottom{
+	border-bottom:1px solid #999999; 
+	border-left: 1px solid #999999; 
+	border-right: 1px solid #999999;
+}
+.titleColumn{
+	border:1px solid #999999;
+	background-image:url(picture/tab.jpg);
+}
+.border{
+	border:1px solid #999999;
+}
+#block{
+	display:block; 
+	overflow:scroll; 
+	height:100px; 
+	width:400px;
+}
+#lookup {
+	position:absolute;
+	left:0;
+	top:0;
+	width:800px;
+	height:700px;
+	z-index:1;
+	background-color: #F0F0F0;
+}
+#Lookup_top {
+	position:absolute;
+	left:5%;
+	top:10px;
+	width:90%;
+	height:40px;
+	z-index:2;
+	background-color: #F4F9FB;
+	font-size:12px;
+	padding-top:10px;
+}
+#Lookup_Btt {
+	position:absolute;
+	left:5%;
+	top:70px;
+	width:90%;
+	height:30px;
+	z-index:2;
+}
+#Lookup_Content {
+	position:absolute;
+	left:5%;
+	top:140px;
+	width:90%;
+	height:222px;
+	z-index:2;
+}
+#lookup_hd1 {
+	float:left;
+	width:10%;
+	height:20px;
+	z-index:2;
+	background-color: #F0F0F0;
+	padding-top:5px;
+}
+#lookup_hd2 {
+	float:left;
+	width:28%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#lookup_hd3 {
+	float:left;
+	width:15%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#lookup_hd4 {
+	float:left;
+	width:15%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#lookup_hd5 {
+	float:left;
+	width:15%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#lookup_hd6 {
+	float:left;
+	width:15%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#Lookup_pt {
+	position:absolute;
+	left:5%;
+	top:365px;
+	width:90%;
+	height:30px;
+	z-index:3;
+}
+
+#Lookup_bottom {
+	position:absolute;
+	left:5%;
+	top:400px;
+	width:90%;
+	height:50px;
+	z-index:4;
+}
+#Lookup_Business_top1{
+	float:left;
+	width:64%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#Lookup_Business_top2{
+	float:left;
+	width:10%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
+#Lookup_Contact_top1{
+	float:left;
+	width:18%;
+	height:20px;
+	z-index:2;
+	padding-top:5px;
+}
